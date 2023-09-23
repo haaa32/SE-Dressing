@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04088c3d-49a7-4355-8111-c74f18c13b89" name="변경" comment="ㅋ">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="test2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,40 +14,29 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-    <projectState path="$PROJECT_DIR$/dressing">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2Vmh5ah0Yl50lFQWchgjRRWuQis" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Vmj2lxHCayowBdoJFRVAya6ewD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="DressingApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dressing.DressingApplication" />
-      <module name="com.example.dressing.main" />
+      <module name="dressing.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.dressing.*" />
@@ -62,50 +49,31 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.DressingApplication" />
+        <item itemvalue="Application.DressingApplication" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="04088c3d-49a7-4355-8111-c74f18c13b89" name="변경" comment="" />
-      <created>1695446980402</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="" />
+      <created>1695447944145</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695446980402</updated>
+      <updated>1695447944145</updated>
     </task>
-    <task id="LOCAL-00001" summary="테스트&#10;!!!">
-      <option name="closed" value="true" />
-      <created>1695447662596</created>
+    <task id="LOCAL-00001" summary="test2">
+      <created>1695448054483</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1695447662596</updated>
+      <updated>1695448054483</updated>
     </task>
-    <task id="LOCAL-00002" summary="테스트!!">
-      <option name="closed" value="true" />
-      <created>1695447779563</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1695447779563</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ㅋ">
-      <option name="closed" value="true" />
-      <created>1695448953337</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1695448953337</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="테스트&#10;!!!" />
-    <MESSAGE value="테스트!!" />
-    <MESSAGE value="ㅋ" />
-    <option name="LAST_COMMIT_MESSAGE" value="ㅋ" />
+    <MESSAGE value="test2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test2" />
   </component>
 </project>
