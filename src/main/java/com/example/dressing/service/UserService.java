@@ -60,4 +60,26 @@ public class UserService {
         }
         return userDTOList;
     }
+
+    public UserDTO findByID(Long id) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
+        if (optionalUserEntity.isPresent()) {
+            return UserDTO.toUserDTO(optionalUserEntity.get());
+        } else {
+            return null;
+        }
+    }
+
+    public UserDTO updateForm(String myUserId) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findByUserId(myUserId);
+        if (optionalUserEntity.isPresent()) {
+            return UserDTO.toUserDTO(optionalUserEntity.get());
+        } else {
+            return null;
+        }
+    }
+
+    public void update(UserDTO userDTO) {
+        userRepository.save(UserEntity.toUpdateUserEntity(userDTO));
+    }
 }

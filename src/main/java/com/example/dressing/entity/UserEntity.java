@@ -35,4 +35,14 @@ public class UserEntity { //엔티티 클래스 대로 실제로 DB에 테이블
 
         return userEntity;
     }
+
+    public static UserEntity toUpdateUserEntity(UserDTO userDTO) {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setId(userDTO.getId());
+        userEntity.setUserName(userDTO.getUserName());
+        userEntity.setUserId(userDTO.getUserId());
+        userEntity.setUserPassword(userDTO.getUserPassword());
+
+        return userEntity;
+    }
 }
