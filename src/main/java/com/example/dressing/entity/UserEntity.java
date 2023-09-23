@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "user_table") //name: DB에 생성될 때 테이블 이름
+@Table(name = "user_table") //name: DB에 생성될 때 테이블 이
 public class UserEntity { //엔티티 클래스 대로 실제로 DB에 테이블이 생성되게 된다
     @Id //pk 지정(primary key(주키))
     @GeneratedValue(strategy = GenerationType.IDENTITY) //mysql에서 auto_increment, 오라클의 sequence (지절로 id가 자동생성 되는듯???)
