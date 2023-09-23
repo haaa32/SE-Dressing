@@ -5,11 +5,14 @@ import com.example.dressing.dto.UserDTO;
 import com.example.dressing.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 import javax.servlet.http.HttpSession;
+import java.util.List;
 //import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -60,4 +63,13 @@ public class UserController {
             return "login";
         }
     }
+
+    @GetMapping("/user/")
+    public String findAll(Model model) {
+        List<UserDTO> userDTOList = userService.findAll();
+        // 어떠한 html로 가져갈 데이터가 있다면 model 사용
+        model.addAttribute("userList", userDTOList);
+        return "list";
+    }
+
 }

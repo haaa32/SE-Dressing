@@ -6,6 +6,8 @@ import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service //spring been 등록 (스프링이 관리해주는 객체)
@@ -47,5 +49,15 @@ public class UserService {
             System.out.println("존재하지 않는 아이디입니다.");
             return null;
         }
+    }
+    public List<UserDTO> findAll() {
+        List<UserEntity> userEntityList = userRepository.findAll();
+        List<UserDTO> userDTOList = new ArrayList<>();
+        for(UserEntity userEntity: userEntityList) {
+            userDTOList.add(UserDTO.toUserDTO(userEntity));
+            // UserDTO userDTO = UserDTO.toUserDTO(userEntity);
+            // userEntityList.add(userDTO);
+        }
+        return userDTOList;
     }
 }
