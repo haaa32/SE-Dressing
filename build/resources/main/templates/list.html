@@ -15,14 +15,15 @@
     <th>상세조회</th>
     <th>삭제</th>
   </tr>
-  <tr th:each="user: ${userList}">
+  <tr th:each="user: ${userList}"> <!-- for-each문 같은 문법 -->
     <td th:text="${user.id}"></td>
     <td th:text="${user.userName}"></td>
     <td th:text="${user.userId}"></td>
     <td th:text="${user.userPassword}"></td>
     <td>
-      <!--query string / user?id=1
-          rest api /user/1-->
+      <!--query string 방식 예: /user?id=1
+          rest api 방식 예: /user/1-->
+      <!-- {|"경로(+모델값)"|} tymeleaf 문법: 경로상에 서버에서 가져온 값(model)을 넣기위한 작업-->
       <a th:href="@{|/user/${user.id}|}">조회</a>
     </td>
     <td>

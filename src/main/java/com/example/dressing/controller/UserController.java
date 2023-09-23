@@ -65,21 +65,24 @@ public class UserController {
         }
     }
 
+    //회원목록 출력
     @GetMapping("/user/")
     public String findAll(Model model) {
         List<UserDTO> userDTOList = userService.findAll();
         // 어떠한 html로 가져갈 데이터가 있다면 model 사용
         model.addAttribute("userList", userDTOList);
-        return "list";
+        return "list"; //list.html 로 모델을 가져갈 것임
     }
 
-    @GetMapping("/user/{id}")
+    //회원 상세정보 (아이디를 이용해 찾음)
+    @GetMapping("/user/{id}") //경로상의 변수를 {} 안에 담음 => PathVariable: 이를 받는 어노테이션, 경로상의 값을 담아옴
     public String findByID(@PathVariable Long id, Model model) {
         UserDTO userDTO = userService.findByID(id);
         model.addAttribute("user", userDTO);
         return "detail";
     }
 
+    //회원정보 수정
     @GetMapping("/user/update")
     public String updateForm(HttpSession session, Model model) {
         String myUserId = (String) session.getAttribute("loginUserId");
@@ -91,6 +94,7 @@ public class UserController {
     @PostMapping("/user/update")
     public String update(@ModelAttribute UserDTO userDTO) {
         userService.update(userDTO);
+        //리다이렉트: 컨트롤러 메소드의 끝나고 다시 다른 컨트롤러 메소드 접속(다른 애 주소)을 요청한다
         return "redirect:/user/" + userDTO.getId();
     }
 }

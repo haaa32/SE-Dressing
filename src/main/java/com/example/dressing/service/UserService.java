@@ -50,6 +50,8 @@ public class UserService {
             return null;
         }
     }
+
+    //db에서 모든 유저를 리스트에 담아 DTO 리스트로 반환
     public List<UserDTO> findAll() {
         List<UserEntity> userEntityList = userRepository.findAll();
         List<UserDTO> userDTOList = new ArrayList<>();
@@ -61,11 +63,12 @@ public class UserService {
         return userDTOList;
     }
 
+    //성공: db에서 id를 이용해 찾은 유저의 DTO 리턴, 실패: null
     public UserDTO findByID(Long id) {
         Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
-        if (optionalUserEntity.isPresent()) {
+        if (optionalUserEntity.isPresent()) { //성공
             return UserDTO.toUserDTO(optionalUserEntity.get());
-        } else {
+        } else { //유저가 없음 실패
             return null;
         }
     }
@@ -79,7 +82,9 @@ public class UserService {
         }
     }
 
+    //db의 회원정보를 업데이트한다
     public void update(UserDTO userDTO) {
-        userRepository.save(UserEntity.toUpdateUserEntity(userDTO));
+        //save는 db에 이미 id가 있는 엔터티가 넘어오면, 값이 수정되어 저장된다.
+        userRepository.save(UserEntity.toUpdateUserEntity(userDTO)); //업데이트 유저 DTO -> 유저 Entity
     }
 }
