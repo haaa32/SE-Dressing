@@ -9,7 +9,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor //기본 생성자
 @AllArgsConstructor //모든 변수를 포함한 생성자
-@ToString //toString 자동 생
+@ToString //toString 자동 생성
 public class UserDTO {
     //필드는 모두 private
     private Long id;
