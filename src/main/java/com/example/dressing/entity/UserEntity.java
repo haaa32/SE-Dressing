@@ -35,4 +35,16 @@ public class UserEntity { //엔티티 클래스 대로 실제로 DB에 테이블
 
         return userEntity;
     }
+
+
+    //회원 업데이트에서 사용하는 유저 DTO -> 유저 Entity ...why? 회원 업데이트에선 id가 무조건 있기 때문에!! (회원가입시에는 아직 id가 정해지지 않음)
+    public static UserEntity toUpdateUserEntity(UserDTO userDTO) {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setId(userDTO.getId()); //추가!!
+        userEntity.setUserName(userDTO.getUserName());
+        userEntity.setUserId(userDTO.getUserId());
+        userEntity.setUserPassword(userDTO.getUserPassword());
+
+        return userEntity;
+    }
 }
