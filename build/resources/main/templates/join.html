@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>join</title>
+    <!-- jquery cdn -->
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- action속성: form에 작성한 데이터를 어디로 보낼지 지정-->
@@ -10,9 +15,39 @@
 <form action="/user/join" method="post">
     <!-- name속성: 서버로 전송할 때 변수이름의 역할-->
     이름 : <input type="text" name="userName"> <br>
-    아이디 : <input type="text" name="userId"> <br>
+    아이디: <input type="text" name="userId" id="userId" onblur="idCheck()"> <p id="check-result"></p> <br> <!-- 중복 체크 -->
     비밀번호 : <input type="password" name="userPassword"> <br>
     <input type="submit" value="회원가입"> <!--회원가입 버튼 역할-->
 </form>
 </body>
+<script th:inline="javascript">
+    const idCheck = () => {
+        const id = document.getElementById("userId").value;
+        const checkResult = document.getElementById("check-result"); // 태그 요소만 접근하는 거라서 .value는 안 씀
+        console.log("입력값: ", id);
+        $.ajax({
+            // 요청방식: post, url: "id-check", 데이터: 아이디
+            type: "post",
+            url: "/user/id-check",
+            data: {
+                "userId": id
+            },
+            success: function(result) {
+                console.log("요청 성공", result);
+                if (result == "ok") {
+                    console.log("사용가능한 아이디");
+                    checkResult.style.color = "green";
+                    checkResult.innerHTML = "사용가능한 아이디";
+                } else {
+                    console.log("이미 사용 중인 아이디");
+                    checkResult.style.color = "red";
+                    checkResult.innerHTML = "이미 사용 중인 아이디";
+                }
+            },
+            error: function(err) {
+                console.log("에러 발생", err);
+            }
+        });
+    }
+</script>
 </html>
