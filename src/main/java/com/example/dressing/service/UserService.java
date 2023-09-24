@@ -87,4 +87,11 @@ public class UserService {
         //save는 db에 이미 id가 있는 엔터티가 넘어오면, 값이 수정되어 저장된다.
         userRepository.save(UserEntity.toUpdateUserEntity(userDTO)); //업데이트 유저 DTO -> 유저 Entity
     }
+
+    //db에 저장된 회원을 id를 이용해 없앤다
+    public void deleteById(Long id) {
+        userRepository.deleteById(id);
+    }
+
+
 }
