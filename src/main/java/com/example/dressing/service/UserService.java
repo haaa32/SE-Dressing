@@ -93,5 +93,14 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-
+    public String idCheck(String userId) {
+        Optional<UserEntity> byUserId = userRepository.findByUserId(userId);
+        if (byUserId.isPresent()) {
+            // 조회결과가 있다 -> 사용할 수 없음 (중복)
+            return null;
+        } else {
+            // 조회결과가 없다 -> 사용할 수 있음
+            return "ok";
+        }
+    }
 }

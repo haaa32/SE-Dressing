@@ -6,10 +6,7 @@ import com.example.dressing.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 
 import javax.servlet.http.HttpSession;
@@ -110,5 +107,21 @@ public class UserController {
     public String logout(HttpSession httpSession) {
         httpSession.invalidate(); //세션을 무효화 한다
         return "index";
+    }
+
+    @PostMapping("/user/id-check")
+    public @ResponseBody String emailCheck(@RequestParam("userId") String userId) {
+        System.out.println("userId = " + userId);
+        String checkResult = userService.idCheck(userId);
+
+        return checkResult;
+
+        /*
+        if (checkResult != null) {
+            return "ok";
+        } else {
+            return "no";
+        }
+         */
     }
 }
