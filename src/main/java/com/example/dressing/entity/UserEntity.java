@@ -26,12 +26,16 @@ public class UserEntity { //엔티티 클래스 대로 실제로 DB에 테이블
     @Column //열 길이도 지정 가능
     private String userPassword;
 
+    @Column(length = 13) //열 길이 13
+    private String phoneNumber;
+
     //유저 DTO를 유저 Entity로 반환 (JpaRepository 를 사용하기 위해)
     public static UserEntity toUserEntity(UserDTO userDTO) {
         UserEntity userEntity = new UserEntity();
         userEntity.setUserName(userDTO.getUserName());
         userEntity.setUserId(userDTO.getUserId());
         userEntity.setUserPassword(userDTO.getUserPassword());
+        userEntity.setPhoneNumber(userDTO.getPhoneNumber());
 
         return userEntity;
     }
@@ -44,6 +48,7 @@ public class UserEntity { //엔티티 클래스 대로 실제로 DB에 테이블
         userEntity.setUserName(userDTO.getUserName());
         userEntity.setUserId(userDTO.getUserId());
         userEntity.setUserPassword(userDTO.getUserPassword());
+        userEntity.setPhoneNumber(userDTO.getPhoneNumber());
 
         return userEntity;
     }
