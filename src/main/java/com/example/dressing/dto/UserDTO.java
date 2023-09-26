@@ -16,6 +16,8 @@ public class UserDTO {
     private String userName;
     private String userId;
     private String userPassword;
+    private String phoneNumber;
+
 
     //UserEntity -> UserDTO 변환
     public static UserDTO toUserDTO(UserEntity userEntity) {
@@ -24,6 +26,7 @@ public class UserDTO {
         userDTO.setUserName(userEntity.getUserName());
         userDTO.setUserId(userEntity.getUserId());
         userDTO.setUserPassword(userEntity.getUserPassword());
+        userDTO.setPhoneNumber(userEntity.getPhoneNumber());
         return userDTO;
     }
 }
