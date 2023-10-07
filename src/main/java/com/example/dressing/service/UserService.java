@@ -16,12 +16,26 @@ public class UserService {
     private final UserRepository userRepository;
 
     //회원가입 로직
-    public void join(UserDTO userDTO) {
-        // DB에 저장하기 위해: Repository의 save 메서드 호출 (조건. entity 객체를 넘겨줘야함)
-        // 1. DTO -> ENTITY 변환
-        // 2. Repository의 save 메서드 호출
-        UserEntity userEntity = UserEntity.toUserEntity(userDTO);
-        userRepository.save(userEntity); //여기서 save는 Jpa 제공 메소드!!
+    public int join(UserDTO userDTO, String passwordCheck) {
+        /* DB에 저장하기 위해: Repository의 save 메서드 호출 (조건. entity 객체를 넘겨줘야함)
+         1. 아이디 중복 확인, 실패시 return -1
+         2. 비밀번호 확인(추가), 실패시 return -2
+         3. DTO -> ENTITY 변환
+         4. Repository의 save 메서드 호출
+         */
+
+        Optional<UserEntity> byUserId = userRepository.findByUserId(userDTO.getUserId());
+        if(byUserId.isPresent()) { //회원가입 실패, 아이디 중복
+            return -1;
+        }
+        else if(!userDTO.getUserPassword().equals(passwordCheck)) { //회원가입 실패, 비밀번호 불일치
+            return -2;
+        }
+        else { //회원가입 성공,
+            UserEntity userEntity = UserEntity.toUserEntity(userDTO);
+            userRepository.save(userEntity); //여기서 save는 Jpa 제공 메소드!!
+            return 1;
+        }
     }
 
     //로그인 로직
