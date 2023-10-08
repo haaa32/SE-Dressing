@@ -45,6 +45,7 @@ public class UserController {
         System.out.println(joinRusult);
 
         if(joinRusult == -1 || joinRusult == -2) { //회원가입 실패
+            //추후 component
             PrintWriter out = response.getWriter();
             response.setCharacterEncoding("utf-8");
             response.setContentType("text/html; charset=utf-8");
