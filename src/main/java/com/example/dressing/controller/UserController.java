@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-
 import javax.servlet.http.HttpSession;
 import java.util.List;
 //import org.springframework.web.bind.annotation.RequestParam;
@@ -115,13 +114,6 @@ public class UserController {
         String checkResult = userService.idCheck(userId);
 
         return checkResult;
-
-        /*
-        if (checkResult != null) {
-            return "ok";
-        } else {
-            return "no";
-        }
-         */
     }
+
 }
