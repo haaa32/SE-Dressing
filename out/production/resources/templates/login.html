@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style1.css}">
+    <script src="/js/jquery-1.12.4.js"></script>
+    <script src="/js/app1.js"></script>
+    <title>Login</title>
+</head>
+<body>
+<div id="log">
+    로그인창
+    <div id="login">
+        <form action="/user/login" method="post">
+        id : <input type="text" name="userId"> <br>
+        password : <input type="password" name="userPassword"> <br>
+        <input type="submit" value="로그인">
+        </form>
+</div>
+</div>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<form action="/user/login" method="post">
+    아이디 : <input type="text" name="userId"> <br>
+    비밀번호 : <input type="password" name="userPassword"> <br>
+    <input type="submit" value="로그인">
+</form>
+</body>
+</html>
+-->
