@@ -1,12 +1,14 @@
 package com.example.dressing.entity;
 
+import com.example.dressing.dto.ClosetDTO;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.catalina.User;
 
 import javax.persistence.*;
 
 // DB의 테이블 역할을 하는 클래스
+@Builder
 @Entity
 @Getter
 @Setter
@@ -16,11 +18,16 @@ public class ClosetEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
     private Long id;
 
-    @JoinColumn(name="userId") // fk
-    private User user; // 참조할 테이블
+    @ManyToOne // User 테이블과의 관계를 표현하기 위해 @ManyToOne 사용
+    @JoinColumn(name = "userId") // fk
+    private UserEntity user; // UserEntity 클래스와 연결되는 엔티티를 참조
 
+    @Column(length = 10)
     private String label;
 
-    @ManyToOne // Many: closet, One: user - 한명의 유저는 여러개의 옷을 업로드할 수 있음
-    private String url;
+    @Column
+    private String originalFileName; // 원본 파일 이름
+
+    @Column
+    private String storedFileName;
 }

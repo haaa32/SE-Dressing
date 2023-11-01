@@ -10,8 +10,8 @@
     <a href="/user/update">내 정보 수정하기</a>
     <a href="/user/logout">로그아웃</a>
 
-    <form action="/upload/save" method="post">
-        file:
+    <form action="/user/main" method="post" enctype="multipart/form-data">
+        file: <input type="file" name="closetFile">
         <input type="submit" value="업로드">
     </form>
 
