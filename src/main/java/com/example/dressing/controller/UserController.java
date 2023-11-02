@@ -9,7 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 //import org.springframework.web.bind.annotation.RequestParam;
 
@@ -31,14 +34,30 @@ public class UserController {
     /*public String join(@RequestParam("userName") String userName, //변수에 input 태그의 name 값 저장
                               @RequestParam("userId") String userId,
                               @RequestParam("userPassword") String userPassword) { */
-    public String join(@ModelAttribute UserDTO userDTO) { //클래스 변수와 name이 일치하면 값이 저장된다
+    public String join(@ModelAttribute UserDTO userDTO, @RequestParam("userPasswordCheck") String userPasswordCheck,
+                       HttpServletResponse response) throws IOException { //클래스 변수와 name이 일치하면 값이 저장된다
+        // HttpServletResponse response: 회원가입 실패시 Controller에서 alert창 띄우기 위해 사용하는 변수
         System.out.println("UserController.join"); //soutm
         //System.out.println("userName = " + userName + ", userId = " + userId + ", userPassword = " + userPassword); //soutp
         System.out.println("userDTO = " + userDTO);
 
-        userService.join(userDTO); //회원가입 로직
+        int joinRusult = userService.join(userDTO, userPasswordCheck); //회원가입 로직
+        System.out.println(joinRusult);
 
-        return "login"; //회원가입 후 로그인 창
+        if(joinRusult == -1 || joinRusult == -2) { //회원가입 실패
+            //추후 component
+            PrintWriter out = response.getWriter();
+            response.setCharacterEncoding("utf-8");
+            response.setContentType("text/html; charset=utf-8");
+            out.println("<script> alert('회원가입 실패!');"); //ㅏㅗ 한글이 깨져서 나와!!
+            out.println("history.go(-1); </script>");
+            out.close();
+            return "join";
+        }
+        else { //회원가입 성공
+            return "login"; //회원가입 후 로그인 창 실행
+        }
+
     }
 
     @GetMapping("/user/login")
@@ -92,7 +111,7 @@ public class UserController {
     @PostMapping("/user/update")
     public String update(@ModelAttribute UserDTO userDTO) {
         userService.update(userDTO);
-        //리다이렉트: 컨트롤러 메소드의 끝나고 다시 다른 컨트롤러 메소드 접속(다른 애 주소)을 요청한다
+        //리다이렉트: 컨트롤러 메소드의 끝나고 다시 다른 컨트롤러 메소드 접속(다른 애 주소)을 요청한다,,(Post 매핑의 중복 방지)
         return "redirect:/user/" + userDTO.getId();
     }
 
@@ -109,6 +128,7 @@ public class UserController {
         return "index";
     }
 
+    //js에서 매핑되어 아이디 중복 체크
     @PostMapping("/user/id-check")
     public @ResponseBody String emailCheck(@RequestParam("userId") String userId) {
         System.out.println("userId = " + userId);
