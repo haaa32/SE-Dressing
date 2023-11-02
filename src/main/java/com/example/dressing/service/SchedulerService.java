@@ -15,9 +15,9 @@ import java.util.List;
 public class SchedulerService {
     private final UserRepository userRepository;
 
-    //**** 이거 매일 12시에 할지 (+서버 시작할 때도 update 해줘야함) or 뭐 몇 분이나 몇 시간마다 업데이트 할지
+    //**** 이거 매일 12시에 할지 (+서버 시작할 때도 update 해줘야함 + 로그인 할 때) or 뭐 몇 분이나 몇 시간마다 업데이트 할지
     //매일 오전 12시에 모든 사용자들의 rank가 update됨
-    @Scheduled(cron = "0 0 12 * * *") //(초, 분, 시간, 일, 월, 요일)
+    @Scheduled(cron = "0 0 0 * * *") //(초, 분, 시간, 일, 월, 요일)
     public void updateRank() {
         LocalDateTime nowDateLime = LocalDateTime.now();
 

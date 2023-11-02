@@ -135,13 +135,5 @@ public class UserController {
         String checkResult = userService.idCheck(userId);
 
         return checkResult;
-
-        /*
-        if (checkResult != null) {
-            return "ok";
-        } else {
-            return "no";
-        }
-         */
     }
 }
