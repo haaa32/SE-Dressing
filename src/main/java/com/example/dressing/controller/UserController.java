@@ -76,6 +76,10 @@ public class UserController {
             //로그인 성공
             //로그인 유지를 하기 위해 세션 정보 추가** 이건 아직 제대로 몰겟음 (세션에 로그인 했던 회원의 아이디를 담아놓는다)
             httpSession.setAttribute("loginUserId", loginResult.getUserId()); // loginUserId 에 오른쪽 값이 들어가고 main.html로 전달된다?
+
+            //관리자 or 일반 사용자
+            if(loginResult.getUserRank().equals("Admin")) //관리자 로그인시
+                return "/admin/main"; //관리자 페이지
             return "main";
         }
         else {
@@ -85,7 +89,7 @@ public class UserController {
         }
     }
 
-    //회원목록 출력
+    /*//회원목록 출력
     @GetMapping("/user/")
     public String findAll(Model model) {
         List<UserDTO> userDTOList = userService.findAll();
@@ -124,7 +128,7 @@ public class UserController {
         userService.deleteById(id);
         //바로 list.html로 가게 된다면 model이 없어 정보가 없이 전달된다. 이 때 리다이렉트 이용!!!
         return "redirect:/user/"; //redirect 뒤에는 무조건 주소가 온다 (list.html이 아님!!)
-    }
+    }*/
 
     @GetMapping("/user/logout")
     public String logout(HttpSession httpSession) {

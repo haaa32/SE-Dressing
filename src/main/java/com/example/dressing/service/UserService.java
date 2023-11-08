@@ -128,6 +128,9 @@ public class UserService {
         List<UserEntity> userEntityList = userRepository.findAll();
 
         for (UserEntity userEntity : userEntityList) {
+            if(userEntity.getUserRank().equals("Admin")) //관리자인 경우 rank 업데이트 안함
+                continue;
+            
             // 사용자가 가입 후 지난 날짜 저장
             long between = ChronoUnit.DAYS.between(userEntity.getCreatedDate().toLocalDate(), nowDateLime.toLocalDate()); //현재 날짜 - 사용자 가입 날짜
             String tmpRank = "Bronze"; //update 할 rank 저장
