@@ -6,6 +6,8 @@ import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -116,5 +118,30 @@ public class UserService {
             // 조회결과가 없다 -> 사용할 수 있음
             return "ok";
         }
+    }
+
+    //모든 유저의 랭크를 업데이트
+    public void updateRank() {
+
+        LocalDateTime nowDateLime = LocalDateTime.now();
+
+        List<UserEntity> userEntityList = userRepository.findAll();
+
+        for (UserEntity userEntity : userEntityList) {
+            // 사용자가 가입 후 지난 날짜 저장
+            long between = ChronoUnit.DAYS.between(userEntity.getCreatedDate().toLocalDate(), nowDateLime.toLocalDate()); //현재 날짜 - 사용자 가입 날짜
+            String tmpRank = "Bronze"; //update 할 rank 저장
+
+            if(between >= 14 && between < 30) // 가입일 14일 이후면
+                tmpRank = "Silver";
+            else if (between >= 30 && between < 60) //가입일 30일 이후
+                tmpRank = "Gold";
+            else if (between >= 60) //가입일 60일 이후
+                tmpRank = "Diamond";
+
+            if(!tmpRank.equals(userEntity.getUserRank())) //rank가 변경되었다면 update
+                userRepository.updateUserRank(tmpRank, userEntity.getId());
+        }
+        System.out.println("유저 rank 업데이트 완료");
     }
 }

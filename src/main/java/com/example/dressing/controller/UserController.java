@@ -1,6 +1,7 @@
 //회원가입, 로그인 등 유저 관리 컨트롤러
 package com.example.dressing.controller;
 
+import com.example.dressing.Component.OtherComponent;
 import com.example.dressing.dto.UserDTO;
 import com.example.dressing.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +23,7 @@ public class UserController {
     //스프링에서 사용하는 객체 사용 방법
     //생성자 주입(공식 느낌)
     public final UserService userService; //UserService 객체를 주입받는다 (컨트롤러가 서비스의 자원(메서드,필드) 등을 이용 가능하다)
+    public final OtherComponent otherComponent;
 
     // 회원가입 페이지 출력 요청
     @GetMapping("/user/join")
@@ -46,12 +48,13 @@ public class UserController {
 
         if(joinRusult == -1 || joinRusult == -2) { //회원가입 실패
             //추후 component
-            PrintWriter out = response.getWriter();
+            /*PrintWriter out = response.getWriter();
             response.setCharacterEncoding("utf-8");
             response.setContentType("text/html; charset=utf-8");
-            out.println("<script> alert('회원가입 실패!');"); //ㅏㅗ 한글이 깨져서 나와!!
+            out.println("<script> alert('Failed Join!');"); //ㅏㅗ 한글이 깨져서 나와!!
             out.println("history.go(-1); </script>");
-            out.close();
+            out.close();*/
+            otherComponent.AlertMessage(response, "Failed Join!!");
             return "join";
         }
         else { //회원가입 성공
@@ -66,7 +69,7 @@ public class UserController {
     }
 
     @PostMapping("/user/login")
-    public String login(@ModelAttribute UserDTO userDTO, HttpSession httpSession) { //아이디와 비밀번호 받아옴, 세션 정보까지
+    public String login(@ModelAttribute UserDTO userDTO, HttpSession httpSession, HttpServletResponse response) throws IOException { //아이디와 비밀번호 받아옴, 세션 정보까지
         UserDTO loginResult = userService.login(userDTO); //로그인 결과를 확인하기 위해
 
         if(loginResult != null) {
@@ -77,6 +80,7 @@ public class UserController {
         }
         else {
             //로그인 실패
+            otherComponent.AlertMessage(response, "Failed Join!!");
             return "login";
         }
     }
