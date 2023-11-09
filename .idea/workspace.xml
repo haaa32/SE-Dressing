@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="Add Password Check and supply Join">
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="관리자 추가 #1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/ClosetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/upload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SchedulerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SchedulerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +61,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ablec\Workspace\MyJava\IntelliJ-workspace\sogong2023\src\main\resources\templates\admin" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.DressingApplication">
     <configuration name="DressingApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dressing.DressingApplication" />
@@ -83,6 +93,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DressingApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,13 +129,29 @@
       <option name="project" value="LOCAL" />
       <updated>1696705359174</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rank 업데이트 추가 로직 and 컴포넌트 추가 and 프로젝트 인코딩 UTF-8 변경">
+      <created>1699460716862</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699460716862</updated>
+    </task>
+    <task id="LOCAL-00005" summary="관리자 추가 #1">
+      <created>1699470621827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699470621827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test2" />
     <MESSAGE value="Add User attribute phoneNumber" />
     <MESSAGE value="Add Password Check and supply Join" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Password Check and supply Join" />
+    <MESSAGE value="Rank 업데이트 추가 로직 and 컴포넌트 추가 and 프로젝트 인코딩 UTF-8 변경" />
+    <MESSAGE value="관리자 추가 #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="관리자 추가 #1" />
   </component>
 </project>
