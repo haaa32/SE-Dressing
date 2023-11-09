@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@EnableScheduling // Scheduled ¾î³ëÅ×ÀÌ¼ÇÀ» »ç¿ëÇÏ±â À§ÇØ ´ÙÀ½°ú °°ÀÌ Application Class¿¡ @EnableSchedulingÀ» Ãß°¡
+@EnableScheduling // Scheduled ì–´ë…¸í…Œì´ì…˜ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ë‹¤ìŒê³¼ ê°™ì´ Application Classì— @EnableSchedulingì„ ì¶”ê°€
 @SpringBootApplication
 public class DressingApplication {
 
