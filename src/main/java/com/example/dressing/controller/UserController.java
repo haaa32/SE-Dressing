@@ -133,7 +133,7 @@ public class UserController {
     @GetMapping("/user/logout")
     public String logout(HttpSession httpSession) {
         httpSession.invalidate(); //세션을 무효화 한다
-        return "index";
+        return "login";
     }
 
     //js에서 매핑되어 아이디 중복 체크

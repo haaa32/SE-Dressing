@@ -89,8 +89,9 @@ public class UserService {
         }
     }
 
-    public UserDTO updateForm(String myUserId) {
-        Optional<UserEntity> optionalUserEntity = userRepository.findByUserId(myUserId);
+    //관리자 페이지로 업데이트 옮기고 수정
+    public UserDTO updateForm(Long id) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
         if (optionalUserEntity.isPresent()) {
             return UserDTO.toUserDTO(optionalUserEntity.get());
         } else {

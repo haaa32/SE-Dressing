@@ -37,13 +37,13 @@ public class AdminController {
         return "detail";
     }
 
+    // 회원정보 수정을 관리자 페이지에 넣음으로써 좀 달라짐 (list.html 출력시 user 하나마다 출력되게)
     //회원정보 수정 (html에서 정보 받았을 때)
-    @GetMapping("/user/update")
-    public String updateForm(HttpSession session, Model model) {
-        String myUserId = (String) session.getAttribute("loginUserId");
-        UserDTO userDTO = userService.updateForm(myUserId);
+    @GetMapping("/user/update/{id}")
+    public String updateForm(@PathVariable Long id, Model model) {
+        UserDTO userDTO = userService.updateForm(id);
         model.addAttribute("updateUser", userDTO);
-        return "update";
+        return "/admin/update";
     }
 
     //회원정보 수정 (정보 수정 폼을 작성받고, html로 다시 넘길 때)
@@ -51,7 +51,7 @@ public class AdminController {
     public String update(@ModelAttribute UserDTO userDTO) {
         userService.update(userDTO);
         //리다이렉트: 컨트롤러 메소드의 끝나고 다시 다른 컨트롤러 메소드 접속(다른 애 주소)을 요청한다,,(Post 매핑의 중복 방지)
-        return "redirect:/user/" + userDTO.getId();
+        return "redirect:/user/"; //ㅇㅎ 리다이렉트 -> html 파일 말고 getmapping 하는 거인듯?
     }
 
     @GetMapping("/user/delete/{id}")
