@@ -10,14 +10,14 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
-// time À» ¼Ó¼ºÀ¸·Î °®´Â ¿£ÅÍÆ¼ ¸ğÀ½
+// time ì„ ì†ì„±ìœ¼ë¡œ ê°–ëŠ” ì—”í„°í‹° ëª¨ìŒ
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Getter
-//@Setter //³»°¡ Ãß°¡..±Ùµ¥ ¾ø¾îµµ µÉµí?
+//@Setter //ë‚´ê°€ ì¶”ê°€..ê·¼ë° ì—†ì–´ë„ ë ë“¯?
 public class TimeEntity {
-    @CreationTimestamp //¸¸µé¾îÁú ¶§ ³¯Â¥
-    @Column(updatable = false) //¾÷µ¥ÀÌÆ® ¶§´Â ³¯Â¥ º¯°æ ¾ÈµÊ
+    @CreationTimestamp //ë§Œë“¤ì–´ì§ˆ ë•Œ ë‚ ì§œ
+    @Column(updatable = false) //ì—…ë°ì´íŠ¸ ë•ŒëŠ” ë‚ ì§œ ë³€ê²½ ì•ˆë¨
     private LocalDateTime createdDate;
 
 }
