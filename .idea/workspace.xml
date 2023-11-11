@@ -56,7 +56,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
-  <component name="RunManager" selected="애플리케이션.DressingApplication (1)">
+  <component name="RunManager" selected="Application.DressingApplication">
     <configuration name="DressingApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dressing.DressingApplication" />
       <module name="com.example.dressing.main" />
@@ -85,8 +85,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.DressingApplication (1)" />
-        <item itemvalue="애플리케이션.DressingApplication" />
+        <item itemvalue="Application.DressingApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +126,7 @@
     <MESSAGE value="test2" />
     <MESSAGE value="Add User attribute phoneNumber" />
     <MESSAGE value="Add Password Check and supply Join" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Password Check and supply Join" />
+    <MESSAGE value="Merge branch 'yewon'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'yewon'" />
   </component>
 </project>

@@ -7,8 +7,9 @@
 <body>
     <!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->
     session 값 확인: <p th:text="${session.loginUserId}"></p> <!-- ${}는 안의 변수값 사용-->
-    <a href="/user/update">내 정보 수정하기</a>
+<!--    회원도 자기 유저 정보 보고, 정보 수정할지 고민 (굳이 안 해도 될듯하긴 함)-->
     <a href="/user/logout">로그아웃</a>
 
+    <a href="/upload">사진 업로드</a>
 </body>
 </html>

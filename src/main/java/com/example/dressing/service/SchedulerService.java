@@ -13,32 +13,15 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class SchedulerService {
-    private final UserRepository userRepository;
+//    private final UserRepository userRepository;
+    private final UserService userService; //userService ì˜ì¡´ì„± ë°›ì•„ì™€ì„œ ì—…ë°ì´íŠ¸ í•˜ê¸°,, ê·¼ë° ì´ê±° ë¬¸ì œ ì¢€ ìˆëŠ”ë“¯
 
-    //**** ÀÌ°Å ¸ÅÀÏ 12½Ã¿¡ ÇÒÁö (+¼­¹ö ½ÃÀÛÇÒ ¶§µµ update ÇØÁà¾ßÇÔ + ·Î±×ÀÎ ÇÒ ¶§) or ¹¹ ¸î ºĞÀÌ³ª ¸î ½Ã°£¸¶´Ù ¾÷µ¥ÀÌÆ® ÇÒÁö
-    //¸ÅÀÏ ¿ÀÀü 12½Ã¿¡ ¸ğµç »ç¿ëÀÚµéÀÇ rank°¡ updateµÊ
-    @Scheduled(cron = "0 0 0 * * *") //(ÃÊ, ºĞ, ½Ã°£, ÀÏ, ¿ù, ¿äÀÏ)
-    public void updateRank() {
-        LocalDateTime nowDateLime = LocalDateTime.now();
+    //**** ì´ê±° ë§¤ì¼ 12ì‹œì— í• ì§€ (+ì„œë²„ ì‹œì‘í•  ë•Œë„ update í•´ì¤˜ì•¼í•¨) or ë­ ëª‡ ë¶„ì´ë‚˜ ëª‡ ì‹œê°„ë§ˆë‹¤ ì—…ë°ì´íŠ¸ í• ì§€
+    //ë§¤ì¼ ì˜¤ì „ 12ì‹œì— ëª¨ë“  ì‚¬ìš©ìë“¤ì˜ rankê°€ updateë¨
+    @Scheduled(cron = "0 0 0 * * *") //(ì´ˆ, ë¶„, ì‹œê°„, ì¼, ì›”, ìš”ì¼)
+    public void updateRankMidnight() {
 
-        List<UserEntity> userEntityList = userRepository.findAll();
-
-        for (UserEntity userEntity : userEntityList) {
-            // »ç¿ëÀÚ°¡ °¡ÀÔ ÈÄ Áö³­ ³¯Â¥ ÀúÀå
-            long between = ChronoUnit.DAYS.between(userEntity.getCreatedDate().toLocalDate(), nowDateLime.toLocalDate()); //ÇöÀç ³¯Â¥ - »ç¿ëÀÚ °¡ÀÔ ³¯Â¥
-            String tmpRank = "Bronze"; //update ÇÒ rank ÀúÀå
-
-            if(between >= 14 && between < 30) // °¡ÀÔÀÏ 14ÀÏ ÀÌÈÄ¸é
-                tmpRank = "Silver";
-            else if (between >= 30 && between < 60) //°¡ÀÔÀÏ 30ÀÏ ÀÌÈÄ
-                tmpRank = "Gold";
-            else if (between >= 60) //°¡ÀÔÀÏ 60ÀÏ ÀÌÈÄ
-                tmpRank = "Diamond";
-
-            if(!tmpRank.equals(userEntity.getUserRank())) //rank°¡ º¯°æµÇ¾ú´Ù¸é update
-                userRepository.updateUserRank(tmpRank, userEntity.getId());
-        }
-
+        userService.updateRank();
     }
 
 }
