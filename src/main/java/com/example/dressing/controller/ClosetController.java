@@ -29,7 +29,7 @@ public class ClosetController {
             closetService.saveFile(multipartFile);
         }
 
-        return "redirect:/"; // redirect:/
+        return "redirect:/main"; // redirect:/
     }
 
 }
