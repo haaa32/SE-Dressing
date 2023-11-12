@@ -88,4 +88,20 @@ public class ClosetService {
         byte[] bytes = Files.readAllBytes(file.toPath());
         return "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(bytes);
     }
+
+    public void deleteImage(Long imageId, Long userId) {
+        ClosetEntity closetEntity = closetRepository.findById(imageId).orElseThrow(() -> new RuntimeException("Image not found"));
+        String filePath = closetEntity.getSavedPath();
+        closetRepository.delete(closetEntity);
+        deleteFileFromSystem(filePath);
+    }
+
+    private void deleteFileFromSystem(String filePath) {
+        try {
+            Files.deleteIfExists(Paths.get(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

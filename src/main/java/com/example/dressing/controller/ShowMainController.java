@@ -13,11 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 @Controller
-public class WeatherController {
+public class ShowMainController {
     private final WeatherService weatherService;
     private final ClosetService closetService;
 
-    public WeatherController(WeatherService weatherService, ClosetService closetService) {
+    public ShowMainController(WeatherService weatherService, ClosetService closetService) {
         this.weatherService = weatherService;
         this.closetService = closetService;
     }
