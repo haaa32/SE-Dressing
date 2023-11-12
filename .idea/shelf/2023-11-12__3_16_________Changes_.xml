@@ -1,0 +1,14 @@
+<changelist name="2023-11-12_오후_3_16,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]" date="1699769789575" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_3_16,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2023-11-12 오후 3:16, 업데이트 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_3_16,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/checksums/checksums.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/checksums/checksums.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_3_16,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/checksums.lock" />
+  </binary>
+</changelist>

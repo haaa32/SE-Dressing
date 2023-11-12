@@ -1,0 +1,79 @@
+<changelist name="2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]" date="1699162909210" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2023-11-05 오후 2:41, 업데이트 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId1" />
+    <option name="AFTER_PATH" value="build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId1" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/UserService.class.uniqueId1" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/compileTransaction/stash-dir/UserEntity.class.uniqueId3" />
+    <option name="AFTER_PATH" value="build/tmp/compileJava/compileTransaction/stash-dir/UserEntity.class.uniqueId3" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/UserEntity.class.uniqueId3" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/com/example/dressing/dto/UserDTO.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/com/example/dressing/dto/UserDTO.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/UserDTO.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/previous-compilation-data.bin" />
+    <option name="AFTER_PATH" value="build/tmp/compileJava/previous-compilation-data.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/previous-compilation-data.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/com/example/dressing/entity/UserEntity.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/com/example/dressing/entity/UserEntity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/UserEntity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.2.1/fileHashes/resourceHashesCache.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.2.1/fileHashes/resourceHashesCache.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/resourceHashesCache.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/com/example/dressing/service/UserService.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/com/example/dressing/service/UserService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/UserService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/com/example/dressing/controller/UserController.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/com/example/dressing/controller/UserController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/UserController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/file-system.probe" />
+    <option name="AFTER_PATH" value=".gradle/file-system.probe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/file-system.probe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/outputFiles.bin" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/outputFiles.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-05_오후_2_41,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/outputFiles.bin" />
+  </binary>
+</changelist>
