@@ -39,7 +39,6 @@ public class ClosetService {
         String extension = origName.substring(origName.lastIndexOf("."));
         String savedName = uuid + extension;
 
-        // Adjust the file storage path to include the user's ID
         String userDirectory = fileStoragePath + loginId + "/";
         String savedPath = userDirectory + savedName;
 
@@ -98,9 +97,14 @@ public class ClosetService {
 
     private void deleteFileFromSystem(String filePath) {
         try {
-            Files.deleteIfExists(Paths.get(filePath));
-        } catch (IOException e) {
-            e.printStackTrace();
+            File file = new File(filePath);
+            if (file.delete()) {
+                System.out.println("이미지 파일이 성공적으로 삭제되었습니다");
+            } else {
+                System.out.println("이미지 파일 삭제에 실패했습니다");
+            }
+        } catch (Exception e) {
+            System.out.println("이미지 파일 삭제 중 오류가 발생했습니다: " + e.getMessage());
         }
     }
 
