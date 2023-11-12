@@ -30,7 +30,7 @@ public class SuggestController {
         suggestDTO.setUid((long) httpSession.getAttribute("loginId"));
         suggestDTO.setUserId((String) httpSession.getAttribute("loginUserId")); //굳이 안 해도 되긴함
         suggestService.save(suggestDTO);
-        return "main";
+        return "redirect:/main";
     }
 
     //관리자 건의함 페이지 출력
