@@ -73,20 +73,20 @@ public class UserController {
         UserDTO loginResult = userService.login(userDTO); //로그인 결과를 확인하기 위해
 
         if(loginResult != null) {
-
             //로그인 성공
             //로그인 유지를 하기 위해 세션 정보 추가** 이건 아직 제대로 몰겟음 (세션에 로그인 했던 회원의 아이디를 담아놓는다)
             httpSession.setAttribute("loginUserId", loginResult.getUserId()); // loginUserId 에 오른쪽 값이 들어가고 main.html로 전달된다?
 
+            httpSession.setAttribute("loginId", loginResult.getId());
+
             //관리자 or 일반 사용자
             if(loginResult.getUserRank().equals("Admin")) //관리자 로그인시
                 return "/admin/main"; //관리자 페이지
-
             return "redirect:/main";
         }
         else {
             //로그인 실패
-            otherComponent.AlertMessage(response, "Failed Join!!");
+            otherComponent.AlertMessage(response, "Failed Login!!");
             return "login";
         }
     }

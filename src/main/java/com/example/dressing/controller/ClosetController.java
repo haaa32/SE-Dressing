@@ -18,7 +18,7 @@ public class ClosetController {
 
     @GetMapping("/upload")
     public String testUploadForm() {
-        return "upload";
+        return "uploadTest";
     }
 
     @PostMapping("/upload")
@@ -29,7 +29,7 @@ public class ClosetController {
             closetService.saveFile(multipartFile);
         }
 
-        return "redirect:/"; // redirect:/
+        return "redirect:/main"; // redirect:/
     }
 
 }
