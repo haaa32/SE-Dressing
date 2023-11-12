@@ -1,0 +1,278 @@
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Test, ??? ??? ?? ?? ???\r\n# ?? ??? yml ??? ?? ?? ???? ?? ? ??? ???\r\n\r\n#?? ??\r\nserver.port = 8081\r\n\r\n# MySQL8 ??\r\nspring.datasource.url=jdbc:mysql://localhost:3306/db_dressing?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul\r\nspring.datasource.username=user_dressing\r\nspring.datasource.password=0000\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\n\r\n# ??? SQL ?? ??\r\nspring.jpa.show-sql=true\r\nspring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect\r\n\r\n# hibernate ??\r\n#update: ??? ?? ?? ?? DB ???, ?? ?? ??? (create? ?? ??? ??? ? ? ???)\r\nspring.jpa.database=mysql\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy\r\nspring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl\r\nspring.jpa.generate-ddl=false\r\nspring.jpa.properties.hibernate.format_sql=true\r\nspring.jpa.properties.hibernate.enable_lazy_load_no_trans=true\r\n\r\nservlet.multipart.max-file-size=1MB\r\nservlet.multipart.max-request-size=10MB\r\nfile.dir=C:/Img_SW/\r\n\r\n# @modifying ?? ??? ?? Enabled debug output ?? ??? ?????\r\n#logging.level.org.springframework=debug\r\n#logging.level.org.springframework.web=debug
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision a16b46c1c0ae0675f8196e6f8b4b71c6a60ce3cf)
++++ b/src/main/resources/application.properties	(date 1699685384472)
+@@ -17,7 +17,7 @@
+ # hibernate ??
+ #update: ??? ?? ?? ?? DB ???, ?? ?? ??? (create? ?? ??? ??? ? ? ???)
+ spring.jpa.database=mysql
+-spring.jpa.hibernate.ddl-auto=update
++spring.jpa.hibernate.ddl-auto=create
+ spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy
+ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+ spring.jpa.generate-ddl=false
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Gradle Imported\" enabled=\"true\">\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <processorPath useClasspath=\"false\">\r\n          <entry name=\"$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar\" />\r\n        </processorPath>\r\n        <module name=\"dressing.main\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision a16b46c1c0ae0675f8196e6f8b4b71c6a60ce3cf)
++++ b/.idea/compiler.xml	(date 1699685312400)
+@@ -2,6 +2,7 @@
+ <project version="4">
+   <component name="CompilerConfiguration">
+     <annotationProcessing>
++      <profile default="true" name="Default" enabled="true" />
+       <profile name="Gradle Imported" enabled="true">
+         <outputRelativeToContentRoot value="true" />
+         <processorPath useClasspath="false">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a0101198-3dc4-406c-bdbb-9e89ed8898f7\" name=\"Changes\" comment=\"commit?\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/controller/SuggestController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/dto/SuggestDTO.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/entity/SuggestEntity.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/repository/SuggestRepository.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/service/SuggestService.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/templates/admin/board.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/templates/suggest.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/entity/TimeEntity.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/entity/TimeEntity.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/admin/list.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/admin/list.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/admin/main.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/admin/main.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/detail.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/admin/detail.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/templates/main.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/templates/main.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Vmj2lxHCayowBdoJFRVAya6ewD\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"project.structure.last.edited\": \"SDKs\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"File.Encoding\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\ablec\\Workspace\\MyJava\\IntelliJ-workspace\\sogong2023\\src\\main\\resources\\templates\\admin\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.DressingApplication\">\r\n    <configuration name=\"DressingApplication (1)\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.dressing.DressingApplication\" />\r\n      <module name=\"com.example.dressing.main\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.dressing.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DressingApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.dressing.DressingApplication\" />\r\n      <module name=\"dressing.main\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.dressing.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.DressingApplication\" />\r\n        <item itemvalue=\"Application.DressingApplication (1)\" />\r\n        <item itemvalue=\"Application.DressingApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a0101198-3dc4-406c-bdbb-9e89ed8898f7\" name=\"Changes\" comment=\"\" />\r\n      <created>1695447944145</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1695447944145</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"test2\">\r\n      <created>1695448054483</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695448054483</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add User attribute phoneNumber\">\r\n      <created>1695729470110</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695729470110</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add Password Check and supply Join\">\r\n      <created>1696705359174</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1696705359174</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Rank 업데이트 추가 로직 and 컴포넌트 추가 and 프로젝트 인코딩 UTF-8 변경\">\r\n      <created>1699460716862</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699460716862</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"관리자 추가 #1\">\r\n      <created>1699470621827</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699470621827</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"test2\" />\r\n    <MESSAGE value=\"Add User attribute phoneNumber\" />\r\n    <MESSAGE value=\"Add Password Check and supply Join\" />\r\n    <MESSAGE value=\"Rank 업데이트 추가 로직 and 컴포넌트 추가 and 프로젝트 인코딩 UTF-8 변경\" />\r\n    <MESSAGE value=\"관리자 추가 #1\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"관리자 추가 #1\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a16b46c1c0ae0675f8196e6f8b4b71c6a60ce3cf)
++++ b/.idea/workspace.xml	(date 1699685337939)
+@@ -4,23 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="commit?">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/SuggestController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/dto/SuggestDTO.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/SuggestEntity.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/SuggestRepository.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SuggestService.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/board.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/suggest.html" afterDir="false" />
++    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="test commit">
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/TimeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/TimeEntity.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/list.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/main.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/detail.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,18 +23,31 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="Interface" />
+         <option value="Class" />
+-        <option value="HTML File" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="haeun" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="2ec51ce4-542d-429a-9374-25cc7380bcad" />
++        <option name="url" value="https://github.com/haaa32/SE-Dressing.git" />
++      </UrlAndAccount>
++    </option>
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -56,27 +57,34 @@
+     <ConfirmationsSetting value="2" id="Add" />
+   </component>
+   <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+-    "DefaultHtmlFileTemplate": "HTML File",
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "project.structure.last.edited": "SDKs",
++    "ignore.virus.scanning.warn.message": "true",
++    "last_opened_file_path": "C:/Users/cocom/OneDrive/바탕 화면/SE-Dressing/src/main/resources/static/js",
++    "project.structure.last.edited": "프로젝트",
+     "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "File.Encoding"
++    "project.structure.side.proportion": "0.0"
++  },
++  "keyToStringList": {
++    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
++      "PLAIN_TEXT"
++    ]
+   }
+ }]]></component>
+   <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\cocom\OneDrive\바탕 화면\SE-Dressing\src\main\resources\static\js" />
++      <recent name="C:\Users\cocom\OneDrive\바탕 화면\SE-Dressing\src\main\resources\static\css" />
++    </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\ablec\Workspace\MyJava\IntelliJ-workspace\sogong2023\src\main\resources\templates\admin" />
++      <recent name="C:\Users\cocom\OneDrive\바탕 화면\SE-Dressing\src\main\resources\static\images" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.DressingApplication">
++  <component name="RunManager" selected="애플리케이션.DressingApplication">
+     <configuration name="DressingApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.example.dressing.DressingApplication" />
+       <module name="com.example.dressing.main" />
+@@ -105,9 +113,10 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.DressingApplication" />
+-        <item itemvalue="Application.DressingApplication (1)" />
+-        <item itemvalue="Application.DressingApplication" />
++        <item itemvalue="애플리케이션.DressingApplication" />
++        <item itemvalue="애플리케이션.DressingApplication (1)" />
++        <item itemvalue="애플리케이션.DressingApplication (1)" />
++        <item itemvalue="애플리케이션.DressingApplication" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -127,43 +136,72 @@
+       <option name="project" value="LOCAL" />
+       <updated>1695448054483</updated>
+     </task>
+-    <task id="LOCAL-00002" summary="Add User attribute phoneNumber">
+-      <created>1695729470110</created>
++    <task id="LOCAL-00002" summary="test3">
++      <created>1695448811561</created>
+       <option name="number" value="00002" />
+       <option name="presentableId" value="LOCAL-00002" />
+       <option name="project" value="LOCAL" />
+-      <updated>1695729470110</updated>
++      <updated>1695448811561</updated>
+     </task>
+-    <task id="LOCAL-00003" summary="Add Password Check and supply Join">
+-      <created>1696705359174</created>
++    <task id="LOCAL-00003" summary="test4 commit">
++      <created>1695448853999</created>
+       <option name="number" value="00003" />
+       <option name="presentableId" value="LOCAL-00003" />
+       <option name="project" value="LOCAL" />
+-      <updated>1696705359174</updated>
++      <updated>1695448853999</updated>
+     </task>
+-    <task id="LOCAL-00004" summary="Rank 업데이트 추가 로직 and 컴포넌트 추가 and 프로젝트 인코딩 UTF-8 변경">
+-      <created>1699460716862</created>
++    <task id="LOCAL-00004" summary="closet 하는 중">
++      <option name="closed" value="true" />
++      <created>1698771273580</created>
+       <option name="number" value="00004" />
+       <option name="presentableId" value="LOCAL-00004" />
+       <option name="project" value="LOCAL" />
+-      <updated>1699460716862</updated>
++      <updated>1698771273580</updated>
+     </task>
+-    <task id="LOCAL-00005" summary="관리자 추가 #1">
+-      <created>1699470621827</created>
++    <task id="LOCAL-00005" summary="closet 하는 중">
++      <option name="closed" value="true" />
++      <created>1698771317008</created>
+       <option name="number" value="00005" />
+       <option name="presentableId" value="LOCAL-00005" />
+       <option name="project" value="LOCAL" />
+-      <updated>1699470621827</updated>
++      <updated>1698771317008</updated>
++    </task>
++    <task id="LOCAL-00006" summary="test commit">
++      <option name="closed" value="true" />
++      <created>1699508321889</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1699508321889</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00007" summary="test commit">
++      <option name="closed" value="true" />
++      <created>1699508468849</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1699508468849</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="test2" />
+-    <MESSAGE value="Add User attribute phoneNumber" />
+-    <MESSAGE value="Add Password Check and supply Join" />
+-    <MESSAGE value="Rank 업데이트 추가 로직 and 컴포넌트 추가 and 프로젝트 인코딩 UTF-8 변경" />
+-    <MESSAGE value="관리자 추가 #1" />
+-    <option name="LAST_COMMIT_MESSAGE" value="관리자 추가 #1" />
++    <MESSAGE value="test3" />
++    <MESSAGE value="test4 commit" />
++    <MESSAGE value="closet 하는 중" />
++    <MESSAGE value="test commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"11\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision a16b46c1c0ae0675f8196e6f8b4b71c6a60ce3cf)
++++ b/.idea/misc.xml	(date 1699685337947)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
