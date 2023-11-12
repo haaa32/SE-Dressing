@@ -6,6 +6,8 @@ import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -16,12 +18,26 @@ public class UserService {
     private final UserRepository userRepository;
 
     //회원가입 로직
-    public void join(UserDTO userDTO) {
-        // DB에 저장하기 위해: Repository의 save 메서드 호출 (조건. entity 객체를 넘겨줘야함)
-        // 1. DTO -> ENTITY 변환
-        // 2. Repository의 save 메서드 호출
-        UserEntity userEntity = UserEntity.toUserEntity(userDTO);
-        userRepository.save(userEntity); //여기서 save는 Jpa 제공 메소드!!
+    public int join(UserDTO userDTO, String passwordCheck) {
+        /* DB에 저장하기 위해: Repository의 save 메서드 호출 (조건. entity 객체를 넘겨줘야함)
+         1. 아이디 중복 확인, 실패시 return -1
+         2. 비밀번호 확인(추가), 실패시 return -2
+         3. DTO -> ENTITY 변환
+         4. Repository의 save 메서드 호출
+         */
+
+        Optional<UserEntity> byUserId = userRepository.findByUserId(userDTO.getUserId());
+        if(byUserId.isPresent()) { //회원가입 실패, 아이디 중복
+            return -1;
+        }
+        else if(!userDTO.getUserPassword().equals(passwordCheck)) { //회원가입 실패, 비밀번호 불일치
+            return -2;
+        }
+        else { //회원가입 성공,
+            UserEntity userEntity = UserEntity.toUserEntity(userDTO);
+            userRepository.save(userEntity); //여기서 save는 Jpa 제공 메소드!!
+            return 1;
+        }
     }
 
     //로그인 로직
@@ -73,8 +89,9 @@ public class UserService {
         }
     }
 
-    public UserDTO updateForm(String myUserId) {
-        Optional<UserEntity> optionalUserEntity = userRepository.findByUserId(myUserId);
+    //관리자 페이지로 업데이트 옮기고 수정
+    public UserDTO updateForm(Long id) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
         if (optionalUserEntity.isPresent()) {
             return UserDTO.toUserDTO(optionalUserEntity.get());
         } else {
@@ -102,5 +119,33 @@ public class UserService {
             // 조회결과가 없다 -> 사용할 수 있음
             return "ok";
         }
+    }
+
+    //모든 유저의 랭크를 업데이트
+    public void updateRank() {
+
+        LocalDateTime nowDateLime = LocalDateTime.now();
+
+        List<UserEntity> userEntityList = userRepository.findAll();
+
+        for (UserEntity userEntity : userEntityList) {
+            if(userEntity.getUserRank().equals("Admin")) //관리자인 경우 rank 업데이트 안함
+                continue;
+            
+            // 사용자가 가입 후 지난 날짜 저장
+            long between = ChronoUnit.DAYS.between(userEntity.getCreatedDate().toLocalDate(), nowDateLime.toLocalDate()); //현재 날짜 - 사용자 가입 날짜
+            String tmpRank = "Bronze"; //update 할 rank 저장
+
+            if(between >= 14 && between < 30) // 가입일 14일 이후면
+                tmpRank = "Silver";
+            else if (between >= 30 && between < 60) //가입일 30일 이후
+                tmpRank = "Gold";
+            else if (between >= 60) //가입일 60일 이후
+                tmpRank = "Diamond";
+
+            if(!tmpRank.equals(userEntity.getUserRank())) //rank가 변경되었다면 update
+                userRepository.updateUserRank(tmpRank, userEntity.getId());
+        }
+        System.out.println("유저 rank 업데이트 완료");
     }
 }

@@ -18,7 +18,7 @@ public class ClosetController {
 
     @GetMapping("/upload")
     public String testUploadForm() {
-        return "upload";
+        return "uploadTest";
     }
 
     @PostMapping("/upload")

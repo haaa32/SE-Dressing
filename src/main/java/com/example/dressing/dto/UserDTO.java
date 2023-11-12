@@ -4,6 +4,9 @@ package com.example.dressing.dto;
 import com.example.dressing.entity.UserEntity;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
+
 //lombok 라이브러리가 제공해주는 어노테이션
 @Getter //getter 자동 만들어줌
 @Setter
@@ -16,6 +19,12 @@ public class UserDTO {
     private String userName;
     private String userId;
     private String userPassword;
+    private String phoneNumber;
+    private String userRank; //int로 해야할지, String으로 해야할지 고민,,
+    private LocalDateTime createdDate;
+    private String local; //대구 고정
+
+
 
     //UserEntity -> UserDTO 변환
     public static UserDTO toUserDTO(UserEntity userEntity) {
@@ -24,6 +33,10 @@ public class UserDTO {
         userDTO.setUserName(userEntity.getUserName());
         userDTO.setUserId(userEntity.getUserId());
         userDTO.setUserPassword(userEntity.getUserPassword());
+        userDTO.setPhoneNumber(userEntity.getPhoneNumber());
+        userDTO.setUserRank(userEntity.getUserRank());
+        userDTO.setCreatedDate(userEntity.getCreatedDate());
+        userDTO.setLocal(userEntity.getLocal());
         return userDTO;
     }
 }

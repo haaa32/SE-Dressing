@@ -1,41 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style1.css}">
-    <script src="/js/jquery-1.12.4.js"></script>
-    <script src="/js/app1.js"></script>
-    <title>Login</title>
-</head>
-<body>
-<div id="log"> <!-- 이거 어카지. 우리 html이랑 효주 html이랑 구성이 달라서 css 다시 해야 할 거 같은데 -->
-    로그인창
-    <div id="login">
-        <form action="/user/login" method="post">
-        id : <input type="text" name="userId"> <br>
-        password : <input type="password" name="userPassword"> <br>
-        <input type="submit" value="로그인">
-        </form>
-</div>
-</div>
-</body>
-</html>
-
-
-<!--
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>login</title>
 </head>
 <body>
-<form action="/user/login" method="post">
-    아이디 : <input type="text" name="userId"> <br>
-    비밀번호 : <input type="password" name="userPassword"> <br>
-    <input type="submit" value="로그인">
-</form>
+    <form action="/user/login" method="post">
+        아이디 : <input type="text" name="userId" required> <br>
+        비밀번호 : <input type="password" name="userPassword" required> <br>
+        <input type="submit" value="로그인">
+    </form>
+    <a href="/user/join">회원가입</a> <!--html의 인덱스 방식은 Get 방식-->
 </body>
 </html>
--->
