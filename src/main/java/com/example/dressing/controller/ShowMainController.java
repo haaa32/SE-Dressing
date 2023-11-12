@@ -1,6 +1,7 @@
 package com.example.dressing.controller;
 
 import com.example.dressing.entity.ClosetEntity;
+import com.example.dressing.entity.ImageData;
 import com.example.dressing.service.ClosetService;
 import com.example.dressing.service.WeatherService;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+
 @Controller
 public class ShowMainController {
     private final WeatherService weatherService;
@@ -24,7 +26,6 @@ public class ShowMainController {
 
     @GetMapping("/main")
     public String showMainPage(Model model, HttpSession session) {
-        // 기존 내용과 함께 해당 사용자의 사진 목록을 불러오는 기능을 사용
         try {
             String weatherData = weatherService.getDaeguWeather().get();
             model.addAttribute("weatherData", weatherData);
@@ -32,13 +33,15 @@ public class ShowMainController {
             Long loginId = (Long) session.getAttribute("loginId");
             List<ClosetEntity> userPhotos = closetService.getUserPhotos(loginId);
 
-            List<String> base64Images = new ArrayList<>();
+            List<ImageData> imageDataList = new ArrayList<>();
             for (ClosetEntity photo : userPhotos) {
-                String base64Image = closetService.getBase64Image(photo.getSavedPath());
-                base64Images.add(base64Image);
+                ImageData imageData = new ImageData();
+                imageData.setBase64Image(closetService.getBase64Image(photo.getSavedPath()));
+                imageData.setId(photo.getId());
+                imageDataList.add(imageData);
             }
 
-            model.addAttribute("base64Images", base64Images);
+            model.addAttribute("imagesData", imageDataList);
 
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
@@ -49,5 +52,4 @@ public class ShowMainController {
 
         return "main"; // 메인 페이지 템플릿 반환
     }
-
 }

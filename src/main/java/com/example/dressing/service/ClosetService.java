@@ -39,7 +39,6 @@ public class ClosetService {
         String extension = origName.substring(origName.lastIndexOf("."));
         String savedName = uuid + extension;
 
-        // Adjust the file storage path to include the user's ID
         String userDirectory = fileStoragePath + loginId + "/";
         String savedPath = userDirectory + savedName;
 
@@ -88,4 +87,25 @@ public class ClosetService {
         byte[] bytes = Files.readAllBytes(file.toPath());
         return "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(bytes);
     }
+
+    public void deleteImage(Long imageId, Long userId) {
+        ClosetEntity closetEntity = closetRepository.findById(imageId).orElseThrow(() -> new RuntimeException("Image not found"));
+        String filePath = closetEntity.getSavedPath();
+        closetRepository.delete(closetEntity);
+        deleteFileFromSystem(filePath);
+    }
+
+    private void deleteFileFromSystem(String filePath) {
+        try {
+            File file = new File(filePath);
+            if (file.delete()) {
+                System.out.println("이미지 파일이 성공적으로 삭제되었습니다");
+            } else {
+                System.out.println("이미지 파일 삭제에 실패했습니다");
+            }
+        } catch (Exception e) {
+            System.out.println("이미지 파일 삭제 중 오류가 발생했습니다: " + e.getMessage());
+        }
+    }
+
 }
