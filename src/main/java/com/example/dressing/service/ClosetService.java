@@ -72,17 +72,6 @@ public class ClosetService {
         return closetRepository.findUserPhotos(userId);
     }
 
-    public Resource serveImage(Long userId, String imageName) {
-        // 사용자의 이미지 폴더 경로를 설정합니다.
-        String userImageDirectory = "C:/Img_SW/" + userId + "/"; // 사용자의 이미지가 저장된 경로에 따라 수정해야 합니다.
-
-        // 요청받은 이미지 경로를 찾습니다.
-        Path imagePath = Paths.get(userImageDirectory).resolve(imageName);
-
-        // 이미지를 로드하여 Resource 형태로 반환합니다.
-        return new FileSystemResource(imagePath);
-    }
-
     public String getBase64Image(String imagePath) throws IOException {
         File file = new File(imagePath);
         byte[] bytes = Files.readAllBytes(file.toPath());
