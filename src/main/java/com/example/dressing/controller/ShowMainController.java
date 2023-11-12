@@ -3,11 +3,9 @@ package com.example.dressing.controller;
 import com.example.dressing.entity.ClosetEntity;
 import com.example.dressing.service.ClosetService;
 import com.example.dressing.service.WeatherService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -15,11 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 @Controller
-public class WeatherController {
+public class ShowMainController {
     private final WeatherService weatherService;
     private final ClosetService closetService;
 
-    public WeatherController(WeatherService weatherService, ClosetService closetService) {
+    public ShowMainController(WeatherService weatherService, ClosetService closetService) {
         this.weatherService = weatherService;
         this.closetService = closetService;
     }
