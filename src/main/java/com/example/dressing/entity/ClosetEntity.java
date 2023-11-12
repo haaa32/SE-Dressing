@@ -1,5 +1,6 @@
 package com.example.dressing.entity;
 
+import com.example.dressing.dto.ClosetDTO;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,8 +18,8 @@ public class ClosetEntity {
     private Long id;
 
     @ManyToOne // User 테이블과의 관계를 표현하기 위해 @ManyToOne 사용
-    @JoinColumn(name = "userId") // fk
-    private UserEntity user; // UserEntity 클래스와 연결되는 엔티티를 참조
+    @JoinColumn(name = "uid", referencedColumnName = "id") // fk
+    private UserEntity userEntity; // UserEntity 클래스와 연결되는 엔티티를 참조
 
     @Column(length = 10)
     private String label;
@@ -29,13 +30,28 @@ public class ClosetEntity {
 
     private String savedPath;
 
+    public ClosetEntity() {}
+
     @Builder
     public ClosetEntity(Long id, UserEntity user, String label, String orgNm, String savedNm, String savedPath) {
         this.id = id;
-        this.user = user;
+        this.userEntity = user;
         this.label = label;
         this.orgNm = orgNm;
         this.savedNm = savedNm;
         this.savedPath = savedPath;
+    }
+
+    public static ClosetEntity toClosetEntity(ClosetDTO closetDTO, UserEntity userEntity) {
+        ClosetEntity closetEntity = ClosetEntity.builder()
+                .id(closetDTO.getId())
+                .user(userEntity)
+                .label(closetDTO.getLabel())
+                .orgNm(closetDTO.getOrgNm())
+                .savedNm(closetDTO.getSavedNm())
+                .savedPath(closetDTO.getSavedPath())
+                .build();
+
+        return closetEntity;
     }
 }

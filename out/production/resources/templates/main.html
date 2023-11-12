@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+<!-- 세션에 저장된 로그인 정보 출력 -->
+<p>session 값 확인: <span th:text="${session.loginUserId}"></span></p>
+
+<!-- 로그아웃 링크 -->
+<a href="/user/logout">로그아웃</a>
+
+<!-- 사진 업로드 링크 -->
+<a href="/upload">사진 업로드</a>
+
+<!-- 건의하기 링크 -->
+<a href="/suggest/save">건의하기</a>
+
+<h1>대구 현재 날씨</h1>
+<p th:text="${weatherData}"></p>
+
+<div>
+    <ul>
+        <li th:each="image : ${base64Images}">
+            <img th:attr="src=${image}" style="width: 200px; height: 200px;"/>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -34,7 +34,9 @@ public class AdminController {
     public String findByID(@PathVariable Long id, Model model) {
         UserDTO userDTO = userService.findByID(id);
         model.addAttribute("user", userDTO);
-        return "detail";
+
+        userDTO.getCreatedDate().toLocalDate();
+        return "/admin/detail";
     }
 
     // 회원정보 수정을 관리자 페이지에 넣음으로써 좀 달라짐 (list.html 출력시 user 하나마다 출력되게)
