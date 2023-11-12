@@ -20,10 +20,13 @@
 <h1>대구 현재 날씨</h1>
 <p th:text="${weatherData}"></p>
 
-<h1>Images</h1>
-<div th:each="image : ${images}">
-    <!-- 이미지 경로 출력 -->
-    <img th:src="@{${image.savedPath}}" style="width: 200px; height: 200px;"/>
+<div>
+    <ul>
+        <li th:each="image : ${base64Images}">
+            <img th:attr="src=${image}" style="width: 200px; height: 200px;"/>
+        </li>
+    </ul>
 </div>
+
 </body>
 </html>

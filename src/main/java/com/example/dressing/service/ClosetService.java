@@ -1,10 +1,14 @@
 package com.example.dressing.service;
 
 import com.example.dressing.entity.ClosetEntity;
+import com.example.dressing.entity.UserEntity;
 import com.example.dressing.repository.ClosetRepository;
 
+import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
+import lombok.Value;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,7 +17,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,47 +26,66 @@ import java.util.UUID;
 public class ClosetService {
 
     private final ClosetRepository closetRepository;
+    private final UserRepository userRepository;
+    private final String fileStoragePath = "C:/Img_SW/"; // Define the base directory
 
-    @Value("${file.upload-dir}")
-    private String uploadDir;
-
-    public Long saveFile(MultipartFile files) throws IOException {
+    public Long saveFile(MultipartFile files, Long loginId) throws IOException {
         if (files.isEmpty()) {
             return null;
         }
 
-        // 원래 파일 이름 추출
         String origName = files.getOriginalFilename();
-
-        // 파일 이름으로 쓸 UUID 생성
         String uuid = UUID.randomUUID().toString();
-
-        // 확장자 추출 (예: .png)
         String extension = origName.substring(origName.lastIndexOf("."));
-
-        // uuid와 확장자 결합
         String savedName = uuid + extension;
 
-        // 파일을 불러올 때 사용할 파일 경로
-        String savedPath = "static/images/" + savedName;
+        // Adjust the file storage path to include the user's ID
+        String userDirectory = fileStoragePath + loginId + "/";
+        String savedPath = userDirectory + savedName;
 
-        // 실제 파일이 저장될 경로 설정
-        Path path = Paths.get(uploadDir + File.separator + savedName);
-        Files.createDirectories(path.getParent());
-        Files.copy(files.getInputStream(), path);
+        createDirectoryIfNotExists(userDirectory); // 폴더 없으면 생성
 
-        ClosetEntity entity = ClosetEntity.builder()
+        UserEntity userEntity = userRepository.findById(loginId).get();
+
+        ClosetEntity file = ClosetEntity.builder()
+                .user(userEntity)
                 .orgNm(origName)
                 .savedNm(savedName)
-                .savedPath("static/images/" + savedName)
+                .savedPath(savedPath)
                 .build();
 
-        ClosetEntity savedFile = closetRepository.save(entity);
+        files.transferTo(new File(savedPath));
+
+        ClosetEntity savedFile = closetRepository.save(file);
+
         return savedFile.getId();
     }
 
-    public List<ClosetEntity> getAllImages() {
-        return closetRepository.findAll();
+    private void createDirectoryIfNotExists(String directoryPath) throws IOException {
+        Path path = Paths.get(directoryPath);
+        if (!Files.exists(path)) {
+            Files.createDirectories(path);
+        }
     }
 
+    public List<ClosetEntity> getUserPhotos(Long userId) {
+        return closetRepository.findUserPhotos(userId);
+    }
+
+    public Resource serveImage(Long userId, String imageName) {
+        // 사용자의 이미지 폴더 경로를 설정합니다.
+        String userImageDirectory = "C:/Img_SW/" + userId + "/"; // 사용자의 이미지가 저장된 경로에 따라 수정해야 합니다.
+
+        // 요청받은 이미지 경로를 찾습니다.
+        Path imagePath = Paths.get(userImageDirectory).resolve(imageName);
+
+        // 이미지를 로드하여 Resource 형태로 반환합니다.
+        return new FileSystemResource(imagePath);
+    }
+
+    public String getBase64Image(String imagePath) throws IOException {
+        File file = new File(imagePath);
+        byte[] bytes = Files.readAllBytes(file.toPath());
+        return "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(bytes);
+    }
 }
