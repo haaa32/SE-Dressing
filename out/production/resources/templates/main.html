@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!--타임리프 뭔가 추가-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>main</title>
 </head>
 <body>
-    <!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->
-    session 값 확인: <p th:text="${session.loginUserId}"></p> <!-- ${}는 안의 변수값 사용-->
-<!--    회원도 자기 유저 정보 보고, 정보 수정할지 고민 (굳이 안 해도 될듯하긴 함)-->
-    <a href="/user/logout">로그아웃</a>
+<!-- 세션에 저장된 로그인 정보 출력 -->
+<p>session 값 확인: <span th:text="${session.loginUserId}"></span></p>
 
-    <a href="/upload">사진 업로드</a>
+<!-- 로그아웃 링크 -->
+<a href="/user/logout">로그아웃</a>
 
-    <a href="/suggest/save">건의하기</a>
+<!-- 사진 업로드 링크 -->
+<a href="/upload">사진 업로드</a>
 
-    <h1>대구 현재 날씨</h1>
-    <p th:text="${weatherData}"></p>
+<!-- 건의하기 링크 -->
+<a href="/suggest/save">건의하기</a>
+
+<h1>대구 현재 날씨</h1>
+<p th:text="${weatherData}"></p>
+
+<h1>Images</h1>
+<div th:each="image : ${images}">
+    <!-- 이미지 경로 출력 -->
+    <img th:src="@{${image.savedPath}}" style="width: 200px; height: 200px;"/>
+</div>
 </body>
 </html>

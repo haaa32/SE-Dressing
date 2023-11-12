@@ -29,6 +29,10 @@ public class ClosetEntity {
 
     private String savedPath;
 
+    public ClosetEntity() {
+        // 기본 생성자 내용은 비워두어도 됩니다.
+    }
+
     @Builder
     public ClosetEntity(Long id, UserEntity user, String label, String orgNm, String savedNm, String savedPath) {
         this.id = id;

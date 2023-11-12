@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -58,4 +60,9 @@ public class ClosetService {
         ClosetEntity savedFile = closetRepository.save(entity);
         return savedFile.getId();
     }
+
+    public List<ClosetEntity> getAllImages() {
+        return closetRepository.findAll();
+    }
+
 }

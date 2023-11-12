@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="Add Password Check and supply Join">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_34_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_34_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_39_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_39_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_39_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_39_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_44_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_44_________Changes_.xml" afterDir="false" />
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="이미지 저장 경로 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ClosetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ClosetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/WeatherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/WeatherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity$ClosetEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity$ClosetEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/8fe5b93e-3de1-4955-9aa8-562eb7fe4f35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/b3bc9293-cbcf-49a7-b659-e00a7542af9f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/e70ea79d-8ebb-4c74-ba38-196c2998e0f0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696705359174</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="이미지 저장 경로 변경">
+      <option name="closed" value="true" />
+      <created>1699776461455</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699776461455</updated>
+    </task>
+    <task id="LOCAL-00005" summary="이미지 저장 경로 변경">
+      <option name="closed" value="true" />
+      <created>1699776756826</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699776756826</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,7 +166,8 @@
     <MESSAGE value="Add User attribute phoneNumber" />
     <MESSAGE value="Add Password Check and supply Join" />
     <MESSAGE value="Merge branch 'yewon'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'yewon'" />
+    <MESSAGE value="이미지 저장 경로 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="이미지 저장 경로 변경" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -152,6 +175,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.InstantiationException" package="org.hibernate" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
