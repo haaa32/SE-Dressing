@@ -1,0 +1,24 @@
+<changelist name="2023-11-12_오후_9_42,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]" date="1699792965684" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_9_42,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2023-11-12 오후 9:42, 체크아웃 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/repository/ClosetRepository.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/repository/ClosetRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_9_42,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/ClosetRepository.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/entity/ClosetEntity.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/entity/ClosetEntity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_9_42,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/ClosetEntity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/controller/ClosetController.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/controller/ClosetController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_9_42,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/ClosetController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/entity/ClosetEntity$ClosetEntityBuilder.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/entity/ClosetEntity$ClosetEntityBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-12_오후_9_42,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/ClosetEntity$ClosetEntityBuilder.class" />
+  </binary>
+</changelist>

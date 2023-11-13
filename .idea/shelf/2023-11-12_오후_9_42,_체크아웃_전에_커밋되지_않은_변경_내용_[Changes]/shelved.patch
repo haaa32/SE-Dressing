@@ -1,0 +1,28 @@
+Index: out/production/resources/templates/main.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>main</title>\r\n</head>\r\n<body>\r\n<!-- 세션에 저장된 로그인 정보 출력 -->\r\n<p>session 값 확인: <span th:text=\"${session.loginUserId}\"></span></p>\r\n\r\n<!-- 로그아웃 링크 -->\r\n<a href=\"/user/logout\">로그아웃</a>\r\n\r\n<!-- 사진 업로드 링크 -->\r\n<a href=\"/upload\">사진 업로드</a>\r\n\r\n<!-- 건의하기 링크 -->\r\n<a href=\"/suggest/save\">건의하기</a>\r\n\r\n<h1>대구 현재 날씨</h1>\r\n<p th:text=\"${weatherData}\"></p>\r\n\r\n<h1>Images</h1>\r\n<div th:each=\"image : ${images}\">\r\n    <!-- 이미지 경로 출력 -->\r\n    <img th:src=\"@{${image.savedPath}}\" style=\"width: 200px; height: 200px;\"/>\r\n</div>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/resources/templates/main.html b/out/production/resources/templates/main.html
+--- a/out/production/resources/templates/main.html	(revision e61a33bb467b49eafe35a298ec36ffc21aa9749a)
++++ b/out/production/resources/templates/main.html	(date 1699792613896)
+@@ -20,10 +20,13 @@
+ <h1>대구 현재 날씨</h1>
+ <p th:text="${weatherData}"></p>
+ 
+-<h1>Images</h1>
+-<div th:each="image : ${images}">
+-    <!-- 이미지 경로 출력 -->
+-    <img th:src="@{${image.savedPath}}" style="width: 200px; height: 200px;"/>
++<div>
++    <ul>
++        <li th:each="image : ${base64Images}">
++            <img th:attr="src=${image}" style="width: 200px; height: 200px;"/>
++        </li>
++    </ul>
+ </div>
++
+ </body>
+ </html>

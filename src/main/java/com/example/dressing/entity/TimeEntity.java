@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Getter
-//@Setter //내가 추가..근데 없어도 될듯?
+@Setter //내가 추가..근데 없어도 될듯?
 public class TimeEntity {
     @CreationTimestamp //만들어질 때 날짜
     @Column(updatable = false) //업데이트 때는 날짜 변경 안됨

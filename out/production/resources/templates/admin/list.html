@@ -9,11 +9,12 @@
 <table>
   <tr>
     <th>id</th>
-    <th>userName</th>
-    <th>userPassword</th>
-    <th>userId</th>
+    <th>이름</th>
+    <th>아이디</th>
+    <th>비밀번호</th>
     <th>상세조회</th>
     <th>삭제</th>
+    <th>수정</th>
   </tr>
   <tr th:each="user: ${userList}"> <!-- for-each문 같은 문법 -->
     <td th:text="${user.id}"></td>

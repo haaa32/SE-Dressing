@@ -1,0 +1,67 @@
+Index: src/main/java/com/example/dressing/controller/FileHandler.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dressing.controller;\r\n\r\nimport com.example.dressing.entity.ClosetEntity;\r\nimport com.example.dressing.entity.UserEntity; // UserEntity를 임포트\r\nimport org.springframework.stereotype.Component;\r\nimport org.springframework.util.ObjectUtils;\r\nimport org.springframework.web.multipart.MultipartFile;\r\n\r\nimport java.io.File;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.ArrayList;\r\nimport java.util.Date;\r\nimport java.util.List;\r\n\r\n@Component\r\npublic class FileHandler {\r\n\r\n    public List<ClosetEntity> parseFileInfo(\r\n            Long closetID,\r\n            List<MultipartFile> multipartFiles,\r\n            UserEntity userEntity // UserEntity를 전달받도록 수정\r\n    ) throws Exception {\r\n\r\n        // 반환을 할 파일 리스트\r\n        List<ClosetEntity> fileList = new ArrayList<>();\r\n\r\n        // 파일이 빈 것이 들어오면 빈 것을 반환\r\n        if (multipartFiles.isEmpty()) {\r\n            return fileList;\r\n        }\r\n\r\n        // 파일 이름을 업로드 한 날짜로 바꾸어서 저장할 것이다\r\n        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(\"yyyyMMdd\");\r\n        String current_date = simpleDateFormat.format(new Date());\r\n\r\n        // 프로젝트 폴더에 저장하기 위해 절대경로를 설정 (Window 의 Tomcat 은 Temp 파일을 이용한다)\r\n        String absolutePath = new File(\"\").getAbsolutePath() + \"\\\\\";\r\n\r\n        // 경로를 지정하고 그곳에다가 저장\r\n        String path = \"images/\" + current_date;\r\n        File file = new File(path);\r\n        // 저장할 위치의 디렉토리가 존재하지 않을 경우\r\n        if (!file.exists()) {\r\n            // mkdir() 함수와 다른 점은 상위 디렉토리가 존재하지 않을 때 그것까지 생성\r\n            file.mkdirs();\r\n        }\r\n\r\n        // 파일들을 이제 만져볼 것이다\r\n        for (MultipartFile multipartFile : multipartFiles) {\r\n            // 파일이 비어 있지 않을 때 작업을 시작해야 오류가 나지 않는다\r\n            if (!multipartFile.isEmpty()) {\r\n                // jpeg, png, gif 파일들만 받아서 처리할 예정\r\n                String contentType = multipartFile.getContentType();\r\n                String originalFileExtension;\r\n                // 확장자 명이 없으면 이 파일은 잘 못 된 것이다\r\n                if (ObjectUtils.isEmpty(contentType)) {\r\n                    break;\r\n                } else {\r\n                    if (contentType.contains(\"image/jpeg\")) {\r\n                        originalFileExtension = \".jpg\";\r\n                    } else if (contentType.contains(\"image/png\")) {\r\n                        originalFileExtension = \".png\";\r\n                    } else if (contentType.contains(\"image/gif\")) {\r\n                        originalFileExtension = \".gif\";\r\n                    }\r\n                    // 다른 파일 명이면 아무 일 하지 않는다\r\n                    else {\r\n                        break;\r\n                    }\r\n                }\r\n                // 각 이름은 겹치면 안되므로 나노 초까지 동원하여 지정\r\n                String new_file_name = System.nanoTime() + originalFileExtension;\r\n                // 생성 후 리스트에 추가\r\n                ClosetEntity closetEntity = ClosetEntity.builder()\r\n                        .user(userEntity) // UserEntity 객체를 user 속성에 설정\r\n                        .label(\"Label value\") // Label 값에 대한 적절한 값으로 설정\r\n                        .originalFileName(multipartFile.getOriginalFilename())\r\n                        .storedFileName(path + \"/\" + new_file_name)\r\n                        .build();\r\n                fileList.add(closetEntity);\r\n\r\n                // 저장된 파일로 변경하여 이를 보여주기 위함\r\n                file = new File(absolutePath + path + \"/\" + new_file_name);\r\n                multipartFile.transferTo(file);\r\n            }\r\n        }\r\n\r\n        return fileList;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/com/example/dressing/controller/FileHandler.java b/src/main/java/com/example/dressing/controller/FileHandler.java
+--- a/src/main/java/com/example/dressing/controller/FileHandler.java	
++++ b/src/main/java/com/example/dressing/controller/FileHandler.java	
+@@ -72,7 +72,7 @@
+                 String new_file_name = System.nanoTime() + originalFileExtension;
+                 // 생성 후 리스트에 추가
+                 ClosetEntity closetEntity = ClosetEntity.builder()
+-                        .user(userEntity) // UserEntity 객체를 user 속성에 설정
++                        .userId(userEntity) // UserEntity 객체를 user 속성에 설정
+                         .label("Label value") // Label 값에 대한 적절한 값으로 설정
+                         .originalFileName(multipartFile.getOriginalFilename())
+                         .storedFileName(path + "/" + new_file_name)
+Index: src/main/java/com/example/dressing/entity/ClosetEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dressing.entity;\r\n\r\nimport com.example.dressing.dto.ClosetDTO;\r\nimport lombok.Builder;\r\nimport lombok.Getter;\r\nimport lombok.Setter;\r\n\r\nimport javax.persistence.*;\r\n\r\n// DB의 테이블 역할을 하는 클래스\r\n@Builder\r\n@Entity\r\n@Getter\r\n@Setter\r\n@Table(name = \"closet_table\")\r\npublic class ClosetEntity {\r\n    @Id // pk 컬럼 지정. 필수\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment\r\n    private Long id;\r\n\r\n    @ManyToOne // User 테이블과의 관계를 표현하기 위해 @ManyToOne 사용\r\n    @JoinColumn(name = \"userId\") // fk\r\n    private UserEntity user; // UserEntity 클래스와 연결되는 엔티티를 참조\r\n\r\n    @Column(length = 10)\r\n    private String label;\r\n\r\n    @Column\r\n    private String originalFileName; // 원본 파일 이름\r\n\r\n    @Column\r\n    private String storedFileName;\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/com/example/dressing/entity/ClosetEntity.java b/src/main/java/com/example/dressing/entity/ClosetEntity.java
+--- a/src/main/java/com/example/dressing/entity/ClosetEntity.java	
++++ b/src/main/java/com/example/dressing/entity/ClosetEntity.java	
+@@ -20,7 +20,7 @@
+ 
+     @ManyToOne // User 테이블과의 관계를 표현하기 위해 @ManyToOne 사용
+     @JoinColumn(name = "userId") // fk
+-    private UserEntity user; // UserEntity 클래스와 연결되는 엔티티를 참조
++    private UserEntity userId; // UserEntity 클래스와 연결되는 엔티티를 참조
+ 
+     @Column(length = 10)
+     private String label;
+Index: out/production/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># tomcat 을 이용해 포트번호 생성? 등 작업\r\n# application.properties 파일 지우고 생성\r\n\r\nserver:\r\n  port: 8081\r\n\r\n# database 연동 설정\r\nspring:\r\n  datasource:\r\n    driver-class-name: com.mysql.cj.jdbc.Driver\r\n    #    각자 PC에 만들어놓은 Database 이름을 써야 합니다.\r\n    url: jdbc:mysql://localhost:3306/db_dressing?serverTimezone=Asia/Seoul&characterEncoding=UTF-8\r\n    #    mysql 에 생성한 사용자 계정 정보를 써야 합니다.\r\n    username: user_dressing\r\n    password: 0000\r\n  thymeleaf:\r\n    cache: false\r\n\r\n  # spring data jpa 설정\r\n  jpa:\r\n    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect\r\n    open-in-view: false\r\n    show-sql: true\r\n    hibernate:\r\n      ddl-auto: create # 나중엔 update로 바꾸기
+===================================================================
+diff --git a/out/production/resources/application.yml b/out/production/resources/application.yml
+--- a/out/production/resources/application.yml	
++++ b/out/production/resources/application.yml	
+@@ -22,4 +22,4 @@
+     open-in-view: false
+     show-sql: true
+     hibernate:
+-      ddl-auto: create # 나중엔 update로 바꾸기
+\ No newline at end of file
++      ddl-auto: update # 나중엔 update로 바꾸기
+\ No newline at end of file
+Index: out/production/resources/templates/main.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\"> <!--타임리프 뭔가 추가-->\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>main</title>\r\n</head>\r\n<body>\r\n    <!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->\r\n    session 값 확인: <p th:text=\"${session.loginUserId}\"></p> <!-- ${}는 안의 변수값 사용-->\r\n    <a href=\"/user/update\">내 정보 수정하기</a>\r\n    <a href=\"/user/logout\">로그아웃</a>\r\n\r\n    <form action=\"/user/main\" method=\"post\" enctype=\"multipart/form-data\">\r\n        file: <input type=\"file\" name=\"closetFile\">\r\n        <input type=\"submit\" value=\"업로드\">\r\n    </form>\r\n\r\n</body>\r\n</html>
+===================================================================
+diff --git a/out/production/resources/templates/main.html b/out/production/resources/templates/main.html
+--- a/out/production/resources/templates/main.html	
++++ b/out/production/resources/templates/main.html	
+@@ -2,7 +2,7 @@
+ <html lang="en" xmlns:th="http://www.thymeleaf.org"> <!--타임리프 뭔가 추가-->
+ <head>
+     <meta charset="UTF-8">
+-    <title>main</title>
++    <title>main</title> <!-- 여기가 main 옷장임? -->
+ </head>
+ <body>
+     <!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->

@@ -12,4 +12,5 @@ public class HomeController {
 //        return "index"; //=> templetes 폴더의 index.html 파일을 찾아감
         return "login";
     }
+
 }
