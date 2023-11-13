@@ -4,73 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="...">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-09-23__5_14_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-09-23__5_14_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-10-11__8_46_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-10-11__8_46_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_33_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-02__2_33_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-05__10_42_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-05__10_42_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-05__2_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-05__2_41_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__2_26_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__2_26_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__2_27_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__2_27_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__2_50_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__2_50_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_37_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_37_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_38_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_39_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_39_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_40_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_40_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_40_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_40_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-09__8_41_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_42_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_42_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_44_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_44_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_47_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_47_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_51_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_51_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_55_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_55_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_56_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_56_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_57_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_57_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_58_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__12_58_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_04_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_04_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_06_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_06_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_08_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_08_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_09_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_09_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_10_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_10_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_11_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_11_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_11_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_11_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_14_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_14_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_14_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_14_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__1_15_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_27_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_27_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_34_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_34_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_34_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_34_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_34_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_34_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_43_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__6_43_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__7_56_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__7_56_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__7_57_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__7_57_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__8_01_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__8_01_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-10__8_02_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-10__8_02_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_30_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_30_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_30_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_30_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_32_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_32_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_32_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_32_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_33_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_36_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_36_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_37_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_37_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_37_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__2_37_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__3_40_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__3_40_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__3_49_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__3_49_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-11__3_50_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-11__3_50_________Changes_.xml" afterDir="false" />
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="다시바꿈33">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_04_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_04_________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_04_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_04_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_05_________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_07_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__10_07_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__2_35_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__2_35_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_10_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_10_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_11_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_11_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_13_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_13_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_16_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_16_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_18_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-12__3_18_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,23 +19,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="dressing" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="haeun" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,16 +54,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f9c41da257c79ad243dd6ab0613aba52&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -152,7 +67,7 @@
       <recent name="C:\Users\cocom\OneDrive\바탕 화면\sogong2023\src\main\resources\templates\test" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.DressingApplication (1)">
+  <component name="RunManager" selected="Application.DressingApplication">
     <configuration name="DressingApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dressing.DressingApplication" />
       <module name="com.example.dressing.main" />
@@ -181,11 +96,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.DressingApplication (1)" />
-        <item itemvalue="애플리케이션.DressingApplication" />
-        <item itemvalue="애플리케이션.DressingApplication (1)" />
-        <item itemvalue="애플리케이션.DressingApplication" />
-        <item itemvalue="애플리케이션.DressingApplication (1)" />
+        <item itemvalue="Application.DressingApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -197,8 +108,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695447944145</updated>
-      <workItem from="1699794552467" duration="2811000" />
-      <workItem from="1699797419621" duration="2144000" />
     </task>
     <task id="LOCAL-00001" summary="test2">
       <created>1695448054483</created>
@@ -245,39 +154,32 @@
       <option name="project" value="LOCAL" />
       <updated>1699780347139</updated>
     </task>
-    <task id="LOCAL-00007" summary="...">
-      <created>1699794487043</created>
+    <task id="LOCAL-00007" summary="다시바꿈">
+      <option name="closed" value="true" />
+      <created>1699794242773</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1699794487043</updated>
+      <updated>1699794242773</updated>
     </task>
-    <task id="LOCAL-00008" summary="...">
-      <created>1699794613846</created>
+    <task id="LOCAL-00008" summary="다시바꿈22">
+      <option name="closed" value="true" />
+      <created>1699794435514</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1699794613846</updated>
+      <updated>1699794435514</updated>
     </task>
-    <task id="LOCAL-00009" summary="...">
-      <created>1699797884607</created>
+    <task id="LOCAL-00009" summary="다시바꿈22">
+      <option name="closed" value="true" />
+      <created>1699794446905</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1699797884607</updated>
+      <updated>1699794446905</updated>
     </task>
-    <task id="LOCAL-00010" summary="...">
-      <created>1699797899096</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1699797899096</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test2" />
@@ -286,8 +188,10 @@
     <MESSAGE value="Merge branch 'yewon'" />
     <MESSAGE value="이미지 저장 경로 변경" />
     <MESSAGE value="수정해야함" />
-    <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="다시바꿈" />
+    <MESSAGE value="다시바꿈22" />
+    <MESSAGE value="다시바꿈33" />
+    <option name="LAST_COMMIT_MESSAGE" value="다시바꿈33" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
