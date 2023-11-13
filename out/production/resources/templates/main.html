@@ -27,11 +27,13 @@
 
 <div>
     <ul>
-        <li th:each="image : ${base64Images}">
-            <img th:attr="src=${image}" style="width: 200px; height: 200px;"/>
+        <li th:each="imageData : ${imagesData}">
+            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
         </li>
     </ul>
 </div>
+
 
 </body>
 </html>
