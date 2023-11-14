@@ -38,4 +38,11 @@ public class ClosetController {
         return "redirect:/main"; // redirect:/
     }
 
+    @GetMapping("/deleteImage")
+    public String deleteImage(@RequestParam("id") Long imageId, HttpSession httpSession) {
+        Long loginId = (Long) httpSession.getAttribute("loginId");
+        closetService.deleteImage(imageId, loginId);
+        return "redirect:/main";
+    }
+
 }
