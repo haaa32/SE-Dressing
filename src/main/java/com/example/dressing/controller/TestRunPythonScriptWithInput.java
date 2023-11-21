@@ -15,7 +15,7 @@ public class TestRunPythonScriptWithInput {
         String pythonScriptPath = "C:/ex.py";
 
         // 파이썬 스크립트에 전달할 입력 데이터
-        String inputData = "C:/6723612710_1_1_3.jpg";
+        String inputData = "C:/Users/kbg01/Desktop/스크린샷 2023-11-12 144511.png";
 
         // 파이썬 스크립트 실행
         ProcessBuilder processBuilder = new ProcessBuilder("python", pythonScriptPath, inputData);
@@ -36,6 +36,6 @@ public class TestRunPythonScriptWithInput {
             e.printStackTrace();
         }
 
-        return "main";
+        return "redirect:/main";
     }
 }
