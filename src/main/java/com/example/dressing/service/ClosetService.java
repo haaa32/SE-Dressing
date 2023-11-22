@@ -1,14 +1,12 @@
 package com.example.dressing.service;
 
+import com.example.dressing.Component.PythonModelComponent;
 import com.example.dressing.entity.ClosetEntity;
 import com.example.dressing.entity.UserEntity;
 import com.example.dressing.repository.ClosetRepository;
 
 import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -17,6 +15,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Base64;
 import java.util.List;
 import java.util.UUID;
@@ -24,6 +23,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Service
 public class ClosetService {
+    private final PythonModelComponent pythonModelComponent;
 
     private final ClosetRepository closetRepository;
     private final UserRepository userRepository;
@@ -39,25 +39,39 @@ public class ClosetService {
         String extension = origName.substring(origName.lastIndexOf("."));
         String savedName = uuid + extension;
 
-        String userDirectory = fileStoragePath + loginId + "/";
-        String savedPath = userDirectory + savedName;
+        // 임시로 컴퓨터에 이미지 저장
+        String tempImagePath = fileStoragePath + savedName;
+        File tempFile = new File(tempImagePath);
+        files.transferTo(tempFile); // 일단 컴퓨터에 이미지 저장 (밑에서 삭제할 거임)
 
-        createDirectoryIfNotExists(userDirectory); // 폴더 없으면 생성
+        // 저장한 이미지를 파이썬 모델을 통해 라벨 얻기
+        String label = pythonModelComponent.getLabel(tempImagePath);
+        System.out.println("==="+label+"===");
+
+        String userDirectory = fileStoragePath + loginId + "/";
+        String userLabelDirectory = userDirectory + label + "/";
+        String savedPath = userLabelDirectory + savedName; // 경로: 유저id/라벨명/이미지.jpg 형태로 저장
+
+        createDirectoryIfNotExists(userLabelDirectory); // 폴더 없으면 생성
 
         UserEntity userEntity = userRepository.findById(loginId).get();
 
         ClosetEntity file = ClosetEntity.builder()
                 .user(userEntity)
+                .label(label)
                 .orgNm(origName)
                 .savedNm(savedName)
                 .savedPath(savedPath)
                 .build();
 
-        files.transferTo(new File(savedPath));
+        //files.transferTo(new File(savedPath)); // 실제 컴퓨터 경로에 저장
+        File savedFile = new File(savedPath);
+        Files.copy(tempFile.toPath(), savedFile.toPath(), StandardCopyOption.REPLACE_EXISTING); // 컴퓨터 파일 복사 (경로 옮기기)
+        deleteFileFromSystem(tempImagePath); // 임시 경로 이미지 삭제
 
-        ClosetEntity savedFile = closetRepository.save(file);
+        ClosetEntity savedEntity = closetRepository.save(file);
 
-        return savedFile.getId();
+        return savedEntity.getId();
     }
 
     private void createDirectoryIfNotExists(String directoryPath) throws IOException {
