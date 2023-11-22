@@ -1,0 +1,26 @@
+Index: src/main/java/com/example/dressing/service/WeatherService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dressing.service;\r\nimport org.asynchttpclient.AsyncHttpClient;\r\nimport org.asynchttpclient.DefaultAsyncHttpClient;\r\nimport org.springframework.stereotype.Service;\r\n\r\nimport java.io.IOException;\r\nimport java.util.concurrent.CompletableFuture;\r\n\r\nimport com.fasterxml.jackson.databind.JsonNode;\r\nimport com.fasterxml.jackson.databind.ObjectMapper;\r\n\r\n@Service\r\npublic class WeatherService {\r\n    public CompletableFuture<String> getDaeguWeather() {\r\n        AsyncHttpClient client = new DefaultAsyncHttpClient();\r\n        CompletableFuture<String> future = client\r\n                .prepareGet(\"https://weatherapi-com.p.rapidapi.com/current.json?q=Daegu\")\r\n                .setHeader(\"X-RapidAPI-Key\", \"862fab4804msh877bf652bb7744ep1629ddjsn7e6cef4000ba\")\r\n                .setHeader(\"X-RapidAPI-Host\", \"weatherapi-com.p.rapidapi.com\")\r\n                .execute()\r\n                .toCompletableFuture()\r\n                .thenApply(response -> {\r\n                    System.out.println(\"API Response: \" + response.getResponseBody());\r\n                    try {\r\n                        ObjectMapper objectMapper = new ObjectMapper();\r\n                        JsonNode rootNode = objectMapper.readTree(response.getResponseBody());\r\n                        JsonNode currentWeather = rootNode.path(\"current\");\r\n\r\n                        double tempCelsius = currentWeather.path(\"temp_c\").asDouble();\r\n                        String weatherCondition = currentWeather.path(\"condition\").path(\"text\").asText();\r\n\r\n                        return \"대구 현재 온도: \" + tempCelsius + \"°C, 날씨 상태: \" + weatherCondition;\r\n                    }catch (Exception e) {\r\n                        e.printStackTrace();\r\n                        return \"날씨 정보를 파싱하는 데 실패했습니다.\";\r\n                    }\r\n                }).whenComplete((result, throwable) -> {\r\n                    try {\r\n                        client.close();\r\n                    } catch (IOException e) {\r\n                        throw new RuntimeException(e);\r\n                    }\r\n                });\r\n\r\n\r\n        return future;\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/java/com/example/dressing/service/WeatherService.java b/src/main/java/com/example/dressing/service/WeatherService.java
+--- a/src/main/java/com/example/dressing/service/WeatherService.java	
++++ b/src/main/java/com/example/dressing/service/WeatherService.java	
+@@ -1,4 +1,7 @@
+ package com.example.dressing.service;
++
++import com.fasterxml.jackson.databind.JsonNode;
++import com.fasterxml.jackson.databind.ObjectMapper;
+ import org.asynchttpclient.AsyncHttpClient;
+ import org.asynchttpclient.DefaultAsyncHttpClient;
+ import org.springframework.stereotype.Service;
+@@ -6,9 +9,6 @@
+ import java.io.IOException;
+ import java.util.concurrent.CompletableFuture;
+ 
+-import com.fasterxml.jackson.databind.JsonNode;
+-import com.fasterxml.jackson.databind.ObjectMapper;
+-
+ @Service
+ public class WeatherService {
+     public CompletableFuture<String> getDaeguWeather() {
