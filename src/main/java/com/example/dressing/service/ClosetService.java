@@ -2,7 +2,9 @@ package com.example.dressing.service;
 
 import com.example.dressing.Component.PythonModelComponent;
 import com.example.dressing.entity.ClosetEntity;
+import com.example.dressing.entity.ClosetInfoEntity;
 import com.example.dressing.entity.UserEntity;
+import com.example.dressing.repository.ClosetInfoRepository;
 import com.example.dressing.repository.ClosetRepository;
 
 import com.example.dressing.repository.UserRepository;
@@ -18,6 +20,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -27,6 +30,7 @@ public class ClosetService {
 
     private final ClosetRepository closetRepository;
     private final UserRepository userRepository;
+    private final ClosetInfoRepository closetInfoRepository;
     private final String fileStoragePath = "C:/Img_SW/"; // Define the base directory
 
     public Long saveFile(MultipartFile files, Long loginId) throws IOException {
@@ -55,10 +59,11 @@ public class ClosetService {
         createDirectoryIfNotExists(userLabelDirectory); // 폴더 없으면 생성
 
         UserEntity userEntity = userRepository.findById(loginId).get();
+        ClosetInfoEntity closetInfoEntity = closetInfoRepository.findByLabel(label).get();
 
         ClosetEntity file = ClosetEntity.builder()
                 .user(userEntity)
-                .label(label)
+                .closetInfoEntity(closetInfoEntity)
                 .orgNm(origName)
                 .savedNm(savedName)
                 .savedPath(savedPath)

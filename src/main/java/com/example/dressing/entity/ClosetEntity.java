@@ -21,8 +21,11 @@ public class ClosetEntity {
     @JoinColumn(name = "uid", referencedColumnName = "id") // fk
     private UserEntity userEntity; // UserEntity 클래스와 연결되는 엔티티를 참조
 
-    @Column(length = 16)
-    private String label;
+//    @Column(length = 16)
+//    private String label;
+    @ManyToOne
+    @JoinColumn(name = "label", referencedColumnName = "label")
+    private ClosetInfoEntity closetInfoEntity;
 
     private String orgNm;
 
@@ -33,20 +36,20 @@ public class ClosetEntity {
     public ClosetEntity() {}
 
     @Builder
-    public ClosetEntity(Long id, UserEntity user, String label, String orgNm, String savedNm, String savedPath) {
+    public ClosetEntity(Long id, UserEntity user, ClosetInfoEntity closetInfoEntity, String label, String orgNm, String savedNm, String savedPath) {
         this.id = id;
         this.userEntity = user;
-        this.label = label;
+        this.closetInfoEntity = closetInfoEntity;
         this.orgNm = orgNm;
         this.savedNm = savedNm;
         this.savedPath = savedPath;
     }
 
-    public static ClosetEntity toClosetEntity(ClosetDTO closetDTO, UserEntity userEntity) {
+    public static ClosetEntity toClosetEntity(ClosetDTO closetDTO, UserEntity userEntity, ClosetInfoEntity closetInfoEntity) {
         ClosetEntity closetEntity = ClosetEntity.builder()
                 .id(closetDTO.getId())
                 .user(userEntity)
-                .label(closetDTO.getLabel())
+                .closetInfoEntity(closetInfoEntity)
                 .orgNm(closetDTO.getOrgNm())
                 .savedNm(closetDTO.getSavedNm())
                 .savedPath(closetDTO.getSavedPath())
