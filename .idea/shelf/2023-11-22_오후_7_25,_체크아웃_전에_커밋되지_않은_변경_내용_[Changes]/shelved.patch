@@ -1,0 +1,17 @@
+Index: src/main/java/com/example/dressing/controller/TestRunPythonScriptWithInput.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dressing.controller;\r\n\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\n\r\nimport java.io.BufferedReader;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\n\r\n@Controller\r\npublic class TestRunPythonScriptWithInput {\r\n    @GetMapping(\"testPB\")\r\n    public String pls() throws IOException {\r\n        // 파이썬 스크립트 경로\r\n        String pythonScriptPath = \"C:/ex.py\";\r\n\r\n        // 파이썬 스크립트에 전달할 입력 데이터\r\n        String inputData = \"C:/6723612710_1_1_3.jpg\";\r\n\r\n        // 파이썬 스크립트 실행\r\n        ProcessBuilder processBuilder = new ProcessBuilder(\"python\", pythonScriptPath, inputData);\r\n        Process process = processBuilder.start();\r\n\r\n        // 파이썬 스크립트의 출력을 읽어오기\r\n        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));\r\n        String line;\r\n        while ((line = reader.readLine()) != null) {\r\n            System.out.println(line);\r\n        }\r\n\r\n        // 프로세스 종료\r\n        try {\r\n            int exitCode = process.waitFor();\r\n            System.out.println(\"Python script exited with code \" + exitCode);\r\n        } catch (InterruptedException e) {\r\n            e.printStackTrace();\r\n        }\r\n\r\n        return \"main\";\r\n    }\r\n}
+===================================================================
+diff --git a/src/main/java/com/example/dressing/controller/TestRunPythonScriptWithInput.java b/src/main/java/com/example/dressing/controller/TestRunPythonScriptWithInput.java
+--- a/src/main/java/com/example/dressing/controller/TestRunPythonScriptWithInput.java	
++++ b/src/main/java/com/example/dressing/controller/TestRunPythonScriptWithInput.java	
+@@ -15,7 +15,7 @@
+         String pythonScriptPath = "C:/ex.py";
+ 
+         // 파이썬 스크립트에 전달할 입력 데이터
+-        String inputData = "C:/6723612710_1_1_3.jpg";
++        String inputData = "C:/sd.jpg";
+ 
+         // 파이썬 스크립트 실행
+         ProcessBuilder processBuilder = new ProcessBuilder("python", pythonScriptPath, inputData);
