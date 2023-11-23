@@ -1,0 +1,72 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration:none;
+}
+
+#wrap{
+    width:1200px;
+    height:900px;
+    background-color: aqua;
+    margin:0 auto;
+}
+#header{
+    width:1200px;
+    height:100px;
+    background-color: aquamarine;
+}
+#header>#logo{
+    float:left;
+    width:500px;
+    height:100px;
+    background-color: cadetblue;
+}
+#header>#cody{
+    float:left;
+    width:700px;
+    height:100px;
+    background-color: chartreuse;
+}
+#cody>#userchoose{
+    float:right;
+    margin-top:20pt;
+    margin-right: 40pt;
+    width:100px;
+    height:50px;
+    background-color: brown;
+}
+#cody>#weatherchoose{
+    float:right;
+    margin-top:20pt;
+    margin-right: 40pt;
+    width:100px;
+    height:50px;
+    background-color: brown;
+}
+
+#category{
+    width:1200px;
+    height:100px;
+    background-color: blueviolet;
+}
+
+#clolist{
+    width:1200px;
+    height:700px;
+    background-color: cadetblue;
+}
+
+#clolist>#addclothes{
+    display: block;
+    float: left;
+    margin: 20pt 35pt;
+    width:200px;
+    height:200px;
+    background-color: antiquewhite;
+}
