@@ -23,6 +23,9 @@ public class ClosetEntity {
 
     @Column(length = 16)
     private String label;
+//    @ManyToOne
+//    @JoinColumn(name = "label", referencedColumnName = "label")
+//    private ClosetInfoEntity closetInfoEntity;
 
     private String orgNm;
 
@@ -33,10 +36,11 @@ public class ClosetEntity {
     public ClosetEntity() {}
 
     @Builder
-    public ClosetEntity(Long id, UserEntity user, String label, String orgNm, String savedNm, String savedPath) {
+    public ClosetEntity(Long id, UserEntity user, ClosetInfoEntity closetInfoEntity, String label, String orgNm, String savedNm, String savedPath) {
         this.id = id;
         this.userEntity = user;
         this.label = label;
+        //this.closetInfoEntity = closetInfoEntity;
         this.orgNm = orgNm;
         this.savedNm = savedNm;
         this.savedPath = savedPath;
