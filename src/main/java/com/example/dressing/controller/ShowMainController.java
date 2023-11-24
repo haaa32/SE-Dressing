@@ -27,23 +27,29 @@ public class ShowMainController {
     @GetMapping("/main")
     public String showMainPage(Model model, HttpSession session) {
         try {
+            // 날씨 서비스를 통해 대구의 날씨 정보를 가져옴
             String weatherData = weatherService.getDaeguWeather().get();
             model.addAttribute("weatherData", weatherData);
 
+            // 세션에서 로그인 ID를 가져옴.
             Long loginId = (Long) session.getAttribute("loginId");
+            // 사용자의 사진을 가져옴.
             List<ClosetEntity> userPhotos = closetService.getUserPhotos(loginId);
 
+            // 이미지 데이터를 처리하기 위한 리스트를 생성
             List<ImageData> imageDataList = new ArrayList<>();
             for (ClosetEntity photo : userPhotos) {
                 ImageData imageData = new ImageData();
-                imageData.setBase64Image(closetService.getBase64Image(photo.getSavedPath()));
-                imageData.setId(photo.getId());
-                imageDataList.add(imageData);
+                imageData.setBase64Image(closetService.getBase64Image(photo.getSavedPath())); // 이미지를 Base64 형식으로 변환하여 저장
+                imageData.setId(photo.getId()); // 이미지 ID를 설정
+                imageDataList.add(imageData); // 리스트에 추가
             }
 
+            // 모델에 이미지 데이터 리스트를 추가
             model.addAttribute("imagesData", imageDataList);
 
         } catch (InterruptedException | ExecutionException e) {
+            // 예외 처리: 날씨 정보나 사진을 가져오는 데 실패한 경우
             e.printStackTrace();
             model.addAttribute("error", "날씨 정보나 사진을 가져오는 데 실패했습니다.");
         } catch (IOException e) {

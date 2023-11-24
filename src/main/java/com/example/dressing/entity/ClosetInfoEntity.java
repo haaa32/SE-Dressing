@@ -25,7 +25,8 @@ public class ClosetInfoEntity {
     @Column
     private int maxTemp;
 
-    // 커스텀 생성자
+    // ClosetInfoEntity 클래스의 생성자
+    // 옷장 항목에 대한 정보를 초기화하는 데 사용
     public ClosetInfoEntity(String label, String category, int minTemp, int maxTemp) {
         this.label = label;
         this.category = category;
