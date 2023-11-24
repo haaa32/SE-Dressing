@@ -15,11 +15,13 @@ public class ClosetInfoService {
     @Autowired
     private ClosetInfoRepository closetInfoRepository;
 
+    // 클래스 인스턴스화 후 초기화를 위한 메소드
     @PostConstruct
     public void init() {
         insertClosetInfoData();
     }
 
+    // 옷장 정보 데이터를 저장소에 삽입하는 메소드
     public void insertClosetInfoData() {
         System.out.println("insertClosetInfoData 메소드 호출됨");
         List<ClosetInfoEntity> entities = Arrays.asList(
@@ -35,6 +37,7 @@ public class ClosetInfoService {
                 new ClosetInfoEntity("Ankle boot", "Shoes",-5, 11)
         );
 
+        // 저장소에 모든 항목들을 저장
         closetInfoRepository.saveAll(entities);
     }
 }

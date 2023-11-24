@@ -96,10 +96,15 @@ public class ClosetService {
         return "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(bytes);
     }
 
+    // 이미지를 삭제하는 메소드
     public void deleteImage(Long imageId, Long userId) {
+        // 지정된 이미지 ID로 ClosetEntity를 찾기
         ClosetEntity closetEntity = closetRepository.findById(imageId).orElseThrow(() -> new RuntimeException("Image not found"));
+        // 찾은 ClosetEntity에서 파일 경로를 가져옴
         String filePath = closetEntity.getSavedPath();
+        // 데이터베이스에서 ClosetEntity를 삭제
         closetRepository.delete(closetEntity);
+        // 시스템에서 실제 파일을 삭제
         deleteFileFromSystem(filePath);
     }
 
