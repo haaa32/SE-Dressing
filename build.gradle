@@ -49,7 +49,7 @@ sourceSets {
 
 
 processResources {
-	duplicatesStrategy = 'fail'
+	dependsOn "buildReact"
 }
 
 task buildReact(type: Exec) {
@@ -76,6 +76,11 @@ task installReact(type: Exec) {
 		commandLine 'npm', 'install'
 	}
 }
+
+tasks.processResources {
+	duplicatesStrategy = 'exclude' // 중복 파일을 제외하고 계속 진행합니다.
+}
+
 
 tasks.named('test') {
 	useJUnitPlatform()
