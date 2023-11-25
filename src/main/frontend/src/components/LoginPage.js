@@ -24,7 +24,7 @@ function App1() {
                 <input type="submit" value="Login" id="login_btn" onClick={GoApp2}/>
                 <br/>
                 <div id="member">
-                  <a href='/api/user/join'>회원가입</a>
+                  <a href='membership'>회원가입</a>
                   <br/>
                   <a href='/admin'>관리자</a>
                 </div>

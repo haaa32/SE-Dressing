@@ -28,7 +28,7 @@ public class UserController {
     // 회원가입 페이지 출력 요청
     @GetMapping("/api/user/join")
     public String joinForm() {
-        return "api/user/join"; // 리액트 애플리케이션의 루트 경로로 리다이렉션
+        return "membership"; // 리액트 애플리케이션의 루트 경로로 리다이렉션
     } //join에서 보낸 데이터를 받는 메소드가 없어 405 ERROR 가 뜬다 //login은 아직 html조차 존재하지 않아서 404 ERROR
 
     // 회원가입 페이지 폼 작성 데이터 받기
@@ -55,7 +55,7 @@ public class UserController {
             out.println("history.go(-1); </script>");
             out.close();*/
             otherComponent.AlertMessage(response, "Failed Join!!");
-            return "api/user/join";
+            return "membership";
         }
         else { //회원가입 성공
             return "/api/login"; //회원가입 후 로그인 창 실행

@@ -9,13 +9,13 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 function App() {
-  const [hello, setHello] = useState('')
-
-    useEffect(() => {
-        axios.get('/api/login')
-        .then(response => setHello(response.data))
-        .catch(error => console.log(error))
-    }, []);
+//  const [hello, setHello] = useState('')
+//
+//    useEffect(() => {
+//        axios.get('/api/login')
+//        .then(response => setHello(response.data))
+//        .catch(error => console.log(error))
+//    }, []);
 
   return (
     <div id='App'>
@@ -25,7 +25,7 @@ function App() {
           <Route path='/login' element={<App1/>}/>
           <Route path='/main' element={<App2/>}/>
           <Route path='/estimation' element={<App3/>}/>
-          <Route path='/join' element={<App4/>}/>
+          <Route path='/membership' element={<App4/>}/>
           <Route path='/admin' element={<App5/>}/>
         </Routes>
       </BrowserRouter>
