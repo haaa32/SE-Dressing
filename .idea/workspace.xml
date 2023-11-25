@@ -5,45 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="..">
-      <change afterPath="$PROJECT_DIR$/src/main/frontend/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/dressing.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/getHttpsConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/jest/babelTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/jest/cssTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/jest/fileTransform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/modules.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/paths.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/webpack/persistentCache/createEnvironmentHash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/config/webpackDevServer.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/scripts/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/scripts/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/frontend/scripts/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/DressingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/DressingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/dto/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/entity/TimeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/entity/TimeEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/dressing/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/join.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/config/WebMvcConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/config/WebMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ShowMainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ShowMainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/WeatherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/WeatherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/category.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/images/02f4ca56-e307-4022-b1d2-bb5ac4faa0a0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/images/41c1dcf3-78e8-4ab6-b798-03f06d20efca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/jquery-1.12.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/css/main.e6c13ad2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/css/main.e6c13ad2.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/js/787.9e9f4ffd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/js/787.9e9f4ffd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/js/main.677742e7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/js/main.677742e7.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/static/js/main.677742e7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/category.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/02f4ca56-e307-4022-b1d2-bb5ac4faa0a0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/41c1dcf3-78e8-4ab6-b798-03f06d20efca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.12.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/css/main.e6c13ad2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/css/main.e6c13ad2.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/js/787.9e9f4ffd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/js/787.9e9f4ffd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/js/main.677742e7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/js/main.677742e7.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/js/main.677742e7.js.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,28 +109,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f9c41da257c79ad243dd6ab0613aba52&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "f9c41da257c79ad243dd6ab0613aba52",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\cocom\OneDrive\바탕 화면\SE-Dressing\src\main\resources\templates\admin" />
@@ -311,7 +317,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700748826703</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="..">
+      <option name="closed" value="true" />
+      <created>1700919244337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700919244337</updated>
+    </task>
+    <task id="LOCAL-00015" summary="..">
+      <option name="closed" value="true" />
+      <created>1700919258074</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700919258074</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +380,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SE_Dressing$DressingApplication__1_.ic" NAME="DressingApplication (1) 커버리지 결과" MODIFIED="1699798664797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
