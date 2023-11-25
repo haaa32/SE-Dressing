@@ -24,7 +24,7 @@ public class ShowMainController {
         this.closetService = closetService;
     }
 
-    @GetMapping("/show-main")
+    @GetMapping("/main")
     public String showMainPage(Model model, HttpSession session) {
         try {
             String weatherData = weatherService.getDaeguWeather().get();
