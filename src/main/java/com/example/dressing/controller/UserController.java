@@ -26,13 +26,13 @@ public class UserController {
     public final OtherComponent otherComponent;
 
     // 회원가입 페이지 출력 요청
-    @GetMapping("/user/join")
+    @GetMapping("/api/user/join")
     public String joinForm() {
         return "join";
     } //join에서 보낸 데이터를 받는 메소드가 없어 405 ERROR 가 뜬다 //login은 아직 html조차 존재하지 않아서 404 ERROR
 
     // 회원가입 페이지 폼 작성 데이터 받기
-    @PostMapping("/user/join")
+    @PostMapping("/api/user/join")
     /*public String join(@RequestParam("userName") String userName, //변수에 input 태그의 name 값 저장
                               @RequestParam("userId") String userId,
                               @RequestParam("userPassword") String userPassword) { */
@@ -63,12 +63,12 @@ public class UserController {
 
     }
 
-    @GetMapping("/user/login")
+    @GetMapping("/api/user/login")
     public String loginForm() {
         return "login";
     }
 
-    @PostMapping("/user/login")
+    @PostMapping("/api/user/login")
     public String login(@ModelAttribute UserDTO userDTO, HttpSession httpSession, HttpServletResponse response) throws IOException { //아이디와 비밀번호 받아옴, 세션 정보까지
         UserDTO loginResult = userService.login(userDTO); //로그인 결과를 확인하기 위해
 
@@ -132,14 +132,14 @@ public class UserController {
         return "redirect:/user/"; //redirect 뒤에는 무조건 주소가 온다 (list.html이 아님!!)
     }*/
 
-    @GetMapping("/user/logout")
+    @GetMapping("/api/user/logout")
     public String logout(HttpSession httpSession) {
         httpSession.invalidate(); //세션을 무효화 한다
         return "login";
     }
 
     //js에서 매핑되어 아이디 중복 체크
-    @PostMapping("/user/id-check")
+    @PostMapping("/api/user/id-check")
     public @ResponseBody String emailCheck(@RequestParam("userId") String userId) {
         System.out.println("userId = " + userId);
         String checkResult = userService.idCheck(userId);
