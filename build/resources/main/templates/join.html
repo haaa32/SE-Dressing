@@ -14,16 +14,20 @@
 <!-- method속성의 post: 우리가 보내는 데이터를 주소창에서 가려서 보낸다(보이지 않게)-->
 <form action="/user/join" method="post">
     <!-- name속성: 서버로 전송할 때 변수이름의 역할-->
-    이름 : <input type="text" name="userName"> <br>
-    아이디: <input type="text" name="userId" id="userId" onblur="idCheck()"> <p id="check-result"></p> <br> <!-- 중복 체크 -->
-    비밀번호 : <input type="password" name="userPassword"> <br>
+    이름 : <input type="text" name="userName" required> <br>
+    아이디: <input type="text" name="userId" id="userId" onblur="idCheck()" required> <br> <!-- 중복 체크 -->
+    <p id="id-check-result"></p>
+    비밀번호 : <input type="password" name="userPassword" id="userPassword" required maxlength="16"> <br>
+    비밀번호 확인 : <input type="password" name="userPasswordCheck" id="userPasswordCheck" onkeyup="passwordCheck()" required maxlength="16"> <br>
+    <p id="password-check-result"></p>
+    전화번호 : <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="010-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" minlength="13" maxlength="13" required>
     <input type="submit" value="회원가입"> <!--회원가입 버튼 역할-->
 </form>
 </body>
 <script th:inline="javascript">
     const idCheck = () => {
         const id = document.getElementById("userId").value;
-        const checkResult = document.getElementById("check-result"); // 태그 요소만 접근하는 거라서 .value는 안 씀
+        const checkResult = document.getElementById("id-check-result"); // 태그 요소만 접근하는 거라서 .value는 안 씀
         console.log("입력값: ", id);
         $.ajax({
             // 요청방식: post, url: "id-check", 데이터: 아이디
@@ -48,6 +52,22 @@
                 console.log("에러 발생", err);
             }
         });
+    }
+    const passwordCheck = () => {
+        const password = document.getElementById("userPassword").value;
+        const passwordCheck = document.getElementById("userPasswordCheck").value;
+        const checkResult = document.getElementById("password-check-result"); // 태그 요소만 접근하는 거라서 .value는 안 씀
+        console.log("입력값: ", password);
+        //$.ajax({
+            if(password == passwordCheck) { //비밀번호 일치
+                checkResult.style.color = "green";
+                checkResult.innerHTML = "비밀번호 일치";
+            }
+            else {
+                checkResult.style.color = "red";
+                checkResult.innerHTML = "비밀번호 불일치";
+            }
+        //});
     }
 </script>
 </html>

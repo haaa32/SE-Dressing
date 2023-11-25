@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!--타임리프 뭔가 추가-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>main</title>
 </head>
 <body>
-    <!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->
-    session 값 확인: <p th:text="${session.loginUserId}"></p> <!-- ${}는 안의 변수값 사용-->
-    <a href="/user/update">내 정보 수정하기</a>
-    <a href="/user/logout">로그아웃</a>
+<!-- 세션에 저장된 로그인 정보 출력 -->
+<p>session 값 확인: <span th:text="${session.loginUserId}"></span></p>
+
+<!-- 로그아웃 링크 -->
+<a href="/user/logout">로그아웃</a>
+
+<!-- 사진 업로드 링크 -->
+<a href="/upload">사진 업로드</a>
+
+<!-- 건의하기 링크 -->
+<a href="/suggest/save">건의하기</a>
+
+<h1>대구 현재 날씨</h1>
+<p th:text="${weatherData}"></p>
+
+<div>
+    <ul>
+        <li th:each="imageData : ${imagesData}">
+            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
+        </li>
+    </ul>
+</div>
+
 
 </body>
 </html>
