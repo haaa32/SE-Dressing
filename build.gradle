@@ -47,8 +47,9 @@ sourceSets {
 	}
 }
 
+
 processResources {
-	dependsOn "buildReact"
+	duplicatesStrategy = 'fail'
 }
 
 task buildReact(type: Exec) {
