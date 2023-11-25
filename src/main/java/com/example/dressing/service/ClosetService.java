@@ -121,4 +121,8 @@ public class ClosetService {
         }
     }
 
+    public List<ClosetEntity> findUserPhotosByCategory(Long loginId, String category) {
+        return closetRepository.findUserPhotosByCategory(loginId, category);
+    }
+
 }

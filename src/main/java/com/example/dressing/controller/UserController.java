@@ -82,6 +82,7 @@ public class UserController {
             //관리자 or 일반 사용자
             if(loginResult.getUserRank().equals("Admin")) //관리자 로그인시
                 return "admin/main"; //관리자 페이지
+            httpSession.setAttribute("category", "total");
             return "redirect:/main";
         }
         else {

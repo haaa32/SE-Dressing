@@ -33,8 +33,16 @@ public class ShowMainController {
 
             // 세션에서 로그인 ID를 가져옴.
             Long loginId = (Long) session.getAttribute("loginId");
+            // 세션에서 카테고리를 가져옴.
+            String category = (String) session.getAttribute("category");
             // 사용자의 사진을 가져옴.
-            List<ClosetEntity> userPhotos = closetService.getUserPhotos(loginId);
+            List<ClosetEntity> userPhotos;
+
+            // 카테고리에 따라 사진 리스트 선택
+            if(category.equals("total"))
+                userPhotos = closetService.getUserPhotos(loginId);
+            else
+                userPhotos = closetService.findUserPhotosByCategory(loginId, category);
 
             // 이미지 데이터를 처리하기 위한 리스트를 생성
             List<ImageData> imageDataList = new ArrayList<>();
