@@ -141,11 +141,22 @@ public class UserService {
             else if (between >= 30 && between < 60) //가입일 30일 이후
                 tmpRank = "Gold";
             else if (between >= 60) //가입일 60일 이후
-                tmpRank = "Diamond";
+                tmpRank = "Platinum";
 
             if(!tmpRank.equals(userEntity.getUserRank())) //rank가 변경되었다면 update
                 userRepository.updateUserRank(tmpRank, userEntity.getId());
         }
         System.out.println("유저 rank 업데이트 완료");
+    }
+
+    // Rank에 따른 하루 최대 옷추천 개수 반환
+    public int getNumLimit(String rank) {
+        int numLimit = 10; // Bronze
+        if(rank.equals("Silver")) numLimit = 15;
+        else if(rank.equals("Gold")) numLimit = 20;
+        else if(rank.equals("Platinum")) numLimit = 20;
+        else if(rank.equals("Diamond")) numLimit = 999;
+
+        return numLimit;
     }
 }

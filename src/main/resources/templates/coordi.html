@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>coordi</title>
+</head>
+<body>
+<h1>사용자 기반 옷추천</h1>
+
+<h3>대구 현재 날씨</h3>
+<p th:text="${weatherData}"></p>
+
+<h3>옷추천 가능 횟수</h3>
+<span th:text="${numUserCoordi}"></span>
+<span>/</span>
+<span th:text="${numLimit}"></span>
+
+<div>
+    <ul>
+        <li th:each="imageData : ${imagesData}">
+            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
+        </li>
+    </ul>
+</div>
+
+<a href="/coordi/like">좋아요</a>
+<a href="/coordi/dislike">싫어요</a>
+
+
+</body>
+</html>

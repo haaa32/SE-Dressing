@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class PythonModelComponent {
     public String getLabel(String imagePath) throws IOException {
         // 파이썬 스크립트 경로
-        String pythonScriptPath = "C:/SE_python/minist_classfy.py";
+        String pythonScriptPath = "C:/SE_python/keras_classfy.py";
 
         // 파이썬 스크립트에 전달할 입력 데이터
 //        String inputData = "C:/Users/kbg01/Desktop/스크린샷 2023-11-12 144511.png";
