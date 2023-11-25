@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:8081")
 public class HomeController {
     //기본 페이지 요청 메서드
     @GetMapping("/") // /주소가 요청되면 index 함수를 실행한다 (보통 홈은 기본으로 / 으로 표현된다)
