@@ -1,0 +1,68 @@
+function menu(){
+    $(".gnb>li").on({
+        'mouseover':function(){
+            //console.log('mouseover!')
+            $(".lnb").stop().slideDown();
+        },
+        'mouseout':function(){
+            //console.log('mouseout!')
+            $(".lnb").stop().slideUp();
+        }
+    })
+}
+
+/////////////////////////////////////////////////////////////
+
+#header>.nav>.gnb{
+    float:right;
+    margin-top:20px;
+    margin-right:20px;
+}
+
+#header>.nav>.gnb>li{
+    float:left;
+}
+
+#header>.nav>.gnb>li>a{
+    display:block;
+    width:100px;
+    height:40px;
+
+    /*
+    background:  #ffffff;
+    없애야 호버 잘 동작함
+    
+    color:#222328;
+    */
+    
+    text-align: center;
+    padding-top:10px;
+
+    font-weight: bold;
+    font-size:16px;
+
+    border:1px solid grey;
+    box-sizing: border-box;
+}
+
+.gnb li a:hover {
+    background:#222328;
+    color:#fff;
+}
+
+.lnb>li>a{
+    display:block;
+    width:100px;
+    height:40px;
+    color:#222328;
+    background:  #ffffff;
+    text-align: center;
+    padding-top:10px;
+
+    font-weight: bold;
+    font-size:16px;
+}
+
+.lnb{
+    display:none;
+}
