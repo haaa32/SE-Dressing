@@ -76,12 +76,6 @@ task installReact(type: Exec) {
 	}
 }
 
-tasks {
-	processResources {
-		duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.INCLUDE
-	}
-}
-
 tasks.named('test') {
 	useJUnitPlatform()
 }
