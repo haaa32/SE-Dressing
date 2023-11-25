@@ -28,7 +28,7 @@ public class UserController {
     // 회원가입 페이지 출력 요청
     @GetMapping("/api/user/join")
     public String joinForm() {
-        return "join";
+        return "api/user/join"; // 리액트 애플리케이션의 루트 경로로 리다이렉션
     } //join에서 보낸 데이터를 받는 메소드가 없어 405 ERROR 가 뜬다 //login은 아직 html조차 존재하지 않아서 404 ERROR
 
     // 회원가입 페이지 폼 작성 데이터 받기
@@ -55,10 +55,10 @@ public class UserController {
             out.println("history.go(-1); </script>");
             out.close();*/
             otherComponent.AlertMessage(response, "Failed Join!!");
-            return "join";
+            return "api/user/join";
         }
         else { //회원가입 성공
-            return "login"; //회원가입 후 로그인 창 실행
+            return "/api/login"; //회원가입 후 로그인 창 실행
         }
 
     }
@@ -90,47 +90,6 @@ public class UserController {
             return "login";
         }
     }
-
-    /*//회원목록 출력
-    @GetMapping("/user/")
-    public String findAll(Model model) {
-        List<UserDTO> userDTOList = userService.findAll();
-        // 어떠한 html로 가져갈 데이터가 있다면 model 사용
-        model.addAttribute("userList", userDTOList);
-        return "list"; //list.html 로 모델을 가져갈 것임
-    }
-
-    //회원 상세정보 (아이디를 이용해 찾음)
-    @GetMapping("/user/{id}") //경로상의 변수를 {} 안에 담음 => PathVariable: 이를 받는 어노테이션, 경로상의 값을 담아옴
-    public String findByID(@PathVariable Long id, Model model) {
-        UserDTO userDTO = userService.findByID(id);
-        model.addAttribute("user", userDTO);
-        return "detail";
-    }
-
-    //회원정보 수정 (html에서 정보 받았을 때)
-    @GetMapping("/user/update")
-    public String updateForm(HttpSession session, Model model) {
-        String myUserId = (String) session.getAttribute("loginUserId");
-        UserDTO userDTO = userService.updateForm(myUserId);
-        model.addAttribute("updateUser", userDTO);
-        return "update";
-    }
-
-    //회원정보 수정 (정보 수정 폼을 작성받고, html로 다시 넘길 때)
-    @PostMapping("/user/update")
-    public String update(@ModelAttribute UserDTO userDTO) {
-        userService.update(userDTO);
-        //리다이렉트: 컨트롤러 메소드의 끝나고 다시 다른 컨트롤러 메소드 접속(다른 애 주소)을 요청한다,,(Post 매핑의 중복 방지)
-        return "redirect:/user/" + userDTO.getId();
-    }
-
-    @GetMapping("/user/delete/{id}")
-    public String deleteById(@PathVariable Long id) {
-        userService.deleteById(id);
-        //바로 list.html로 가게 된다면 model이 없어 정보가 없이 전달된다. 이 때 리다이렉트 이용!!!
-        return "redirect:/user/"; //redirect 뒤에는 무조건 주소가 온다 (list.html이 아님!!)
-    }*/
 
     @GetMapping("/api/user/logout")
     public String logout(HttpSession httpSession) {
