@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 @Controller
 @RequiredArgsConstructor
 public class CoordiController {
@@ -77,5 +80,27 @@ public class CoordiController {
         model.addAttribute("numLimit", numLimit);
 
         return "coordi";
+    }
+    // 좋아요 처리 메소드
+    @RequestMapping("/coordi/like")
+    @ResponseBody
+    public String likeCoordi(HttpSession session) {
+        return handleUserReaction(session, true);
+    }
+
+    // 싫어요 처리 메소드
+    @RequestMapping("/coordi/dislike")
+    @ResponseBody
+    public String dislikeCoordi(HttpSession session) {
+        return handleUserReaction(session, false);
+    }
+
+    // 사용자 반응 처리 공통 메소드
+    private String handleUserReaction(HttpSession session, boolean isLike) {
+        Long userId = (Long) session.getAttribute("loginId");
+        UserDTO userDTO = userService.findByID(userId);
+        // JSON 형태로 numUserCoordi 값을 반환
+        return "{\"numUserCoordi\": " + userDTO.getNumUserCoordi() + "}";
+
     }
 }

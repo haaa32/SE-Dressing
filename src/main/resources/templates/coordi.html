@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>coordi</title>
+    <script>
+        function updateUserReaction(reactionType) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // 페이지 새로고침
+                    location.reload();
+                }
+            };
+            xhttp.open("GET", "/coordi/" + reactionType, true);
+            xhttp.send();
+        }
+    </script>
 </head>
 <body>
 <h1>사용자 기반 옷추천</h1>
 
 <h3>옷추천 가능 횟수</h3>
-<span th:text="${numUserCoordi}"></span>
+<span id="numUserCoordi" th:text="${numUserCoordi}"></span>
 <span>/</span>
 <span th:text="${numLimit}"></span>
 
@@ -26,8 +39,8 @@
     </ul>
 </div>
 
-<a href="/coordi/like">좋아요</a>
-<a href="/coordi/dislike">싫어요</a>
+<a href="javascript:updateUserReaction('like')">좋아요</a>
+<a href="javascript:updateUserReaction('dislike')">싫어요</a>
 
 
 </body>
