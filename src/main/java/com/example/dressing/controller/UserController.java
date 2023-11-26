@@ -17,7 +17,9 @@ import java.io.PrintWriter;
 import java.util.List;
 //import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller
+@RestController
+@RequestMapping("/api/user")
+@CrossOrigin(origins = "http://localhost:8081")
 @RequiredArgsConstructor //(lombok) userService 필드를 매개변수로 갖는 UserController 생성자 자동생성
 public class UserController {
     //스프링에서 사용하는 객체 사용 방법
@@ -25,17 +27,16 @@ public class UserController {
     public final UserService userService; //UserService 객체를 주입받는다 (컨트롤러가 서비스의 자원(메서드,필드) 등을 이용 가능하다)
     public final OtherComponent otherComponent;
 
+
     // 회원가입 페이지 출력 요청
-    @GetMapping("/api/user/join")
+    @GetMapping("/join")
+    @ResponseBody
     public String joinForm() {
-        return "membership"; // 리액트 애플리케이션의 루트 경로로 리다이렉션
+        return "/api/user/join";
     } //join에서 보낸 데이터를 받는 메소드가 없어 405 ERROR 가 뜬다 //login은 아직 html조차 존재하지 않아서 404 ERROR
 
     // 회원가입 페이지 폼 작성 데이터 받기
-    @PostMapping("/api/user/join")
-    /*public String join(@RequestParam("userName") String userName, //변수에 input 태그의 name 값 저장
-                              @RequestParam("userId") String userId,
-                              @RequestParam("userPassword") String userPassword) { */
+    @PostMapping("/join")
     public String join(@ModelAttribute UserDTO userDTO, @RequestParam("userPasswordCheck") String userPasswordCheck,
                        HttpServletResponse response) throws IOException { //클래스 변수와 name이 일치하면 값이 저장된다
         // HttpServletResponse response: 회원가입 실패시 Controller에서 alert창 띄우기 위해 사용하는 변수
@@ -47,28 +48,21 @@ public class UserController {
         System.out.println(joinRusult);
 
         if(joinRusult == -1 || joinRusult == -2) { //회원가입 실패
-            //추후 component
-            /*PrintWriter out = response.getWriter();
-            response.setCharacterEncoding("utf-8");
-            response.setContentType("text/html; charset=utf-8");
-            out.println("<script> alert('Failed Join!');"); //ㅏㅗ 한글이 깨져서 나와!!
-            out.println("history.go(-1); </script>");
-            out.close();*/
             otherComponent.AlertMessage(response, "Failed Join!!");
-            return "membership";
+            return "join";
         }
         else { //회원가입 성공
-            return "/api/login"; //회원가입 후 로그인 창 실행
+            return "login"; //회원가입 후 로그인 창 실행
         }
 
     }
 
-    @GetMapping("/api/user/login")
+    @GetMapping("/login")
     public String loginForm() {
         return "login";
     }
 
-    @PostMapping("/api/user/login")
+    @PostMapping("/login")
     public String login(@ModelAttribute UserDTO userDTO, HttpSession httpSession, HttpServletResponse response) throws IOException { //아이디와 비밀번호 받아옴, 세션 정보까지
         UserDTO loginResult = userService.login(userDTO); //로그인 결과를 확인하기 위해
 
@@ -91,14 +85,14 @@ public class UserController {
         }
     }
 
-    @GetMapping("/api/user/logout")
+    @GetMapping("/logout")
     public String logout(HttpSession httpSession) {
         httpSession.invalidate(); //세션을 무효화 한다
         return "login";
     }
 
     //js에서 매핑되어 아이디 중복 체크
-    @PostMapping("/api/user/id-check")
+    @PostMapping("/id-check")
     public @ResponseBody String emailCheck(@RequestParam("userId") String userId) {
         System.out.println("userId = " + userId);
         String checkResult = userService.idCheck(userId);

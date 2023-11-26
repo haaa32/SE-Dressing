@@ -8,14 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Arrays;
 import java.util.List;
 
-@RestController
-//@RequestMapping("/api")
+@Controller
 public class HomeController {
-    //기본 페이지 요청 메서드
     @RequestMapping("/api/login")
     @ResponseBody
     public String login() {
         return "login";
     }
-
 }
