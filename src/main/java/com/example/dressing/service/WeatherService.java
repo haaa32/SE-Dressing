@@ -48,4 +48,11 @@ public class WeatherService {
 
         return future;
     }
+
+    public double getDaeguTempCelsius(String daeguWeather) {
+        String[] array = daeguWeather.split(" ");
+        String temp = array[3]; // ex) 6.0^C, (뒤에 ^C, 3자 잘라야됨)
+
+        return Double.parseDouble(temp.substring(0, temp.length()-3));
+    }
 }
