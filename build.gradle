@@ -39,13 +39,22 @@ dependencies {
 
 def webappDir = "$projectDir/src/main/frontend"
 
+//sourceSets {
+//	main {
+//		resources {
+//			srcDirs = ["$webappDir/build", "$projectDir/src/main/resources"]
+//		}
+//	}
+//}
+
 sourceSets {
 	main {
 		resources {
-			srcDirs = ["$webappDir/build", "$projectDir/src/main/resources"]
+			srcDirs = ["$webappDir/build", "$webappDir/build/static", "$projectDir/src/main/resources"]
 		}
 	}
 }
+
 
 
 processResources {

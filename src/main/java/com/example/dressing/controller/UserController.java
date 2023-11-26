@@ -30,9 +30,9 @@ public class UserController {
 
     // 회원가입 페이지 출력 요청
     @GetMapping("/join")
-    @ResponseBody
     public String joinForm() {
-        return "/api/user/join";
+        System.out.println("join");
+        return "null";
     } //join에서 보낸 데이터를 받는 메소드가 없어 405 ERROR 가 뜬다 //login은 아직 html조차 존재하지 않아서 404 ERROR
 
     // 회원가입 페이지 폼 작성 데이터 받기

@@ -25,7 +25,7 @@ function App() {
           <Route path='/login' element={<App1/>}/>
           <Route path='/main' element={<App2/>}/>
           <Route path='/estimation' element={<App3/>}/>
-          <Route path='/user/join' element={<App4 />} />
+          <Route path='/api/user/join' element={<App4 />} />
           <Route path='/admin' element={<App5/>}/>
         </Routes>
       </BrowserRouter>
