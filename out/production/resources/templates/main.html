@@ -2,50 +2,72 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/MainPage.css">
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/app2.js"></script>
     <title>main</title>
 </head>
 <body>
-<!-- 세션에 저장된 로그인 정보 출력 -->
-<p>session 값 확인: <span th:text="${session.loginUserId}"></span></p>
-
-<!-- 로그아웃 링크 -->
-<a href="/user/logout">로그아웃</a>
-
-<!-- 사진 업로드 링크 -->
-<a href="/upload">사진 업로드</a>
-
-<!-- 건의하기 링크 -->
-<a href="/suggest/save">건의하기</a>
-
-<!-- 사용자 기반 옷추천 링크 -->
-<a href="/coordi">사용자 기반 옷추천</a>
-
-<h1>대구 현재 날씨</h1>
-<p th:text="${weatherData}"></p>
-
-<p>테스트 카테고리</p>
-<p th:text="${session.category}"></p>
-
-<nav>
-    <ul>
-        <li><a href="/category/total">전체</a></li>
-        <li><a href="/category/outer">아우터</a></li>
-        <li><a href="/category/top">상의</a></li>
-        <li><a href="/category/bottom">하의</a></li>
-        <li><a href="/category/shoes">신발</a></li>
-        <li><a href="/category/bag">가방</a></li>
-    </ul>
-</nav>
-
-<div>
-    <ul>
-        <li th:each="imageData : ${imagesData}">
-            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
-            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
-        </li>
-    </ul>
+<div id="wrap">
+    <div id="header2">
+        <div id="logo">
+            <img src="./images/logo.png"/>
+        </div>
+        <div id="cody">
+            <div id="userdata">
+                <p> 유저 id: <span th:text="${session.loginUserId}"></span></p>
+                <br/>
+                <a href="/user/logout">로그아웃</a>
+                <br/>
+            </div>
+            <div id="aichoose">
+                <a href='./EstimationPage.html'>AI기반</a>
+            </div>
+            <div id="weatherchoose">
+                <a href='./EstimationPage.html'>날씨기반</a>
+            </div>
+        </div>
+    </div>
+    <div id="category2">
+        <p>카테고리</p>
+        <p th:text="${session.category}"></p>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="/category/total">전체</a></li>
+                <li><a href="/category/outer">아우터</a></li>
+                <li><a href="/category/top">상의</a></li>
+                <li><a href="/category/bottom">하의</a></li>
+                <li><a href="/category/shoes">신발</a></li>
+                <li><a href="/category/bag">가방</a></li>
+                <li><a href="#">좋아요</a></li>
+                <li><a href="#">싫어요</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="clolist">
+        <div id="addclothes">
+            <a href="/upload">사진 업로드</a>
+        </div>
+        <ul>
+            <li th:each="imageData : ${imagesData}">
+                <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+                <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
+            </li>
+        </ul>
+    </div>
 </div>
-
-
 </body>
-</html>
+
+
+
+<!--&lt;!&ndash; 건의하기 링크 &ndash;&gt;-->
+<!--<a href="/suggest/save">건의하기</a>-->
+
+<!--&lt;!&ndash; 사용자 기반 옷추천 링크 &ndash;&gt;-->
+<!--<a href="/coordi">사용자 기반 옷추천</a>-->
+
+<!--<h1>대구 현재 날씨</h1>-->
+<!--<p th:text="${weatherData}"></p>-->
+
+

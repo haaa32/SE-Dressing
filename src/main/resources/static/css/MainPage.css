@@ -1,0 +1,153 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+    min-width: 1200px; /* 최소 너비 설정 */
+    min-height: 100vh; /* 최소 높이 설정 */
+    background-color: aqua;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#header2 {
+    width: 100%;
+    height: 100px;
+    background-color: aquamarine;
+    display: flex; /* Flexbox를 사용하여 자식 요소를 정렬 */
+}
+
+#logo {
+    float: left;
+    width: 226px;
+    height: 100px;
+    background-color: cadetblue;
+}
+
+#logo>img {
+    width: 100%;
+    height: 100%;
+}
+
+#cody {
+    float: left;
+    flex: 1; /* 남은 공간을 꽉 채움 */
+    height: 100%;
+    background-color: #4f4f4f;
+}
+
+#cody>#userdata {
+    float: left;
+    width: 300px;
+    height: 100px;
+    background-color: #FEC4DD;
+}
+
+#cody>#aichoose {
+    float: right;
+    margin-top: 20pt;
+    margin-right: 40pt;
+    width: 100px;
+    height: 50px;
+    background-color: #FEC4DD;
+}
+
+#cody>#weatherchoose {
+    float: right;
+    margin-top: 20pt;
+    margin-right: 40pt;
+    width: 100px;
+    height: 50px;
+    background-color: #FEC4DD;
+}
+
+#category2 {
+    width: 100%;
+    height: 100px;
+    background-color: #AFAFAF;
+}
+
+#category2>.nav>.gnb {
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#category2>.nav>.gnb>li {
+    float: left;
+}
+
+#category2>.nav>.gnb>li>a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #f864a2;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.gnb li a:hover {
+    background: #4f4f4f;
+    color: #FE85B8;
+}
+
+.lnb>li>a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    color: #4f4f4f;
+    background: #FE85B8;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.lnb {
+    display: none;
+}
+
+#colorcheck {
+    float: left;
+    width: 100%;
+    height: 30px;
+    background-color: #8f8c8c;
+}
+
+#colorcheck>#color {
+    float: right;
+    width: 600px;
+    height: 30px;
+    background-color: #8f8c8c;
+    word-spacing: 20px;
+}
+
+#clolist {
+    width: 100%;
+    height: 100vh;
+    background-color: #fcf7f9;
+}
+
+#clolist>#addclothes {
+    display: block;
+    float: left;
+    margin: 20pt 35pt;
+    width: 200px;
+    height: 200px;
+    background-color: #FEC4DD;
+}
