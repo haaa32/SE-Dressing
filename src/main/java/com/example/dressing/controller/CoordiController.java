@@ -42,6 +42,13 @@ public class CoordiController {
 
         // 추천받기 횟수 증가 및 DB에 저장
         if (numUserCoordi < numLimit) {
+            // 사용자가 Top, Bottom, Shoes 카테고리에서 최소 한 개의 아이템을 갖고 있는지 확인
+            boolean hasRequiredItems = coordiService.hasRequiredItems(userId);
+            if (!hasRequiredItems) {
+                otherComponent.AlertMessage(response, "Add more clothes!");
+                return "coordi";
+            }
+
             userDTO.setNumUserCoordi(numUserCoordi + 1);
             userService.saveUser(userDTO);
 
@@ -60,7 +67,7 @@ public class CoordiController {
             model.addAttribute("imagesData", imageDataList);
 
         } else {
-            // 추천 가능 횟수 소진 메시지 전달 및 main 페이지로 리디렉션
+            // 추천 가능 횟수 소진 메시지 전달 및 main 페이지로
             otherComponent.AlertMessage(response, "The chance is over!");
             //return "redirect:/main";
             return "coordi";
