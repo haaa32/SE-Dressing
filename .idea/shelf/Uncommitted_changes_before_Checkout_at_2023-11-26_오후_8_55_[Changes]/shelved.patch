@@ -1,0 +1,65 @@
+Index: src/main/java/com/example/dressing/controller/CoordiController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dressing.controller;\r\n\r\nimport com.example.dressing.dto.UserDTO;\r\nimport com.example.dressing.service.UserService;\r\nimport com.example.dressing.service.WeatherService;\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.ui.Model;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\n\r\nimport javax.servlet.http.HttpSession;\r\nimport java.util.concurrent.ExecutionException;\r\n\r\n@Controller\r\n@RequiredArgsConstructor\r\npublic class CoordiController {\r\n    public final WeatherService weatherService;\r\n    public final UserService userService;\r\n\r\n    @GetMapping(\"/coordi\")\r\n    public String coordiForm(Model model, HttpSession session) throws ExecutionException, InterruptedException {\r\n        String weatherData = weatherService.getDaeguWeather().get();\r\n        model.addAttribute(\"weatherData\", weatherData);\r\n\r\n        Long userId = (Long) session.getAttribute(\"loginId\");\r\n        UserDTO userDTO = userService.findByID(userId);\r\n        int numLimit = userService.getNumLimit(userDTO.getUserRank());\r\n        model.addAttribute(\"numLimit\", numLimit);\r\n\r\n\r\n\r\n        return \"coordi\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/com/example/dressing/controller/CoordiController.java b/src/main/java/com/example/dressing/controller/CoordiController.java
+--- a/src/main/java/com/example/dressing/controller/CoordiController.java	
++++ b/src/main/java/com/example/dressing/controller/CoordiController.java	
+@@ -1,6 +1,10 @@
+ package com.example.dressing.controller;
+ 
+ import com.example.dressing.dto.UserDTO;
++import com.example.dressing.entity.ClosetEntity;
++import com.example.dressing.entity.ImageData;
++import com.example.dressing.service.ClosetService;
++import com.example.dressing.service.CoordiService;
+ import com.example.dressing.service.UserService;
+ import com.example.dressing.service.WeatherService;
+ import lombok.RequiredArgsConstructor;
+@@ -9,6 +13,9 @@
+ import org.springframework.web.bind.annotation.GetMapping;
+ 
+ import javax.servlet.http.HttpSession;
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.List;
+ import java.util.concurrent.ExecutionException;
+ 
+ @Controller
+@@ -16,9 +23,11 @@
+ public class CoordiController {
+     public final WeatherService weatherService;
+     public final UserService userService;
++    public final ClosetService closetService;
++    public final CoordiService coordiService;
+ 
+     @GetMapping("/coordi")
+-    public String coordiForm(Model model, HttpSession session) throws ExecutionException, InterruptedException {
++    public String coordiForm(Model model, HttpSession session) throws ExecutionException, InterruptedException, IOException {
+         String weatherData = weatherService.getDaeguWeather().get();
+         model.addAttribute("weatherData", weatherData);
+ 
+@@ -27,6 +36,22 @@
+         int numLimit = userService.getNumLimit(userDTO.getUserRank());
+         model.addAttribute("numLimit", numLimit);
+ 
++        // 횟수가 넘어가면 추천할 수 없도록 main 페이지로 보내버렷~
++
++        // 횟수 아직 안 차서 코디
++        List<ClosetEntity> recommendedClosetEntityList = coordiService.recommendCoordiByUser(userId, weatherService.getDaeguTempCelsius(weatherData));
++
++        // 이미지 데이터를 처리하기 위한 리스트를 생성
++        List<ImageData> imageDataList = new ArrayList<>();
++        for (ClosetEntity photo : recommendedClosetEntityList) {
++            ImageData imageData = new ImageData();
++            imageData.setBase64Image(closetService.getBase64Image(photo.getSavedPath())); // 이미지를 Base64 형식으로 변환하여 저장
++            imageData.setId(photo.getId()); // 이미지 ID를 설정
++            imageDataList.add(imageData); // 리스트에 추가
++        }
++
++        // 모델에 이미지 데이터 리스트를 추가
++        model.addAttribute("imagesData", imageDataList);
+ 
+ 
+         return "coordi";
