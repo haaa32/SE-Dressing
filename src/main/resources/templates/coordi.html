@@ -16,15 +16,54 @@
 <h3>대구 현재 날씨</h3>
 <p th:text="${weatherData}"></p>
 
+<!--삭제해도됨-->
+<!--<div>-->
+<!--    <ul>-->
+<!--        <li th:each="imageData : ${imagesData}">-->
+<!--            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</div>-->
 
-<div>
-    <ul>
-        <li th:each="imageData : ${imagesData}">
-            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
-            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
-        </li>
-    </ul>
-</div>
+<!--옷 추천 테이블-->
+<table>
+    <tr>
+        <th>아우터</th>
+        <th>상의</th>
+        <th>하의</th>
+        <th>신발</th>
+        <th>가방</th>
+    </tr>
+    <tr>
+        <td>
+<!--            타임리프 조건문 개꿀, 모델이 null인지 검사-->
+            <div th:if = "${outerImageData != null}">
+                <img th:src="${outerImageData.base64Image}" style="width: 200px; height: 200px;"/>
+            </div>
+        </td>
+        <td>
+            <div th:if = "${topImageData != null}">
+                <img th:src="${topImageData.base64Image}" style="width: 200px; height: 200px;"/>
+            </div>
+        </td>
+        <td>
+            <div th:if = "${bottomImageData != null}">
+                <img th:src="${bottomImageData.base64Image}" style="width: 200px; height: 200px;"/>
+            </div>
+        </td>
+        <td>
+            <div th:if = "${shoesImageData != null}">
+                <img th:src="${shoesImageData.base64Image}" style="width: 200px; height: 200px;"/>
+            </div>
+        </td>
+        <td>
+            <div th:if = "${bagImageData != null}">
+                <img th:src="${bagImageData.base64Image}" style="width: 200px; height: 200px;"/>
+            </div>
+        </td>
+
+    </tr>
+</table>
 
 <a href="/coordi/like">좋아요</a>
 <a href="/coordi/dislike">싫어요</a>
