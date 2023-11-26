@@ -42,6 +42,11 @@ public class UserEntity extends TimeEntity { //엔티티 클래스 대로 실제
     @ColumnDefault("'Daegu'")
     private String local; //대구 고정
 
+    // 사용자가 추천받기 버튼을 몇 번 눌렀는지
+    @Column
+    @ColumnDefault("0")
+    private Integer numUserCoordi = 0;
+
     //유저 DTO를 유저 Entity로 반환 (JpaRepository 를 사용하기 위해)
     public static UserEntity toUserEntity(UserDTO userDTO) {
         UserEntity userEntity = new UserEntity();

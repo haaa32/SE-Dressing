@@ -6,6 +6,7 @@ import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -158,5 +159,17 @@ public class UserService {
         else if(rank.equals("Diamond")) numLimit = 999;
 
         return numLimit;
+    }
+
+    // UserDTO를 UserEntity로 변환
+    public void saveUser(UserDTO userDTO) {
+        UserEntity userEntity = userRepository.findById(userDTO.getId())
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+
+        // 업데이트할 필드 설정, 기존 사용자의 데이터를 업데이트
+        userEntity.setNumUserCoordi(userDTO.getNumUserCoordi());
+
+
+        userRepository.save(userEntity);
     }
 }
