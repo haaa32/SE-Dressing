@@ -24,6 +24,8 @@ public class UserDTO {
     private LocalDateTime createdDate;
     private String local; //대구 고정
 
+    private Integer numUserCoordi;
+
 
 
     //UserEntity -> UserDTO 변환
@@ -37,6 +39,7 @@ public class UserDTO {
         userDTO.setUserRank(userEntity.getUserRank());
         userDTO.setCreatedDate(userEntity.getCreatedDate());
         userDTO.setLocal(userEntity.getLocal());
+        userDTO.setNumUserCoordi(userEntity.getNumUserCoordi());
         return userDTO;
     }
 }
