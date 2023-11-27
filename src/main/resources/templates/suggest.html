@@ -1,14 +1,40 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>suggest</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="/suggest/save" method="post"> &lt;!&ndash;enctype="multipart/form-data"&ndash;&gt;-->
+<!--  title: <input type="text" name="title" required> <br>-->
+<!--  content: <textarea name="content" cols="30" rows="10" required></textarea> <br>-->
+<!--  <input type="submit" value="작성">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/suggest.css">
   <title>suggest</title>
 </head>
 <body>
-<form action="/suggest/save" method="post"> <!--enctype="multipart/form-data"-->
-  title: <input type="text" name="title" required> <br>
-  content: <textarea name="content" cols="30" rows="10" required></textarea> <br>
-  <input type="submit" value="작성">
-</form>
+<div id="wrap">
+  <div id="header">
+    <div id="logo">
+      <img src="../images/logo.png"/>
+    </div>
+  </div>
+  <div id="suggest_write">
+    <form action="/suggest/save" method="post"> <!--enctype="multipart/form-data"-->
+      &nbsp;&nbsp;제목: <input type="text" name="title" required> <br>
+      &nbsp;&nbsp;<br>&nbsp;&nbsp;<textarea name="content" cols="80" rows="20" required></textarea> <br>
+      &nbsp;&nbsp;<input type="submit" value="작성  " id="suggest_btn">
+    </form>
+  </div>
+</div>
 </body>
 </html>

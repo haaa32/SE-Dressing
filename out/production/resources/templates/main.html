@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/MainPage.css">
-    <script src="./js/jquery-1.12.4.js"></script>
-    <script src="./js/app2.js"></script>
     <title>main</title>
 </head>
 <body>
@@ -22,10 +20,10 @@
                 <br/>
             </div>
             <div id="aichoose">
-                <a href='./EstimationPage.html'>AI기반</a>
+                <a href="/coordi">코디추천</a>
             </div>
-            <div id="weatherchoose">
-                <a href='./EstimationPage.html'>날씨기반</a>
+            <div id="suggest">
+                <a href="/suggest/save">건의하기</a>
             </div>
         </div>
     </div>
@@ -47,7 +45,7 @@
     </div>
     <div id="clolist">
         <div id="addclothes">
-            <a href="/upload">사진 업로드</a>
+            <a href="/upload" id="upload-link">&#43;</a>
         </div>
         <ul>
             <li th:each="imageData : ${imagesData}">
@@ -63,9 +61,6 @@
 
 <!--&lt;!&ndash; 건의하기 링크 &ndash;&gt;-->
 <!--<a href="/suggest/save">건의하기</a>-->
-
-<!--&lt;!&ndash; 사용자 기반 옷추천 링크 &ndash;&gt;-->
-<!--<a href="/coordi">사용자 기반 옷추천</a>-->
 
 <!--<h1>대구 현재 날씨</h1>-->
 <!--<p th:text="${weatherData}"></p>-->

@@ -63,7 +63,7 @@ a {
     background-color: #FEC4DD;
 }
 
-#cody>#weatherchoose {
+#cody>#suggest {
     float: right;
     margin-top: 20pt;
     margin-right: 40pt;
@@ -143,11 +143,27 @@ a {
     background-color: #fcf7f9;
 }
 
-#clolist>#addclothes {
+#addclothes {
     display: block;
     float: left;
     margin: 20pt 35pt;
-    width: 200px;
-    height: 200px;
+    width: 200px; /* 크기 조절 필요시 조절하세요 */
+    height: 200px; /* 크기 조절 필요시 조절하세요 */
     background-color: #FEC4DD;
+}
+
+#upload-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+#upload-link:hover {
+    background-color: #4f4f4f;
+    color: #FE85B8;
 }
