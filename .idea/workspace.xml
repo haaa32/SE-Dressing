@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="merge main yujin yewon 좋아요 싫어요 합침">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/coordi.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/coordi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ShowMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ShowMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/CoordiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/CoordiRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/coordi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/coordi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-    </list>
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -309,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701086821837</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="무흐흐그,,ㅡㅜㅜ 좋아요 싫어요 카테고리까지 개발!!">
+      <created>1701099457104</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701099457104</updated>
+    </task>
+    <task id="LOCAL-00021" summary="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!">
+      <created>1701099733677</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701099733677</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +348,9 @@
     <MESSAGE value="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료" />
     <MESSAGE value="yujin yewon 좋아요 싫어요 전까지 합침" />
     <MESSAGE value="merge main yujin yewon 좋아요 싫어요 합침" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge main yujin yewon 좋아요 싫어요 합침" />
+    <MESSAGE value="무흐흐그,,ㅡㅜㅜ 좋아요 싫어요 카테고리까지 개발!!" />
+    <MESSAGE value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
