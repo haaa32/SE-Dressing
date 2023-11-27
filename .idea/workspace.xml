@@ -6,10 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/MainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/MainPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ClosetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ClosetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/static/css/category.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/static/css/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/static/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/static/css/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/static/js/jquery-1.12.4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/admin/board.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/admin/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/admin/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/admin/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/admin/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/join.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/suggest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dressing/templates/uploadTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/suggest.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/suggest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +59,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="yujin" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,6 +107,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.dressing.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\REAL2_SE\src\main\resources\templates" />
     </key>
@@ -271,7 +291,35 @@
       <option name="project" value="LOCAL" />
       <updated>1700927411006</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="yujin yewon 합침.. 옷 추천 1 days..">
+      <created>1701000757401</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701000757401</updated>
+    </task>
+    <task id="LOCAL-00017" summary="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료">
+      <created>1701018101267</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701018101267</updated>
+    </task>
+    <task id="LOCAL-00018" summary="yujin yewon 좋아요 싫어요 전까지 합침">
+      <created>1701085497955</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701085497955</updated>
+    </task>
+    <task id="LOCAL-00019" summary="merge main yujin yewon 좋아요 싫어요 합침">
+      <created>1701086821837</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701086821837</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +354,11 @@
     <MESSAGE value="카테고리 추가!!!!! ㅎㅎ" />
     <MESSAGE value="yewon2 합침 카테고리 추가..ㅎ" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="yujin yewon 합침.. 옷 추천 1 days.." />
+    <MESSAGE value="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료" />
+    <MESSAGE value="yujin yewon 좋아요 싫어요 전까지 합침" />
+    <MESSAGE value="merge main yujin yewon 좋아요 싫어요 합침" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge main yujin yewon 좋아요 싫어요 합침" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
