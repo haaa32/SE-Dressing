@@ -58,6 +58,7 @@ public class UserEntity extends TimeEntity { //엔티티 클래스 대로 실제
         userEntity.setUserRank(userDTO.getUserRank());
         userEntity.setCreatedDate(userDTO.getCreatedDate()); //일단 없애고 문제생기면 ㄲ
         userEntity.setLocal(userDTO.getLocal());
+        userEntity.setNumUserCoordi(userDTO.getNumUserCoordi());
 
         return userEntity;
     }
@@ -74,6 +75,7 @@ public class UserEntity extends TimeEntity { //엔티티 클래스 대로 실제
         userEntity.setUserRank(userDTO.getUserRank());
         userEntity.setCreatedDate(userDTO.getCreatedDate());
         userEntity.setLocal(userDTO.getLocal());
+        userEntity.setNumUserCoordi(userDTO.getNumUserCoordi());
 
         return userEntity;
     }
