@@ -25,7 +25,7 @@ public class ClosetInfoService {
     public void insertClosetInfoData() {
         System.out.println("insertClosetInfoData 메소드 호출됨");
         List<ClosetInfoEntity> entities = Arrays.asList(
-                new ClosetInfoEntity("T-shirt", "Top", 24, 40),
+                new ClosetInfoEntity("T-shirt", "Top", -5, 40),
                 new ClosetInfoEntity("Trouser", "Bottom",0, 40),
                 new ClosetInfoEntity("Pullover", "Top",-5, 22),
                 new ClosetInfoEntity("Dress", "Onepiece",12, 40),

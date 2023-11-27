@@ -88,7 +88,7 @@ public class CoordiService {
     // 사용자가 각 필수 카테고리에 최소 하나의 아이템을 가지고 있는지 확인하는 메서드
     public boolean hasRequiredItems(Long userId) {
         // 필수 카테고리 목록
-        List<String> requiredCategories = Arrays.asList("top", "bag");
+        List<String> requiredCategories = Arrays.asList("top", "bottom", "shoes");
         for (String category : requiredCategories) {
             // 각 카테고리에 대한 사용자의 아이템 목록을 가져옴
             List<ClosetEntity> items = closetRepository.findUserPhotosByCategory(userId, category);
@@ -99,5 +99,32 @@ public class CoordiService {
         }
         // 모든 필수 카테고리에 대해 최소 하나의 아이템이 있다면 true 반환
         return true;
+    }
+
+    // 사용자의 좋아요, 싫어요한 코디 리턴
+    public List<List<ClosetEntity>> getUserCoordis(Long loginId, String heart) {
+        List<List<ClosetEntity>> closetEntityLists = new ArrayList<>(); // 리턴할 옷 리스트들
+        List<CoordiEntity> coordiEntityList; // 코디 리스트
+
+        // 코디리스트 가져오기
+        if(heart.equals("like")) // 좋아요 코디 리스트
+            coordiEntityList = coordiRepository.findUserCoordisByHeart(loginId, 1);
+        else if(heart.equals("dislike")) //싫어요 코디 리스트
+            coordiEntityList = coordiRepository.findUserCoordisByHeart(loginId, -1);
+        else // fault
+            return null;
+
+        for (CoordiEntity coordiEntity : coordiEntityList) {
+            List<ClosetEntity> closetEntityList = new ArrayList<>();
+            //closetEntityList.add(closetRepository.findById(coordiEntity.getOuterId()).get());
+            closetEntityList.add((coordiEntity.getOuterId() != null)? closetRepository.findById(coordiEntity.getOuterId()).get() : null);
+            closetEntityList.add((coordiEntity.getTopId() != null)? closetRepository.findById(coordiEntity.getTopId()).get() : null);
+            closetEntityList.add((coordiEntity.getBottomId() != null)? closetRepository.findById(coordiEntity.getBottomId()).get() : null);
+            closetEntityList.add((coordiEntity.getShoesId() != null)? closetRepository.findById(coordiEntity.getShoesId()).get() : null);
+            closetEntityList.add((coordiEntity.getBagId() != null)? closetRepository.findById(coordiEntity.getBagId()).get() : null);
+
+            closetEntityLists.add(closetEntityList); // 리스트들에 리스트 추가
+        }
+        return closetEntityLists;
     }
 }
