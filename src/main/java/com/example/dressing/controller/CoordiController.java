@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -46,7 +47,7 @@ public class CoordiController {
         boolean hasRequiredItems = coordiService.hasRequiredItems(userId);
         if (!hasRequiredItems) {
             otherComponent.AlertMessage(response, "Add more clothes!");
-            return "redirect:/main";
+            return "coordi";
         }
 
         if(numUserCoordi >= numLimit) { // === 추천 횟수 소진 ===
@@ -95,18 +96,31 @@ public class CoordiController {
     }
 
     @GetMapping("/coordi/like")
+    @ResponseBody
     public String likeCoordi(HttpSession session) {
         Long coordiId = (Long) session.getAttribute("coordiId");
         coordiService.like(coordiId);
 
-        return "redirect:/coordi";
+//        return "redirect:/coordi";
+        return handleUserReaction(session, true);
     }
 
     @GetMapping("/coordi/dislike")
+    @ResponseBody
     public String dislikeCoordi(HttpSession session) {
         Long coordiId = (Long) session.getAttribute("coordiId");
         coordiService.dislike(coordiId);
 
-        return "redirect:/coordi";
+//        return "redirect:/coordi";
+        return handleUserReaction(session, false);
+    }
+
+    // 사용자 반응 처리 공통 메소드
+    private String handleUserReaction(HttpSession session, boolean isLike) {
+        Long userId = (Long) session.getAttribute("loginId");
+        UserDTO userDTO = userService.findByID(userId);
+
+        // JSON 형태로 numUserCoordi 값을 반환
+        return "{\"numUserCoordi\": " + userDTO.getNumUserCoordi() + "}";
     }
 }
