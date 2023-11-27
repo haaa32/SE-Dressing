@@ -84,4 +84,20 @@ public class CoordiService {
         coordiEntity.setHeart(-1);
         coordiRepository.save(coordiEntity);
     }
+
+    // 사용자가 각 필수 카테고리에 최소 하나의 아이템을 가지고 있는지 확인하는 메서드
+    public boolean hasRequiredItems(Long userId) {
+        // 필수 카테고리 목록
+        List<String> requiredCategories = Arrays.asList("top", "bag");
+        for (String category : requiredCategories) {
+            // 각 카테고리에 대한 사용자의 아이템 목록을 가져옴
+            List<ClosetEntity> items = closetRepository.findUserPhotosByCategory(userId, category);
+            // 해당 카테고리의 아이템이 없다면 false 반환
+            if (items == null || items.isEmpty()) {
+                return false;
+            }
+        }
+        // 모든 필수 카테고리에 대해 최소 하나의 아이템이 있다면 true 반환
+        return true;
+    }
 }

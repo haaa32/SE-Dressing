@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/CoordiEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/CoordiRepository.java" afterDir="false" />
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-11-26__8_57__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/coordi.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/coordi.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/coordi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/coordi.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701000757401</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료">
+      <created>1701018101267</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701018101267</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +321,8 @@
     <MESSAGE value="yewon2 합침 카테고리 추가..ㅎ" />
     <MESSAGE value="test" />
     <MESSAGE value="yujin yewon 합침.. 옷 추천 1 days.." />
-    <option name="LAST_COMMIT_MESSAGE" value="yujin yewon 합침.. 옷 추천 1 days.." />
+    <MESSAGE value="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

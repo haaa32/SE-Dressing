@@ -42,15 +42,22 @@ public class CoordiController {
         int numUserCoordi = userDTO.getNumUserCoordi();
         int numLimit = userService.getNumLimit(userDTO.getUserRank());
 
+        // 사용자가 Top, Bottom, Shoes 카테고리에서 최소 한 개의 아이템을 갖고 있는지 확인
+        boolean hasRequiredItems = coordiService.hasRequiredItems(userId);
+        if (!hasRequiredItems) {
+            otherComponent.AlertMessage(response, "Add more clothes!");
+            return "redirect:/main";
+        }
+
         if(numUserCoordi >= numLimit) { // === 추천 횟수 소진 ===
-            // 추천 가능 횟수 소진 메시지 전달 및 main 페이지로 리디렉션
+            // 추천 가능 횟수 소진 메시지 전달 및 main 페이지로
             otherComponent.AlertMessage(response, "The chance is over!");
             //return "redirect:/main";
             return "coordi";
         }
 
         // === 추천 가능 ===
-        userDTO.setNumUserCoordi(numUserCoordi + 1);
+        userDTO.setNumUserCoordi(numUserCoordi + 1); // 추천 카운트 1 증가
         userService.saveUser(userDTO);
 
         // 옷 추천
