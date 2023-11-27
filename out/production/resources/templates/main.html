@@ -11,8 +11,9 @@
 <!-- 로그아웃 링크 -->
 <a href="/user/logout">로그아웃</a>
 
-<!-- 사진 업로드 링크 -->
-<a href="/upload">사진 업로드</a>
+<!-- 사진 업로드 기능 -->
+<a href="#" onclick="document.getElementById('fileInput').click()">사진 업로드</a>
+<input type="file" id="fileInput" name="files" style="display: none;" onchange="uploadFile()" multiple>
 
 <!-- 건의하기 링크 -->
 <a href="/suggest/save">건의하기</a>
@@ -34,18 +35,58 @@
         <li><a href="/category/bottom">하의</a></li>
         <li><a href="/category/shoes">신발</a></li>
         <li><a href="/category/bag">가방</a></li>
+        <li><a href="/category/like">좋아요</a></li>
+        <li><a href="/category/dislike">싫어요</a></li>
     </ul>
 </nav>
 
-<div>
+<!--카테고리가 전체, 아우터, 상의, 하의, 신발일때-->
+<div th:if="${session.category}">
     <ul>
-        <li th:each="imageData : ${imagesData}">
+        <li th:each="imageData : ${imagesDataList}">
             <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
             <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
         </li>
     </ul>
 </div>
 
+<!--카테고리가 좋아요 또는 싫어요 일 떄-->
+<div th:if="${session.category.toString().equals('like')} or ${session.category.toString().equals('dislike')}">
+    <table>
+        <tr>
+            <th>아우터</th>
+            <th>상의</th>
+            <th>하의</th>
+            <th>신발</th>
+            <th>가방</th>
+        </tr>
+        <tr th:each="heartImagesDataList : ${heartImagesDataLists}">
+            <td th:each="heartImagesData : ${heartImagesDataList}">
+                <div th:if = "${heartImagesData != null}">
+                    <img th:src="${heartImagesData.base64Image}" style="width: 200px; height: 200px;"/>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function uploadFile() {
+        var formData = new FormData();
+        var files = document.getElementById('fileInput').files;
+        for (var i = 0; i < files.length; i++) {
+            formData.append("files", files[i]);
+        }
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            }
+        });
+    }
+</script>
 
 </body>
 </html>

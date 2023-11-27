@@ -11,8 +11,9 @@
 <!-- 로그아웃 링크 -->
 <a href="/user/logout">로그아웃</a>
 
-<!-- 사진 업로드 링크 -->
-<a href="/upload">사진 업로드</a>
+<!-- 사진 업로드 기능 -->
+<a href="#" onclick="document.getElementById('fileInput').click()">사진 업로드</a>
+<input type="file" id="fileInput" name="files" style="display: none;" onchange="uploadFile()" multiple>
 
 <!-- 건의하기 링크 -->
 <a href="/suggest/save">건의하기</a>
@@ -68,6 +69,24 @@
         </tr>
     </table>
 </div>
+
+<script>
+    function uploadFile() {
+        var formData = new FormData();
+        var files = document.getElementById('fileInput').files;
+        for (var i = 0; i < files.length; i++) {
+            formData.append("files", files[i]);
+        }
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
