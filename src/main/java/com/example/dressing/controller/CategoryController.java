@@ -14,7 +14,6 @@ public class CategoryController {
         return "redirect:/main";
     }
 
-
     @GetMapping("/category/outer")
     public String showMainCategoryOuter(HttpSession session) {
         session.setAttribute("category", "outer");
