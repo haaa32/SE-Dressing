@@ -19,7 +19,7 @@
                 <a href="/user/logout">로그아웃</a>
                 <br/>
             </div>
-            <div id="aichoose">
+            <div id="coordiChoose">
                 <a href="/coordi">코디추천</a>
             </div>
             <div id="suggest">
@@ -50,7 +50,7 @@
         <ul>
             <li th:each="imageData : ${imagesData}">
                 <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
-                <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
+                <a th:href="@{/deleteImage(id=${imageData.id})}">x</a>
             </li>
         </ul>
     </div>

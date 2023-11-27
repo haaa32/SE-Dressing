@@ -35,7 +35,7 @@ public class ClosetController {
             closetService.saveFile(multipartFile, loginId);
         }
 
-        return "redirect:/main"; // redirect:/
+        return "redirect:/main.html"; // redirect:/
     }
 
     @GetMapping("/deleteImage")
