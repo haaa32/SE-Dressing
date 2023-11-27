@@ -68,26 +68,10 @@ public class CoordiController {
         session.setAttribute("coordiId", savedCoordiEntity.getId()); // 추천받은 코디의 아이디
 
         // 이미지 데이터를 처리하기 위한 리스트를 생성
-        List<ImageData> imageDataList = new ArrayList<>();
-        for (ClosetEntity photo : recommendedClosetEntityList) {
-            if (photo == null) {
-                imageDataList.add(null);
-                continue;
-            }
-            ImageData imageData = new ImageData();
-            imageData.setBase64Image(closetService.getBase64Image(photo.getSavedPath())); // 이미지를 Base64 형식으로 변환하여 저장
-            imageData.setId(photo.getId()); // 이미지 ID를 설정
-            imageDataList.add(imageData); // 리스트에 추가
-        }
-
-        // 모델을 5개 따로 생성해서 옷 테이블로 보낼 거얌
-        List<String> imageModelNameList = new ArrayList<>(Arrays.asList("outerImageData","topImageData","bottomImageData","shoesImageData","bagImageData"));
-        for (int i = 0; i < imageModelNameList.size(); i++)
-            if (imageDataList.get(i) != null)
-                model.addAttribute(imageModelNameList.get(i), imageDataList.get(i));
+        List<ImageData> imageDataList = closetService.toImageDataList(recommendedClosetEntityList);
 
         // 모델에 이미지 데이터 리스트를 추가
-        //model.addAttribute("imagesData", imageDataList);
+        model.addAttribute("imagesDataList", imageDataList);
 
         model.addAttribute("numUserCoordi", userDTO.getNumUserCoordi());
         model.addAttribute("numLimit", numLimit);

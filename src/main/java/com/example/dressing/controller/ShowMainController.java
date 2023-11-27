@@ -3,6 +3,7 @@ package com.example.dressing.controller;
 import com.example.dressing.entity.ClosetEntity;
 import com.example.dressing.entity.ImageData;
 import com.example.dressing.service.ClosetService;
+import com.example.dressing.service.CoordiService;
 import com.example.dressing.service.WeatherService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,10 +19,12 @@ import java.util.concurrent.ExecutionException;
 public class ShowMainController {
     private final WeatherService weatherService;
     private final ClosetService closetService;
+    private final CoordiService coordiService;
 
-    public ShowMainController(WeatherService weatherService, ClosetService closetService) {
+    public ShowMainController(WeatherService weatherService, ClosetService closetService, CoordiService coordiService) {
         this.weatherService = weatherService;
         this.closetService = closetService;
+        this.coordiService = coordiService;
     }
 
     @GetMapping("/main")
@@ -36,25 +39,31 @@ public class ShowMainController {
             // 세션에서 카테고리를 가져옴.
             String category = (String) session.getAttribute("category");
             // 사용자의 사진을 가져옴.
-            List<ClosetEntity> userPhotos;
+            List<ClosetEntity> userPhotos = new ArrayList<>();
+            // 좋아요 싫어요에 쓰이는 코디 리스트 (2차원)
+            List<List<ClosetEntity>> userHeartPhotos = new ArrayList<>();
 
             // 카테고리에 따라 사진 리스트 선택
-            if(category.equals("total"))
-                userPhotos = closetService.getUserPhotos(loginId);
-            else
-                userPhotos = closetService.findUserPhotosByCategory(loginId, category);
+            if(category.equals("like") || category.equals("dislike")) { // 좋아요, 싫어요
+                userHeartPhotos = coordiService.getUserCoordis(loginId, category);
 
-            // 이미지 데이터를 처리하기 위한 리스트를 생성
-            List<ImageData> imageDataList = new ArrayList<>();
-            for (ClosetEntity photo : userPhotos) {
-                ImageData imageData = new ImageData();
-                imageData.setBase64Image(closetService.getBase64Image(photo.getSavedPath())); // 이미지를 Base64 형식으로 변환하여 저장
-                imageData.setId(photo.getId()); // 이미지 ID를 설정
-                imageDataList.add(imageData); // 리스트에 추가
+                List<List<ImageData>> heartImageDataList = new ArrayList<>();
+                for (List<ClosetEntity> userHeart : userHeartPhotos)
+                    heartImageDataList.add(closetService.toImageDataList(userHeart));
+                //모델에 등록
+                model.addAttribute("heartImagesDataLists", heartImageDataList);
             }
+            else {
+                if(category.equals("total")) // 전체
+                    userPhotos = closetService.getUserPhotos(loginId);
+                else // 나머지 옷 카테고리
+                    userPhotos = closetService.findUserPhotosByCategory(loginId, category);
 
-            // 모델에 이미지 데이터 리스트를 추가
-            model.addAttribute("imagesData", imageDataList);
+                // 이미지 데이터를 처리하기 위한 리스트를 생성
+                List<ImageData> imageDataList = closetService.toImageDataList(userPhotos);
+                // 모델에 이미지 데이터 리스트를 추가
+                model.addAttribute("imagesDataList", imageDataList);
+            }
 
         } catch (InterruptedException | ExecutionException e) {
             // 예외 처리: 날씨 정보나 사진을 가져오는 데 실패한 경우
