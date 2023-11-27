@@ -10,12 +10,6 @@
                 if (this.readyState == 4 && this.status == 200) {
                     // 페이지 새로고침
                     location.reload();
-                    // 응답에서 numUserCoordi 값을 파싱
-                    // var response = JSON.parse(this.responseText);
-                    // var numUserCoordi = response.numUserCoordi;
-
-                    // 페이지의 numUserCoordi 값을 업데이트
-                    // document.querySelector("span#numUserCoordi").textContent = numUserCoordi;
                 }
             };
             xhttp.open("GET", "/coordi/" + reactionType, true);

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="코디 추천 최소 옷 수량">
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="합치기 전 커밋">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-11-26__8_57__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/templates/coordi.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/coordi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/coordi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/coordi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695447944145</updated>
       <workItem from="1700826699164" duration="1695000" />
+      <workItem from="1701082860325" duration="2905000" />
     </task>
     <task id="LOCAL-00001" summary="test2">
       <created>1695448054483</created>
@@ -259,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701004376220</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="좋아요 싫어요">
+      <created>1701011264669</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701011264669</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +300,9 @@
     <MESSAGE value=".." />
     <MESSAGE value="yewon yujin 병합" />
     <MESSAGE value="코디 추천 최소 옷 수량" />
-    <option name="LAST_COMMIT_MESSAGE" value="코디 추천 최소 옷 수량" />
+    <MESSAGE value="좋아요 싫어요" />
+    <MESSAGE value="합치기 전 커밋" />
+    <option name="LAST_COMMIT_MESSAGE" value="합치기 전 커밋" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
