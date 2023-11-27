@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="yujin yewon merge Dressing backend ver#1 완성!!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="yewon2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -350,7 +350,8 @@
     <MESSAGE value="merge main yujin yewon 좋아요 싫어요 합침" />
     <MESSAGE value="무흐흐그,,ㅡㅜㅜ 좋아요 싫어요 카테고리까지 개발!!" />
     <MESSAGE value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
+    <MESSAGE value="yujin yewon merge Dressing backend ver#1 완성!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="yujin yewon merge Dressing backend ver#1 완성!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
