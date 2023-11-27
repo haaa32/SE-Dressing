@@ -11,8 +11,10 @@
 <!-- 로그아웃 링크 -->
 <a href="/user/logout">로그아웃</a>
 
-<!-- 사진 업로드 링크 -->
-<a href="/upload">사진 업로드</a>
+<!-- 사진 업로드 기능 -->
+<a href="#" onclick="document.getElementById('fileInput').click()">사진 업로드</a>
+<input type="file" id="fileInput" name="files" style="display: none;" onchange="uploadFile()" multiple>
+
 
 <!-- 건의하기 링크 -->
 <a href="/suggest/save">건의하기</a>
@@ -45,6 +47,29 @@
         </li>
     </ul>
 </div>
+
+<script>
+    function uploadFile() {
+        // FormData 객체 생성: 웹 폼 데이터를 쉽게 구성할 수 있도록 함.
+        var formData = new FormData();
+        // 사용자가 선택한 파일들을 가져옴.
+        var files = document.getElementById('fileInput').files;
+        // 모든 선택된 파일을 formData에 추가
+        for (var i = 0; i < files.length; i++) {
+            formData.append("files", files[i]);
+        }
+        // 비동기 요청으로 서버에 formData 전송.
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            // 서버로부터의 응답 처리
+            if (response.redirected) {
+                window.location.href = response.url;
+            }
+        });
+    }
+</script>
 
 
 </body>

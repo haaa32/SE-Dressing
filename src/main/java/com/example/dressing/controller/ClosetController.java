@@ -27,9 +27,8 @@ public class ClosetController {
     }
 
     @PostMapping("/upload")
-    public String uploadFile(@RequestParam("file") MultipartFile file, @RequestParam("files") List<MultipartFile> files, HttpSession httpSession) throws IOException {
+    public String uploadFile(@RequestParam("files") List<MultipartFile> files, HttpSession httpSession) throws IOException {
         Long loginId = (long) httpSession.getAttribute("loginId");
-        closetService.saveFile(file, loginId);
 
         for (MultipartFile multipartFile : files) {
             closetService.saveFile(multipartFile, loginId);
