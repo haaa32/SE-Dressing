@@ -1,4 +1,4 @@
-package com.example.dressing.dto;
+package com.example.dressing.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
