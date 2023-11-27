@@ -33,7 +33,6 @@ public class ClosetController {
         for (MultipartFile multipartFile : files) {
             closetService.saveFile(multipartFile, loginId);
         }
-
         return "redirect:/main"; // redirect:/
     }
 

@@ -43,4 +43,16 @@ public class CategoryController {
         session.setAttribute("category", "bag");
         return "redirect:/main";
     }
+
+    @GetMapping("/category/like")
+    public String showMainCategoryLike(HttpSession session) {
+        session.setAttribute("category", "like");
+        return "redirect:/main";
+    }
+
+    @GetMapping("/category/dislike")
+    public String showMainCategoryDislike(HttpSession session) {
+        session.setAttribute("category", "dislike");
+        return "redirect:/main";
+    }
 }

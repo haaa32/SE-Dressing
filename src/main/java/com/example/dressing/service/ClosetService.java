@@ -3,6 +3,7 @@ package com.example.dressing.service;
 import com.example.dressing.Component.PythonModelComponent;
 import com.example.dressing.entity.ClosetEntity;
 import com.example.dressing.entity.ClosetInfoEntity;
+import com.example.dressing.entity.ImageData;
 import com.example.dressing.entity.UserEntity;
 import com.example.dressing.repository.ClosetInfoRepository;
 import com.example.dressing.repository.ClosetRepository;
@@ -18,10 +19,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.Base64;
+import java.util.*;
 import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
@@ -124,5 +123,22 @@ public class ClosetService {
     public List<ClosetEntity> findUserPhotosByCategory(Long loginId, String category) {
         return closetRepository.findUserPhotosByCategory(loginId, category);
     }
+
+    public List<ImageData> toImageDataList(List<ClosetEntity> closetEntityList) throws IOException {
+        // 이미지 데이터를 처리하기 위한 리스트를 생성
+        List<ImageData> imageDataList = new ArrayList<>();
+        for (ClosetEntity photo : closetEntityList) {
+            if (photo == null) {
+                imageDataList.add(null);
+                continue;
+            }
+            ImageData imageData = new ImageData();
+            imageData.setBase64Image(getBase64Image(photo.getSavedPath())); // 이미지를 Base64 형식으로 변환하여 저장
+            imageData.setId(photo.getId()); // 이미지 ID를 설정
+            imageDataList.add(imageData); // 리스트에 추가
+        }
+        return imageDataList;
+    }
+
 
 }
