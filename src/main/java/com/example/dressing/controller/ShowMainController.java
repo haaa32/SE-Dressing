@@ -1,7 +1,7 @@
 package com.example.dressing.controller;
 
 import com.example.dressing.entity.ClosetEntity;
-import com.example.dressing.entity.ImageData;
+import com.example.dressing.dto.ImageData;
 import com.example.dressing.service.ClosetService;
 import com.example.dressing.service.CoordiService;
 import com.example.dressing.service.WeatherService;

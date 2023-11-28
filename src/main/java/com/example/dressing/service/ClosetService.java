@@ -3,7 +3,7 @@ package com.example.dressing.service;
 import com.example.dressing.Component.PythonModelComponent;
 import com.example.dressing.entity.ClosetEntity;
 import com.example.dressing.entity.ClosetInfoEntity;
-import com.example.dressing.entity.ImageData;
+import com.example.dressing.dto.ImageData;
 import com.example.dressing.entity.UserEntity;
 import com.example.dressing.repository.ClosetInfoRepository;
 import com.example.dressing.repository.ClosetRepository;

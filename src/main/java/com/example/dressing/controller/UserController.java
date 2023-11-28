@@ -6,15 +6,12 @@ import com.example.dressing.dto.UserDTO;
 import com.example.dressing.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 //import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller

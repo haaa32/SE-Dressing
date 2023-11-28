@@ -1,12 +1,8 @@
 package com.example.dressing.controller;
 
-import com.example.dressing.entity.ClosetEntity;
-import com.example.dressing.repository.ClosetRepository;
 import com.example.dressing.service.ClosetService;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,7 +15,6 @@ import java.util.List;
 public class ClosetController {
 
     private final ClosetService closetService;
-    private ClosetRepository closetRepository;
 
     @GetMapping("/upload")
     public String testUploadForm() {

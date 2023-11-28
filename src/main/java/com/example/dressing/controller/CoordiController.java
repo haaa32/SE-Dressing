@@ -4,7 +4,7 @@ import com.example.dressing.Component.OtherComponent;
 import com.example.dressing.dto.UserDTO;
 import com.example.dressing.entity.ClosetEntity;
 import com.example.dressing.entity.CoordiEntity;
-import com.example.dressing.entity.ImageData;
+import com.example.dressing.dto.ImageData;
 import com.example.dressing.service.ClosetService;
 import com.example.dressing.service.CoordiService;
 import com.example.dressing.service.UserService;
@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
