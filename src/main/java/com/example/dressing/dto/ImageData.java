@@ -1,4 +1,4 @@
-package com.example.dressing.entity;
+package com.example.dressing.dto;
 
 public class ImageData {
     private String base64Image;

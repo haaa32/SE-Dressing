@@ -1,14 +1,8 @@
 package com.example.dressing.service;
 
-import com.example.dressing.entity.UserEntity;
-import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
