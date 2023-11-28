@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/dto/CategoryController.java" afterDir="false" />
-    </list>
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="yujin yewon merge Dressing backend ver#1 완성!!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="yewon2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,7 +96,7 @@
       <recent name="C:\Users\cocom\OneDrive\바탕 화면\sogong2023\src\main\resources\templates\test" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.DressingApplication (1)">
+  <component name="RunManager" selected="Application.DressingApplication">
     <configuration name="DressingApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dressing.DressingApplication" />
       <module name="com.example.dressing.main" />
@@ -138,13 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="애플리케이션.DressingApplication" />
-      <item itemvalue="애플리케이션.DressingApplication (1)" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.DressingApplication (1)" />
+        <item itemvalue="Application.DressingApplication" />
+        <item itemvalue="Application.DressingApplication (1)" />
+        <item itemvalue="Application.DressingApplication" />
+        <item itemvalue="Application.DressingApplication (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -298,39 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701086821837</updated>
     </task>
-    <task id="LOCAL-00020" summary="test">
-      <option name="closed" value="true" />
-      <created>1701105266850</created>
+    <task id="LOCAL-00020" summary="무흐흐그,,ㅡㅜㅜ 좋아요 싫어요 카테고리까지 개발!!">
+      <created>1701099457104</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1701105266850</updated>
+      <updated>1701099457104</updated>
     </task>
-    <task id="LOCAL-00021" summary="test">
-      <option name="closed" value="true" />
-      <created>1701105312358</created>
+    <task id="LOCAL-00021" summary="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!">
+      <created>1701099733677</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1701105312358</updated>
+      <updated>1701099733677</updated>
     </task>
-    <task id="LOCAL-00022" summary="test">
-      <option name="closed" value="true" />
-      <created>1701105388382</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1701105388382</updated>
-    </task>
-    <task id="LOCAL-00023" summary="test">
-      <option name="closed" value="true" />
-      <created>1701105425616</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1701105425616</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,12 +343,15 @@
     <MESSAGE value=".." />
     <MESSAGE value="카테고리 추가!!!!! ㅎㅎ" />
     <MESSAGE value="yewon2 합침 카테고리 추가..ㅎ" />
+    <MESSAGE value="test" />
     <MESSAGE value="yujin yewon 합침.. 옷 추천 1 days.." />
     <MESSAGE value="옷 추천 #2 and CoordiEntity 추가 and 좋아요, 싫어요 구현 완료" />
     <MESSAGE value="yujin yewon 좋아요 싫어요 전까지 합침" />
     <MESSAGE value="merge main yujin yewon 좋아요 싫어요 합침" />
-    <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="무흐흐그,,ㅡㅜㅜ 좋아요 싫어요 카테고리까지 개발!!" />
+    <MESSAGE value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
+    <MESSAGE value="yujin yewon merge Dressing backend ver#1 완성!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="yujin yewon merge Dressing backend ver#1 완성!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

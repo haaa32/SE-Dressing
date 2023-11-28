@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2023-11-26_오후_8_57_[Changes]" date="1700999834167" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-26_오후_8_57_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2023-11-26 오후 8:57 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/service/WeatherService.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/service/WeatherService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-26_오후_8_57_[Changes]/WeatherService.class" />
+  </binary>
+</changelist>
