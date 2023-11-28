@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/AdminPage.css">
+    <link rel="stylesheet" href="./../css/AdminPage.css">
     <title>main</title>
 </head>
 <body>
 <div id="wrap">
     <div id="header5">
         <div id="logo">
-            <img src="../images/logo.png"/>
+            <img src="./../images/logo.png"/>
         </div>
         <div id="userdata">
             <p> 관리자 id: <span th:text="${session.loginUserId}"></span></p>
             <a href="/user/logout">로그아웃</a>
         </div>
     </div>
-        <nav class="nav">
-            <ul class="gnb">
-                <li><a href="/suggest/board">건의함</a></li>
-                <li><a href="/user">회원관리</a></li>
-            </ul>
-        </nav>
+    <div id="category5">
+        <div id="user">
+            <img src="./../images/admin1.png" id="admin1"/>
+            <script>
+                document.getElementById('admin1').addEventListener('click', function(event) {
+                    window.location.href = '/user';
+                });
+            </script>
+        </div>
+        <div id="suggest_board">
+            <img src="./../images/admin2.png" id="admin2"/>
+            <script>
+                document.getElementById('admin2').addEventListener('click', function(event) {
+                    window.location.href = '/suggest/board';
+                });
+            </script>
+        </div>
+    </div>
 </div>
+</body>
+</html>
