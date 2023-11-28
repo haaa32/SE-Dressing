@@ -1,0 +1,40 @@
+Index: src/main/java/com/example/dressing/controller/CoordiController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.dressing.controller;\r\n\r\nimport com.example.dressing.dto.UserDTO;\r\nimport com.example.dressing.service.UserService;\r\nimport com.example.dressing.service.WeatherService;\r\nimport lombok.RequiredArgsConstructor;\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.ui.Model;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\n\r\nimport javax.servlet.http.HttpSession;\r\nimport java.util.concurrent.ExecutionException;\r\n\r\n@Controller\r\n@RequiredArgsConstructor\r\npublic class CoordiController {\r\n    public final WeatherService weatherService;\r\n    public final UserService userService;\r\n\r\n    @GetMapping(\"/coordi\")\r\n    public String coordiForm(Model model, HttpSession session) throws ExecutionException, InterruptedException {\r\n        String weatherData = weatherService.getDaeguWeather().get();\r\n        model.addAttribute(\"weatherData\", weatherData);\r\n\r\n        Long userId = (Long) session.getAttribute(\"loginId\");\r\n        UserDTO userDTO = userService.findByID(userId);\r\n        int numLimit = userService.getNumLimit(userDTO.getUserRank());\r\n        model.addAttribute(\"numLimit\", numLimit);\r\n\r\n\r\n\r\n        return \"coordi\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/com/example/dressing/controller/CoordiController.java b/src/main/java/com/example/dressing/controller/CoordiController.java
+--- a/src/main/java/com/example/dressing/controller/CoordiController.java	
++++ b/src/main/java/com/example/dressing/controller/CoordiController.java	
+@@ -24,6 +24,7 @@
+ 
+         Long userId = (Long) session.getAttribute("loginId");
+         UserDTO userDTO = userService.findByID(userId);
++        // 하루 최대 추천 개수
+         int numLimit = userService.getNumLimit(userDTO.getUserRank());
+         model.addAttribute("numLimit", numLimit);
+ 
+@@ -31,4 +32,6 @@
+ 
+         return "coordi";
+     }
++
++    
+ }
+Index: src/main/resources/templates/coordi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\" xmlns:th=\"http://www.thymeleaf.org\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>coordi</title>\r\n</head>\r\n<body>\r\n<h1>사용자 기반 옷추천</h1>\r\n\r\n<h3>대구 현재 날씨</h3>\r\n<p th:text=\"${weatherData}\"></p>\r\n\r\n<h3>옷추천 가능 횟수</h3>\r\n<span th:text=\"${numUserCoordi}\"></span>\r\n<span>/</span>\r\n<span th:text=\"${numLimit}\"></span>\r\n\r\n<div>\r\n    <ul>\r\n        <li th:each=\"imageData : ${imagesData}\">\r\n            <img th:src=\"${imageData.base64Image}\" style=\"width: 200px; height: 200px;\"/>\r\n            <a th:href=\"@{/deleteImage(id=${imageData.id})}\">Delete</a>\r\n        </li>\r\n    </ul>\r\n</div>\r\n\r\n<a href=\"/coordi/like\">좋아요</a>\r\n<a href=\"/coordi/dislike\">싫어요</a>\r\n\r\n\r\n</body>\r\n</html>\r\n
+===================================================================
+diff --git a/src/main/resources/templates/coordi.html b/src/main/resources/templates/coordi.html
+--- a/src/main/resources/templates/coordi.html	
++++ b/src/main/resources/templates/coordi.html	
+@@ -15,6 +15,8 @@
+ <span>/</span>
+ <span th:text="${numLimit}"></span>
+ 
++<a href="/coordi/recommend">추천받기</a>
++
+ <div>
+     <ul>
+         <li th:each="imageData : ${imagesData}">

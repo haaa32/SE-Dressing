@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/MainPage.css">
     <title>main</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.gnb a');
+
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    links.forEach(function(item) {
+                        item.style.background = '';
+                    });
+                    this.style.background = '#4f4f4f';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <div id="wrap">
@@ -19,7 +33,7 @@
                 <a href="/user/logout">로그아웃</a>
                 <br/>
             </div>
-            <div id="aichoose">
+            <div id="coordiChoose">
                 <a href="/coordi">코디추천</a>
             </div>
             <div id="suggest">
@@ -38,31 +52,62 @@
                 <li><a href="/category/bottom">하의</a></li>
                 <li><a href="/category/shoes">신발</a></li>
                 <li><a href="/category/bag">가방</a></li>
-                <li><a href="#">좋아요</a></li>
-                <li><a href="#">싫어요</a></li>
+                <li><a href="/category/like">좋아요</a></li>
+                <li><a href="/category/dislike">싫어요</a></li>
             </ul>
         </nav>
     </div>
     <div id="clolist">
         <div id="addclothes">
-            <a href="/upload" id="upload-link">&#43;</a>
+            <a href="#" onclick="document.getElementById('fileInput').click()" id="upload-link">&#43;</a>
+            <input type="file" id="fileInput" name="files" style="display: none;" onchange="uploadFile()" multiple>
         </div>
-        <ul>
-            <li th:each="imageData : ${imagesData}">
-                <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
-                <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
-            </li>
-        </ul>
+        <div th:if="${session.category}">
+            <ul>
+                <li th:each="imageData : ${imagesDataList}">
+                    <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+                    <a th:href="@{/deleteImage(id=${imageData.id})}">X</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+
+<div th:if="${session.category.toString().equals('like')} or ${session.category.toString().equals('dislike')}">
+    <table>
+        <tr>
+            <th>아우터</th>
+            <th>상의</th>
+            <th>하의</th>
+            <th>신발</th>
+            <th>가방</th>
+        </tr>
+        <tr th:each="heartImagesDataList : ${heartImagesDataLists}">
+            <td th:each="heartImagesData : ${heartImagesDataList}">
+                <div th:if = "${heartImagesData != null}">
+                    <img th:src="${heartImagesData.base64Image}" style="width: 200px; height: 200px;"/>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function uploadFile() {
+        var formData = new FormData();
+        var files = document.getElementById('fileInput').files;
+        for (var i = 0; i < files.length; i++) {
+            formData.append("files", files[i]);
+        }
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            }
+        });
+    }
+</script>
+
 </body>
-
-
-
-<!--&lt;!&ndash; 건의하기 링크 &ndash;&gt;-->
-<!--<a href="/suggest/save">건의하기</a>-->
-
-<!--<h1>대구 현재 날씨</h1>-->
-<!--<p th:text="${weatherData}"></p>-->
-
-

@@ -5,30 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/EstimationPage.css">
     <title>coordi</title>
+    <script>
+        function updateUserReaction(reactionType) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // 페이지 새로고침
+                    location.reload();
+                }
+            };
+            xhttp.open("GET", "/coordi/" + reactionType, true);
+            xhttp.send();
+        }
+    </script>
 </head>
 <body>
 <h1>사용자 기반 옷추천</h1>
 
-<h3>대구 현재 날씨</h3>
-<p th:text="${weatherData}"></p>
-
 <h3>옷추천 가능 횟수</h3>
-<span th:text="${numUserCoordi}"></span>
+<span id="numUserCoordi" th:text="${numUserCoordi}"></span>
 <span>/</span>
 <span th:text="${numLimit}"></span>
 
-<div>
-    <ul>
-        <li th:each="imageData : ${imagesData}">
-            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
-            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
-        </li>
-    </ul>
-</div>
 
-<a href="/coordi/like">좋아요</a>
-<a href="/coordi/dislike">싫어요</a>
+<h3>대구 현재 날씨</h3>
+<p th:text="${weatherData}"></p>
 
+<!--옷 추천 테이블-->
+<table>
+    <tr>
+        <th>아우터</th>
+        <th>상의</th>
+        <th>하의</th>
+        <th>신발</th>
+        <th>가방</th>
+    </tr>
+    <tr>
+        <td th:each="imageData : ${imagesDataList}">
+            <!--타임리프 조건문 개꿀, 모델이 null인지 검사-->
+            <div th:if = "${imageData != null}">
+                <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--<a href="/coordi/like">좋아요</a>-->
+<!--<a href="/coordi/dislike">싫어요</a>-->
+
+<a href="javascript:updateUserReaction('like')">좋아요</a>
+<a href="javascript:updateUserReaction('dislike')">싫어요</a>
 
 </body>
 </html>
