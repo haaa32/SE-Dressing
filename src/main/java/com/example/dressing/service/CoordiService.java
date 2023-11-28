@@ -53,6 +53,11 @@ public class CoordiService {
             System.out.println(randomClosetEntity);
         }
 
+        // 상의가 드레스가 추천되었을 때 하의는 없도록
+        if (resultClosetEntityList.get(1) != null) 
+            if (resultClosetEntityList.get(1).getClosetInfoEntity().getLabel().equals("Dress"))
+                resultClosetEntityList.set(2, null);
+
         System.out.println("랜덤 옷선택 결과" + resultClosetEntityList);
 
         return resultClosetEntityList;
