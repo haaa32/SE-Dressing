@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="yujin yewon merge Dressing backend ver#1 완성!!!">
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="merge Dressing backend ver#1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ClosetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ClosetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ShowMainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ShowMainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ImageData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/ClosetService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ClosetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ShowMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ShowMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/SuggestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/SuggestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ImageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/dto/ImageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SchedulerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SchedulerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DressingApplication" />
+        <item itemvalue="Application.DressingApplication (1)" />
         <item itemvalue="Application.DressingApplication" />
         <item itemvalue="Application.DressingApplication (1)" />
       </list>
@@ -311,7 +328,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701099733677</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Dressing backend ver#1.1">
+      <created>1701172188323</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701172188323</updated>
+    </task>
+    <task id="LOCAL-00023" summary="merge Dressing backend ver#1.1">
+      <created>1701172254216</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701172254216</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +383,8 @@
     <MESSAGE value="merge main yujin yewon 좋아요 싫어요 합침" />
     <MESSAGE value="무흐흐그,,ㅡㅜㅜ 좋아요 싫어요 카테고리까지 개발!!" />
     <MESSAGE value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
+    <MESSAGE value="merge Dressing backend ver#1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge Dressing backend ver#1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
