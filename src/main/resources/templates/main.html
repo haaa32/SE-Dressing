@@ -2,55 +2,77 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/MainPage.css">
     <title>main</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.gnb a');
+
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    links.forEach(function(item) {
+                        item.style.background = '';
+                    });
+                    this.style.background = '#4f4f4f';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-<!-- 세션에 저장된 로그인 정보 출력 -->
-<p>session 값 확인: <span th:text="${session.loginUserId}"></span></p>
-
-<!-- 로그아웃 링크 -->
-<a href="/user/logout">로그아웃</a>
-
-<!-- 사진 업로드 기능 -->
-<a href="#" onclick="document.getElementById('fileInput').click()">사진 업로드</a>
-<input type="file" id="fileInput" name="files" style="display: none;" onchange="uploadFile()" multiple>
-
-<!-- 건의하기 링크 -->
-<a href="/suggest/save">건의하기</a>
-
-<!-- 사용자 기반 옷추천 링크 -->
-<a href="/coordi">사용자 기반 옷추천</a>
-
-<h1>대구 현재 날씨</h1>
-<p th:text="${weatherData}"></p>
-
-<p>카테고리</p>
-<p th:text="${session.category}"></p>
-
-<nav>
-    <ul>
-        <li><a href="/category/total">전체</a></li>
-        <li><a href="/category/outer">아우터</a></li>
-        <li><a href="/category/top">상의</a></li>
-        <li><a href="/category/bottom">하의</a></li>
-        <li><a href="/category/shoes">신발</a></li>
-        <li><a href="/category/bag">가방</a></li>
-        <li><a href="/category/like">좋아요</a></li>
-        <li><a href="/category/dislike">싫어요</a></li>
-    </ul>
-</nav>
-
-<!--카테고리가 전체, 아우터, 상의, 하의, 신발일때-->
-<div th:if="${session.category}">
-    <ul>
-        <li th:each="imageData : ${imagesDataList}">
-            <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
-            <a th:href="@{/deleteImage(id=${imageData.id})}">Delete</a>
-        </li>
-    </ul>
+<div id="wrap">
+    <div id="header2">
+        <div id="logo">
+            <img src="./images/logo.png"/>
+        </div>
+        <div id="cody">
+            <div id="userdata">
+                <p> 유저 id: <span th:text="${session.loginUserId}"></span></p>
+                <br/>
+                <a href="/user/logout">로그아웃</a>
+                <br/>
+            </div>
+            <div id="coordiChoose">
+                <a href="/coordi">코디추천</a>
+            </div>
+            <div id="suggest">
+                <a href="/suggest/save">건의하기</a>
+            </div>
+        </div>
+    </div>
+    <div id="category2">
+        <p>카테고리</p>
+        <p th:text="${session.category}"></p>
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="/category/total">전체</a></li>
+                <li><a href="/category/outer">아우터</a></li>
+                <li><a href="/category/top">상의</a></li>
+                <li><a href="/category/bottom">하의</a></li>
+                <li><a href="/category/shoes">신발</a></li>
+                <li><a href="/category/bag">가방</a></li>
+                <li><a href="/category/like">좋아요</a></li>
+                <li><a href="/category/dislike">싫어요</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="clolist">
+        <div id="addclothes">
+            <a href="#" onclick="document.getElementById('fileInput').click()" id="upload-link">&#43;</a>
+            <input type="file" id="fileInput" name="files" style="display: none;" onchange="uploadFile()" multiple>
+        </div>
+        <div th:if="${session.category}">
+            <ul>
+                <li th:each="imageData : ${imagesDataList}">
+                    <img th:src="${imageData.base64Image}" style="width: 200px; height: 200px;"/>
+                    <a th:href="@{/deleteImage(id=${imageData.id})}">X</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
-<!--카테고리가 좋아요 또는 싫어요 일 떄-->
 <div th:if="${session.category.toString().equals('like')} or ${session.category.toString().equals('dislike')}">
     <table>
         <tr>
@@ -89,4 +111,3 @@
 </script>
 
 </body>
-</html>

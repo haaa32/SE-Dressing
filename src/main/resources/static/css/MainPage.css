@@ -54,7 +54,7 @@ a {
     background-color: #FEC4DD;
 }
 
-#cody>#coordiChoose {
+#cody>#aichoose {
     float: right;
     margin-top: 20pt;
     margin-right: 40pt;
@@ -77,11 +77,16 @@ a {
     height: 100px;
     background-color: #AFAFAF;
 }
+#category2 > .nav {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
 
-#category2>.nav>.gnb {
-    float: left;
+#category2 > .nav > .gnb {
     margin-top: 10px;
-    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #category2>.nav>.gnb>li {
@@ -89,6 +94,7 @@ a {
 }
 
 #category2>.nav>.gnb>li>a {
+
     display: block;
     width: 150px;
     height: 40px;
@@ -122,6 +128,13 @@ a {
     display: none;
 }
 
+@media screen and (max-width: 1250px) {
+    #category2 > .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 #colorcheck {
     float: left;
     width: 100%;
@@ -144,6 +157,7 @@ a {
 }
 
 #clolist ul {
+        float:left;
         list-style-type: none;
         padding: 0;
         display: flex;

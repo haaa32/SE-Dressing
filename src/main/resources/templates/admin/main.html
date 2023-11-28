@@ -13,6 +13,7 @@
             <img src="../images/logo.png"/>
         </div>
         <div id="userdata">
+            <p> 관리자 id: <span th:text="${session.loginUserId}"></span></p>
             <a href="/user/logout">로그아웃</a>
         </div>
     </div>
@@ -23,18 +24,3 @@
             </ul>
         </nav>
 </div>
-
-
-
-
-
-
-
-<!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->
-<h1>관리자 페이지</h1>
-관리자 id: <p th:text="${session.loginUserId}"></p> <!-- ${}는 안의 변수값 사용-->
-
-<a href="/user/logout">로그아웃</a>
-
-</body>
-</html>
