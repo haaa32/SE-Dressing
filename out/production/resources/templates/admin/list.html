@@ -2,36 +2,43 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/UserList.css">
     <title>list</title>
 </head>
 <body>
-<h2>회원 리스트</h2>
-<table>
-  <tr>
-    <th>id</th>
-    <th>이름</th>
-    <th>아이디</th>
-    <th>상세조회</th>
-    <th>삭제</th>
-    <th>수정</th>
-  </tr>
-  <tr th:each="user: ${userList}"> <!-- for-each문 같은 문법 -->
-    <td th:text="${user.id}"></td>
-    <td th:text="${user.userName}"></td>
-    <td th:text="${user.userId}"></td>
-    <td>
-      <!--query string 방식 예: /user?id=1
-          rest api 방식 예: /user/1-->
-      <!-- {|"경로(+모델값)"|} tymeleaf 문법: 경로상에 서버에서 가져온 값(model)을 넣기위한 작업-->
-      <a th:href="@{|/user/${user.id}|}">조회</a>
-    </td>
-    <td>
-      <a th:href="@{|/user/delete/${user.id}|}">삭제</a>
-    </td>
-    <td>
-      <a th:href="@{|/user/update/${user.id}|}">수정</a>
-    </td>
-  </tr>
-</table>
+  <div id="wrap">
+    <div id="list">
+      <h2>회원 리스트</h2>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>이름</th>
+          <th>아이디</th>
+          <th>상세조회</th>
+          <th>삭제</th>
+          <th>수정</th>
+        </tr>
+        <tr th:each="user: ${userList}"> <!-- for-each문 같은 문법 -->
+          <td th:text="${user.id}"></td>
+          <td th:text="${user.userName}"></td>
+          <td th:text="${user.userId}"></td>
+          <div id="list_btn">
+            <td>
+              <!--query string 방식 예: /user?id=1
+                  rest api 방식 예: /user/1-->
+              <!-- {|"경로(+모델값)"|} tymeleaf 문법: 경로상에 서버에서 가져온 값(model)을 넣기위한 작업-->
+              <a th:href="@{|/user/${user.id}|}">조회</a>
+            </td>
+            <td>
+              <a th:href="@{|/user/delete/${user.id}|}">삭제</a>
+            </td>
+            <td>
+              <a th:href="@{|/user/update/${user.id}|}">수정</a>
+          </div>
+        </tr>
+      </table>
+    </div>
+</div>
 </body>
 </html>

@@ -25,9 +25,9 @@
                 <form action="/user/join" method="post">
                     <!-- name속성: 서버로 전송할 때 변수이름의 역할-->
                     이름 : <input type="text" name="userName" required> <br>
-                    아이디: <input type="text" name="userId" id="userId" onblur="idCheck()" required> <br> <!-- 중복 체크 -->
+                    아이디 : <input type="text" name="userId" id="userId" onblur="idCheck()" required> <br> <!-- 중복 체크 -->
                     <p id="id-check-result"></p>
-                    비밀번호 : <input type="password" name="userPassword" id="userPassword" required maxlength="16"> <br>
+                    비밀번호 :  <input type="password" name="userPassword" id="userPassword" required maxlength="16"> <br>
                     비밀번호 확인 : <input type="password" name="userPasswordCheck" id="userPasswordCheck" onkeyup="passwordCheck()" required maxlength="16"> <br>
                     <p id="password-check-result"></p>
                     전화번호 : <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="010-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" minlength="13" maxlength="13" required>
