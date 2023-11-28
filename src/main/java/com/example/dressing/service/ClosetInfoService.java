@@ -28,7 +28,7 @@ public class ClosetInfoService {
                 new ClosetInfoEntity("T-shirt", "Top", -5, 40),
                 new ClosetInfoEntity("Trouser", "Bottom",0, 40),
                 new ClosetInfoEntity("Pullover", "Top",-5, 22),
-                new ClosetInfoEntity("Dress", "Onepiece",12, 40),
+                new ClosetInfoEntity("Dress", "Top",12, 40),
                 new ClosetInfoEntity("Coat", "Outer",-5, 16),
                 new ClosetInfoEntity("Sandal", "Shoes",23, 40),
                 new ClosetInfoEntity("Shirt", "Top",17, 27),
