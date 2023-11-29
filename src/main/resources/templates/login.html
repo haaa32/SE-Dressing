@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/LoginPage.css">
     <title>login</title>
 </head>
 <body>
-    <form action="/user/login" method="post">
-        아이디 : <input type="text" name="userId" required> <br>
-        비밀번호 : <input type="password" name="userPassword" required> <br>
-        <input type="submit" value="로그인">
-    </form>
-    <a href="/user/join">회원가입</a> <!--html의 인덱스 방식은 Get 방식-->
+<div id="wrap">
+    <div id="header">
+        <div id="logo">
+            <img src='../images/logo.png'/>
+        </div>
+        <div id="head"></div>
+    </div>
+
+    <div id="log">
+        <div id="login">
+            <div id="form">
+                <form action="/user/login" method="post">
+                    <input type="text" name="userId" placeholder="ID"/>
+                    <br/>
+                    <input type="password" name="userPassword" placeholder="PW"/>
+                    <br/>
+                    <input type="submit" value="Login" id="login_btn">
+                </form>
+                <div id="member">
+                    <a href='/user/join'>회원가입</a>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

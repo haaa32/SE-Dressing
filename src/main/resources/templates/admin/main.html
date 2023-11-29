@@ -2,14 +2,39 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"> <!--타임리프 뭔가 추가-->
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/AdminPage.css">
     <title>main</title>
 </head>
 <body>
-<!--login: 세션에 로그인한 정보를 담음, logout: 세션에 로그인한 정보를 뺀다-->
-<h1>관리자 페이지</h1>
-session 값 확인: <p th:text="${session.loginUserId}"></p> <!-- ${}는 안의 변수값 사용-->
-<a href="/user">회원관리</a>
-<a href="/user/logout">로그아웃</a>
-<a href="/suggest/board">건의함</a>
+<div id="wrap">
+    <div id="header5">
+        <div id="logo">
+            <img src="./../images/logo.png"/>
+        </div>
+        <div id="userdata">
+            <p> 관리자 id: <span th:text="${session.loginUserId}"></span></p>
+            <a href="/user/logout">로그아웃</a>
+        </div>
+    </div>
+    <div id="category5">
+        <div id="user">
+            <img src="./../images/admin1.png" id="admin1"/>
+            <script>
+                document.getElementById('admin1').addEventListener('click', function(event) {
+                    window.location.href = '/user';
+                });
+            </script>
+        </div>
+        <div id="suggest_board">
+            <img src="./../images/admin2.png" id="admin2"/>
+            <script>
+                document.getElementById('admin2').addEventListener('click', function(event) {
+                    window.location.href = '/suggest/board';
+                });
+            </script>
+        </div>
+    </div>
+</div>
 </body>
 </html>
