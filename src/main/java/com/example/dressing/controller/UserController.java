@@ -55,14 +55,14 @@ public class UserController {
             return "join";
         }
         else { //회원가입 성공
-            return "login"; //회원가입 후 로그인 창 실행
+            return "login.html"; //회원가입 후 로그인 창 실행
         }
 
     }
 
     @GetMapping("/user/login")
     public String loginForm() {
-        return "login";
+        return "login.html";
     }
 
     @PostMapping("/user/login")
@@ -89,51 +89,10 @@ public class UserController {
         }
     }
 
-    /*//회원목록 출력
-    @GetMapping("/user/")
-    public String findAll(Model model) {
-        List<UserDTO> userDTOList = userService.findAll();
-        // 어떠한 html로 가져갈 데이터가 있다면 model 사용
-        model.addAttribute("userList", userDTOList);
-        return "list"; //list.html 로 모델을 가져갈 것임
-    }
-
-    //회원 상세정보 (아이디를 이용해 찾음)
-    @GetMapping("/user/{id}") //경로상의 변수를 {} 안에 담음 => PathVariable: 이를 받는 어노테이션, 경로상의 값을 담아옴
-    public String findByID(@PathVariable Long id, Model model) {
-        UserDTO userDTO = userService.findByID(id);
-        model.addAttribute("user", userDTO);
-        return "detail";
-    }
-
-    //회원정보 수정 (html에서 정보 받았을 때)
-    @GetMapping("/user/update")
-    public String updateForm(HttpSession session, Model model) {
-        String myUserId = (String) session.getAttribute("loginUserId");
-        UserDTO userDTO = userService.updateForm(myUserId);
-        model.addAttribute("updateUser", userDTO);
-        return "update";
-    }
-
-    //회원정보 수정 (정보 수정 폼을 작성받고, html로 다시 넘길 때)
-    @PostMapping("/user/update")
-    public String update(@ModelAttribute UserDTO userDTO) {
-        userService.update(userDTO);
-        //리다이렉트: 컨트롤러 메소드의 끝나고 다시 다른 컨트롤러 메소드 접속(다른 애 주소)을 요청한다,,(Post 매핑의 중복 방지)
-        return "redirect:/user/" + userDTO.getId();
-    }
-
-    @GetMapping("/user/delete/{id}")
-    public String deleteById(@PathVariable Long id) {
-        userService.deleteById(id);
-        //바로 list.html로 가게 된다면 model이 없어 정보가 없이 전달된다. 이 때 리다이렉트 이용!!!
-        return "redirect:/user/"; //redirect 뒤에는 무조건 주소가 온다 (list.html이 아님!!)
-    }*/
-
     @GetMapping("/user/logout")
     public String logout(HttpSession httpSession) {
         httpSession.invalidate(); //세션을 무효화 한다
-        return "login";
+        return "login.html";
     }
 
     //js에서 매핑되어 아이디 중복 체크

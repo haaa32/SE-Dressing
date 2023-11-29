@@ -11,7 +11,6 @@ import lombok.*;
 public class ClosetDTO {
     private Long id; //옷 id (pk)
     private Long uid; //user의 id (fk)
-    //    private String userId; //***일단 없어도 될듯. 근데 필요해지면 ㄱ
     private String label; // ClosetInfo의 label
     private String orgNm;
     private String savedNm;

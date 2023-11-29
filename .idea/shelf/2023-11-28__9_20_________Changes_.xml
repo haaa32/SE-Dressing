@@ -1,0 +1,14 @@
+<changelist name="2023-11-28_오후_9_20,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]" date="1701174008898" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-28_오후_9_20,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2023-11-28 오후 9:20, 업데이트 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/service/CoordiService.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/service/CoordiService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-28_오후_9_20,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/CoordiService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/service/ClosetInfoService.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/service/ClosetInfoService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-28_오후_9_20,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/ClosetInfoService.class" />
+  </binary>
+</changelist>
