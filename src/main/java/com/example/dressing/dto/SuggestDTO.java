@@ -10,8 +10,8 @@ import lombok.*;
 @ToString
 public class SuggestDTO {
     private Long id; //건의 id
-    private Long uid; //user의 id ***이거 Entity랑 똑같이 UserEntity로 받아야 할지 아님 그냥 id값만 받게 Long할지 두고보기
-    private String userId; //user의 userId 있으면 편할듯!!해서 일단 집어넘
+    private Long uid;
+    private String userId;
     private String title; //건의 제목
     private String content; //건의 내용
 
