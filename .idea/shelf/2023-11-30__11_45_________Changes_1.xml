@@ -1,0 +1,14 @@
+<changelist name="2023-11-30_오후_11_45,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1" date="1701355520812" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-30_오후_11_45,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="2023-11-30 오후 11:45, 체크아웃 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/entity/ClosetEntity.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/entity/ClosetEntity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-30_오후_11_45,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/ClosetEntity.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/entity/ClosetInfoEntity.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/entity/ClosetInfoEntity.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-30_오후_11_45,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/ClosetInfoEntity.class" />
+  </binary>
+</changelist>
