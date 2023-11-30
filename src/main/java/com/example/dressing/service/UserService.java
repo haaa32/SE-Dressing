@@ -1,7 +1,13 @@
 package com.example.dressing.service;
 
 import com.example.dressing.dto.UserDTO;
+import com.example.dressing.entity.ClosetEntity;
+import com.example.dressing.entity.CoordiEntity;
+import com.example.dressing.entity.SuggestEntity;
 import com.example.dressing.entity.UserEntity;
+import com.example.dressing.repository.ClosetRepository;
+import com.example.dressing.repository.CoordiRepository;
+import com.example.dressing.repository.SuggestRepository;
 import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -113,6 +119,7 @@ public class UserService {
 
     //db에 저장된 회원을 id를 이용해 없앤다
     public void deleteById(Long id) {
+        // 사용자 삭제
         userRepository.deleteById(id);
     }
 

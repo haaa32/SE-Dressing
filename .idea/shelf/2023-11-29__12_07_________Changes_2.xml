@@ -1,0 +1,29 @@
+<changelist name="2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]" date="1701184076170" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2023-11-29 오전 12:07, 병합 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/controller/UserController.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/controller/UserController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]/UserController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/controller/AdminController.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/controller/AdminController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]/AdminController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/service/SchedulerService.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/service/SchedulerService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]/SchedulerService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/controller/SuggestController.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/controller/SuggestController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]/SuggestController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/repository/UserRepository.class" />
+    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/repository/UserRepository.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023-11-29_오전_12_07,_병합_전에_커밋되지_않은_변경_내용_[Changes]/UserRepository.class" />
+  </binary>
+</changelist>
