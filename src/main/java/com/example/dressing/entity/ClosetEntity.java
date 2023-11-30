@@ -21,7 +21,7 @@ public class ClosetEntity {
     @JoinColumn(name = "uid", referencedColumnName = "id") // fk
     private UserEntity userEntity; // UserEntity 클래스와 연결되는 엔티티를 참조
 
-//    @Column(length = 16)
+    //    @Column(length = 16)
 //    private String label;
     @ManyToOne
     @JoinColumn(name = "label", referencedColumnName = "label")

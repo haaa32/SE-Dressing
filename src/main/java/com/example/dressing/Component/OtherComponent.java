@@ -15,7 +15,7 @@ public class OtherComponent {
         PrintWriter out = response.getWriter();
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html; charset=utf-8");
-        out.println(script); //ㅏㅗ 한글이 깨져서 나와!!
+        out.println(script);
         out.println("history.go(-1); </script>");
         out.close();
     }

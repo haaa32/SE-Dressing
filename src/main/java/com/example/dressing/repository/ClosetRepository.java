@@ -12,7 +12,4 @@ import java.util.List;
 public interface ClosetRepository extends JpaRepository<ClosetEntity, Long> {
     @Query("SELECT c FROM ClosetEntity c WHERE c.userEntity.id = :uid")
     List<ClosetEntity> findUserPhotos(@Param("uid") Long uid);
-
-    @Query("SELECT c FROM ClosetEntity c WHERE c.userEntity.id = :uid and c.closetInfoEntity.category = :category")
-    List<ClosetEntity> findUserPhotosByCategory(@Param("uid") Long uid, @Param("category") String category);
 }
