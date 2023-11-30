@@ -1,10 +1,13 @@
 package com.example.dressing.controller;
 
+import com.example.dressing.dto.UserDTO;
 import com.example.dressing.entity.ClosetEntity;
-import com.example.dressing.entity.ImageData;
+import com.example.dressing.dto.ImageData;
 import com.example.dressing.service.ClosetService;
 import com.example.dressing.service.CoordiService;
+import com.example.dressing.service.UserService;
 import com.example.dressing.service.WeatherService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,16 +19,12 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @Controller
+@RequiredArgsConstructor
 public class ShowMainController {
     private final WeatherService weatherService;
     private final ClosetService closetService;
     private final CoordiService coordiService;
-
-    public ShowMainController(WeatherService weatherService, ClosetService closetService, CoordiService coordiService) {
-        this.weatherService = weatherService;
-        this.closetService = closetService;
-        this.coordiService = coordiService;
-    }
+    private final UserService userService;
 
     @GetMapping("/main")
     public String showMainPage(Model model, HttpSession session) {
@@ -36,6 +35,9 @@ public class ShowMainController {
 
             // 세션에서 로그인 ID를 가져옴.
             Long loginId = (Long) session.getAttribute("loginId");
+            // 로그인 ID를 이용해 UserDTO 구하기
+            UserDTO userDTO = userService.findByID(loginId); // main에 Rank 보내려고
+            model.addAttribute("userRank", userDTO.getUserRank());
             // 세션에서 카테고리를 가져옴.
             String category = (String) session.getAttribute("category");
             // 사용자의 사진을 가져옴.

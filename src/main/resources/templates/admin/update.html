@@ -2,18 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/UserUpdate.css">
     <title>update</title>
 </head>
 <body>
-<form action="/user/update" method="post">
-  <input type = "hidden" th:value="${updateUser.id}" name="id"><br>
-  이름: <input type="text" th:value="${updateUser.userName}" name="userName"> <br>
-  아이디: <input type="text" th:value="${updateUser.userId}" name="userId" readonly> <br>
-  비밀번호: <input type="text" th:value="${updateUser.userPassword}" name="userPassword"> <br>
-  전화번호: <input type="text" th:value="${updateUser.phoneNumber}" name="phoneNumber"> <br>
-  등급: <input type="text" th:value="${updateUser.userRank}" name="userRank"> <br>
-  지역: <input type="text" th:value="${updateUser.local}" name="local" readonly> <br>
-  <input type="submit" value="정보수정">
-</form>
+  <div id="wrap">
+    <div id="write">
+      &nbsp;&nbsp;회원정보수정
+      <form action="/user/update" method="post"><br>
+        <input type = "hidden" th:value="${updateUser.id}" name="id">
+        &nbsp;&nbsp;이름:<br> <input type="text" th:value="${updateUser.userName}" name="userName"> <br>
+        &nbsp;&nbsp;아이디:<br> <input type="text" th:value="${updateUser.userId}" name="userId" readonly> <br>
+        &nbsp;&nbsp;비밀번호:<br> <input type="text" th:value="${updateUser.userPassword}" name="userPassword"> <br>
+        &nbsp;&nbsp;전화번호:<br> <input type="text" th:value="${updateUser.phoneNumber}" name="phoneNumber"> <br>
+        &nbsp;&nbsp;등급:<br> <input type="text" th:value="${updateUser.userRank}" name="userRank"> <br>
+        &nbsp;&nbsp;지역:<br> <input type="text" th:value="${updateUser.local}" name="local" readonly> <br> <br>
+        &nbsp;&nbsp;<input type="submit" value="정보수정  " id="suggest_btn">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

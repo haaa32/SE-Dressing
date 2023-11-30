@@ -1,7 +1,6 @@
 package com.example.dressing.controller;
 
 import com.example.dressing.dto.SuggestDTO;
-import com.example.dressing.entity.SuggestEntity;
 import com.example.dressing.service.SuggestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

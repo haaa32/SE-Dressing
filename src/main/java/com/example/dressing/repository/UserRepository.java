@@ -1,6 +1,5 @@
 package com.example.dressing.repository;
 
-import com.example.dressing.dto.UserDTO;
 import com.example.dressing.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
