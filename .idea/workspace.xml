@@ -4,92 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="병합전 커밋">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__1_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__1_05_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__2_10_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__2_10_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__2_12_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__2_12_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_01_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_01_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_13_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_13_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_17_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_17_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_17_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-26__9_17_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_07_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_07_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_08_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_08_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_09_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_09_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_16_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_16_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_18_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-27__9_18_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_47_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_47_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_47_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_47_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_51_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_51_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_52_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__12_52_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_53_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_54_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__8_54_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_19_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_19_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_20_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_20_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_20_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_20_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_20_________Changes_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-28__9_20_________Changes_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-29__12_07_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-29__12_07_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-29__12_07_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-29__12_07_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-29__12_36_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-29__12_36_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-29__8_37_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-29__8_37_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-30__10_09_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-30__10_09_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-30__10_11_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-30__10_11_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-30__11_43_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-30__11_43_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-30__11_45_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-30__11_45_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-30__11_45_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-30__11_45_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-30__9_55_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-11-30__9_55_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_05_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_07_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_07_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_10_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_10_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_13_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_13_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_23_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_23_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_23_________Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2023-12-01__12_23_________Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-29__12_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-29__12_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-12-01__12_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-12-01__12_40__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-11-29__12_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-11-29__12_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-12-01__12_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-12-01__12_41__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_______Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_______Changes_.xml" afterDir="false" />
+    <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="예원 주석 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/Component/ApplicationRunnerComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/Component/ApplicationRunnerComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/Component/OtherComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/Component/OtherComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/Component/PythonModelComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/Component/PythonModelComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/CoordiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ShowMainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/ShowMainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/dto/SuggestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/dto/SuggestDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetInfoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/SuggestEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/SuggestEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/CoordiService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/SchedulerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/SchedulerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/WeatherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/WeatherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/Component/ApplicationRunnerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/Component/ApplicationRunnerComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/Component/OtherComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/Component/OtherComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/Component/PythonModelComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/Component/PythonModelComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/CoordiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ShowMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/ShowMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/SuggestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/SuggestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/dto/SuggestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/dto/SuggestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetInfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetInfoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/CoordiEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/CoordiEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/SuggestEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/SuggestEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/TimeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/TimeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/ClosetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/ClosetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/CoordiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/CoordiRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/SuggestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/SuggestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/CoordiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SchedulerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/SchedulerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/service/ClosetInfoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -442,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701172254216</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="예원 주석 추가">
+      <option name="closed" value="true" />
+      <created>1701371283033</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701371283033</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +388,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test2" />
     <MESSAGE value="Add User attribute phoneNumber" />
     <MESSAGE value="Add Password Check and supply Join" />
     <MESSAGE value="Merge branch 'yewon'" />
@@ -485,7 +412,8 @@
     <MESSAGE value="yujin yewon 합침 Dressing Backend ver#1 완성!!!!!" />
     <MESSAGE value="merge Dressing backend ver#1.1" />
     <MESSAGE value="병합전 커밋" />
-    <option name="LAST_COMMIT_MESSAGE" value="병합전 커밋" />
+    <MESSAGE value="예원 주석 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="예원 주석 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

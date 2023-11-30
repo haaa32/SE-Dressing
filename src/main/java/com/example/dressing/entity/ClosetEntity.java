@@ -23,7 +23,7 @@ public class ClosetEntity {
 
     //    @Column(length = 16)
 //    private String label;
-    @ManyToOne(cascade = CascadeType.ALL) // 또는 CascadeType.ALL을 사용하여 모든 작업에 대해 Cascade 설정
+    @ManyToOne//(cascade = CascadeType.ALL) // 또는 CascadeType.ALL을 사용하여 모든 작업에 대해 Cascade 설정
     @JoinColumn(name = "label", referencedColumnName = "label")
     private ClosetInfoEntity closetInfoEntity;
 
