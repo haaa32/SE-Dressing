@@ -45,6 +45,7 @@ public class ClosetEntity {
         this.savedPath = savedPath;
     }
 
+    // ClosetDTO -> ClosetEntity
     public static ClosetEntity toClosetEntity(ClosetDTO closetDTO, UserEntity userEntity, ClosetInfoEntity closetInfoEntity) {
         ClosetEntity closetEntity = ClosetEntity.builder()
                 .id(closetDTO.getId())

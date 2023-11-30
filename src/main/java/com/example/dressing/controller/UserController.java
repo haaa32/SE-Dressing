@@ -44,13 +44,6 @@ public class UserController {
         System.out.println(joinRusult);
 
         if(joinRusult == -1 || joinRusult == -2) { //회원가입 실패
-            //추후 component
-            /*PrintWriter out = response.getWriter();
-            response.setCharacterEncoding("utf-8");
-            response.setContentType("text/html; charset=utf-8");
-            out.println("<script> alert('Failed Join!');"); //ㅏㅗ 한글이 깨져서 나와!!
-            out.println("history.go(-1); </script>");
-            out.close();*/
             otherComponent.AlertMessage(response, "Failed Join!!");
             return "join";
         }
@@ -60,26 +53,28 @@ public class UserController {
 
     }
 
+    // 로그인 페이지 출력 요청
     @GetMapping("/user/login")
     public String loginForm() {
         return "login.html";
     }
 
+    // 로그인폼 입력 데이터 받고 로직
     @PostMapping("/user/login")
     public String login(@ModelAttribute UserDTO userDTO, HttpSession httpSession, HttpServletResponse response) throws IOException { //아이디와 비밀번호 받아옴, 세션 정보까지
         UserDTO loginResult = userService.login(userDTO); //로그인 결과를 확인하기 위해
 
         if(loginResult != null) {
             //로그인 성공
-            //로그인 유지를 하기 위해 세션 정보 추가** 이건 아직 제대로 몰겟음 (세션에 로그인 했던 회원의 아이디를 담아놓는다)
+            //로그인 유지를 하기 위해 세션 정보 추가 (세션에 로그인 했던 회원의 아이디를 담아놓는다)
             httpSession.setAttribute("loginUserId", loginResult.getUserId()); // loginUserId 에 오른쪽 값이 들어가고 main.html로 전달된다?
-
             httpSession.setAttribute("loginId", loginResult.getId());
 
             //관리자 or 일반 사용자
             if(loginResult.getUserRank().equals("Admin")) //관리자 로그인시
                 return "admin/main"; //관리자 페이지
-            httpSession.setAttribute("category", "total");
+
+            httpSession.setAttribute("category", "total"); // 메인페이지 카테고리 total
             return "redirect:/main";
         }
         else {
@@ -89,6 +84,7 @@ public class UserController {
         }
     }
 
+    // 로그아웃 페이지 출력 요청
     @GetMapping("/user/logout")
     public String logout(HttpSession httpSession) {
         httpSession.invalidate(); //세션을 무효화 한다

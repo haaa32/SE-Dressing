@@ -54,7 +54,7 @@ public class CoordiService {
         }
 
         // 상의가 드레스가 추천되었을 때 하의는 없도록
-        if (resultClosetEntityList.get(1) != null) 
+        if (resultClosetEntityList.get(1) != null)
             if (resultClosetEntityList.get(1).getClosetInfoEntity().getLabel().equals("Dress"))
                 resultClosetEntityList.set(2, null);
 
@@ -79,14 +79,14 @@ public class CoordiService {
     // 좋아요
     public void like(Long coordiId) {
         CoordiEntity coordiEntity = coordiRepository.findById(coordiId).get();
-        coordiEntity.setHeart(1);
+        coordiEntity.setHeart(1); // heart를 1
         coordiRepository.save(coordiEntity);
     }
 
     // 싫어요
     public void dislike(Long coordiId) {
         CoordiEntity coordiEntity = coordiRepository.findById(coordiId).get();
-        coordiEntity.setHeart(-1);
+        coordiEntity.setHeart(-1); //heart를 -1
         coordiRepository.save(coordiEntity);
     }
 
@@ -106,7 +106,7 @@ public class CoordiService {
         return true;
     }
 
-    // 사용자의 좋아요, 싫어요한 코디 리턴
+    // 사용자의 좋아요, 싫어요한 모든 코디 리턴
     public List<List<ClosetEntity>> getUserCoordis(Long loginId, String heart) {
         List<List<ClosetEntity>> closetEntityLists = new ArrayList<>(); // 리턴할 옷 리스트들
         List<CoordiEntity> coordiEntityList; // 코디 리스트
@@ -119,9 +119,11 @@ public class CoordiService {
         else // fault
             return null;
 
+        // CooldiEntity -> ClosetEntity 리스트 해서 리스트에 추가
         for (CoordiEntity coordiEntity : coordiEntityList) {
             List<ClosetEntity> closetEntityList = new ArrayList<>();
             //closetEntityList.add(closetRepository.findById(coordiEntity.getOuterId()).get());
+            // 코디에서 카테고리 순서대로 담는다 (옷이 null이면 null 담기)
             closetEntityList.add((coordiEntity.getOuterId() != null)? closetRepository.findById(coordiEntity.getOuterId()).get() : null);
             closetEntityList.add((coordiEntity.getTopId() != null)? closetRepository.findById(coordiEntity.getTopId()).get() : null);
             closetEntityList.add((coordiEntity.getBottomId() != null)? closetRepository.findById(coordiEntity.getBottomId()).get() : null);

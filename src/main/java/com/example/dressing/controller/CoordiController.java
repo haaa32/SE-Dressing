@@ -23,6 +23,7 @@ import java.util.concurrent.ExecutionException;
 
 @Controller
 @RequiredArgsConstructor
+// 코디 컨트롤러
 public class CoordiController {
     private final WeatherService weatherService;
     private final UserService userService;
@@ -30,14 +31,18 @@ public class CoordiController {
     public final ClosetService closetService;
     public final CoordiService coordiService;
 
+    // 옷 추천 페이지 출력 요청
     @GetMapping("/coordi")
     public String coordiForm(Model model, HttpSession session, HttpServletResponse response) throws ExecutionException, InterruptedException, IOException {
+        // 현재 날씨를 받아온다
         String weatherData = weatherService.getDaeguWeather().get();
         model.addAttribute("weatherData", weatherData);
 
+        // 세션에서 로그인한 아이디를 받아온다
         Long userId = (Long) session.getAttribute("loginId");
-        UserDTO userDTO = userService.findByID(userId);
+        UserDTO userDTO = userService.findByID(userId); // 로그인 아이디를 이용해 DTO를 구한다
 
+        // 사용자의 코디 횟수 / 최대 코디 횟수
         int numUserCoordi = userDTO.getNumUserCoordi();
         int numLimit = userService.getNumLimit(userDTO.getUserRank());
 
@@ -48,7 +53,8 @@ public class CoordiController {
             return "coordi";
         }
 
-        if(numUserCoordi >= numLimit) { // === 추천 횟수 소진 ===
+        // === 추천 횟수 소진 ===
+        if(numUserCoordi >= numLimit) {
             // 추천 가능 횟수 소진 메시지 전달 및 main 페이지로
             otherComponent.AlertMessage(response, "The chance is over!");
             //return "redirect:/main";
@@ -61,7 +67,7 @@ public class CoordiController {
 
         // 옷 추천
         List<ClosetEntity> recommendedClosetEntityList = coordiService.recommendCoordiByUser
-                (userId, weatherService.getDaeguTempCelsius(weatherData)); // 옷 추천 받기
+                (userId, weatherService.getDaeguTempCelsius(weatherData)); // 날씨에 맞는 옷 추천 받기
         CoordiEntity savedCoordiEntity = coordiService.saveByClosetList(userDTO, recommendedClosetEntityList); //추천 코디 DB 저장
         session.setAttribute("coordiId", savedCoordiEntity.getId()); // 추천받은 코디의 아이디
 
@@ -77,6 +83,7 @@ public class CoordiController {
         return "coordi";
     }
 
+    // 추천받은 코디 좋아요 누를시
     @GetMapping("/coordi/like")
     @ResponseBody // HTTP 응답 본문에 직접 내용을 반환
     public String likeCoordi(HttpSession session) {
@@ -87,6 +94,7 @@ public class CoordiController {
         return handleUserReaction(session, true); // 사용자 반응을 처리하고 결과를 반환
     }
 
+    //추천받은 코디 싫어요 누를시
     @GetMapping("/coordi/dislike")
     @ResponseBody // HTTP 응답 본문에 직접 내용을 반환
     public String dislikeCoordi(HttpSession session) {

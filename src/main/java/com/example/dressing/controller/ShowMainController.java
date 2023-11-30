@@ -26,6 +26,7 @@ public class ShowMainController {
     private final CoordiService coordiService;
     private final UserService userService;
 
+    // 메인 페이지 출력 요청
     @GetMapping("/main")
     public String showMainPage(Model model, HttpSession session) {
         try {
