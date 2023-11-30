@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0101198-3dc4-406c-bdbb-9e89ed8898f7" name="Changes" comment="회원 삭제 수정함">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23__11_14_________Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23__11_14_________Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23__11_14_________Changes_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23__11_14_________Changes_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23_오후_11_14,_병합_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23_오후_11_14,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23_오후_11_14,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023-11-23_오후_11_14,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/ClosetInfoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetInfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/entity/ClosetInfoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/dressing/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/ClosetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dressing/repository/ClosetRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="yewon2" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
