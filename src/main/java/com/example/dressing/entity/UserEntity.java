@@ -9,6 +9,8 @@ import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -19,6 +21,15 @@ public class UserEntity extends TimeEntity { //엔티티 클래스 대로 실제
     @Id //pk 지정(primary key(주키))
     @GeneratedValue(strategy = GenerationType.IDENTITY) //mysql에서 auto_increment, 오라클의 sequence (지절로 id가 자동생성 되는듯???)
     private Long id;
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ClosetEntity> closets = new ArrayList<>();
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CoordiEntity> coordis = new ArrayList<>();
+
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<SuggestEntity> suggests = new ArrayList<>();
 
     @Column //unique 디폴트 false (중복 허용)
     private String userName;
