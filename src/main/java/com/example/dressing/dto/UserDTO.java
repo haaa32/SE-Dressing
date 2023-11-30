@@ -20,7 +20,7 @@ public class UserDTO {
     private String userId;
     private String userPassword;
     private String phoneNumber;
-    private String userRank; //int로 해야할지, String으로 해야할지 고민,,
+    private String userRank;
     private LocalDateTime createdDate;
     private String local; //대구 고정
 

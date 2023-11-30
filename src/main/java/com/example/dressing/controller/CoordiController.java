@@ -78,29 +78,29 @@ public class CoordiController {
     }
 
     @GetMapping("/coordi/like")
-    @ResponseBody
+    @ResponseBody // HTTP 응답 본문에 직접 내용을 반환
     public String likeCoordi(HttpSession session) {
-        Long coordiId = (Long) session.getAttribute("coordiId");
-        coordiService.like(coordiId);
+        Long coordiId = (Long) session.getAttribute("coordiId"); // 세션에서 코디 ID를 가져옴.
+        coordiService.like(coordiId); // 코디에 '좋아요'를 처리
 
 //        return "redirect:/coordi";
-        return handleUserReaction(session, true);
+        return handleUserReaction(session, true); // 사용자 반응을 처리하고 결과를 반환
     }
 
     @GetMapping("/coordi/dislike")
-    @ResponseBody
+    @ResponseBody // HTTP 응답 본문에 직접 내용을 반환
     public String dislikeCoordi(HttpSession session) {
-        Long coordiId = (Long) session.getAttribute("coordiId");
-        coordiService.dislike(coordiId);
+        Long coordiId = (Long) session.getAttribute("coordiId");  // 세션에서 코디 ID를 가져옴
+        coordiService.dislike(coordiId);  // 코디에 '싫어요'를 처리
 
 //        return "redirect:/coordi";
-        return handleUserReaction(session, false);
+        return handleUserReaction(session, false); // 사용자 반응을 처리하고 결과를 반환
     }
 
     // 사용자 반응 처리 공통 메소드
     private String handleUserReaction(HttpSession session, boolean isLike) {
-        Long userId = (Long) session.getAttribute("loginId");
-        UserDTO userDTO = userService.findByID(userId);
+        Long userId = (Long) session.getAttribute("loginId"); // 세션에서 사용자 ID를 가져옴.
+        UserDTO userDTO = userService.findByID(userId); // 사용자 정보를 가져옴
 
         // JSON 형태로 numUserCoordi 값을 반환
         return "{\"numUserCoordi\": " + userDTO.getNumUserCoordi() + "}";
