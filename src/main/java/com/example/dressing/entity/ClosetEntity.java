@@ -21,9 +21,9 @@ public class ClosetEntity {
     @JoinColumn(name = "uid", referencedColumnName = "id") // fk
     private UserEntity userEntity; // UserEntity 클래스와 연결되는 엔티티를 참조
 
-//    @Column(length = 16)
+    //    @Column(length = 16)
 //    private String label;
-    @ManyToOne
+    @ManyToOne//(cascade = CascadeType.ALL) // 또는 CascadeType.ALL을 사용하여 모든 작업에 대해 Cascade 설정
     @JoinColumn(name = "label", referencedColumnName = "label")
     private ClosetInfoEntity closetInfoEntity;
 
@@ -45,6 +45,7 @@ public class ClosetEntity {
         this.savedPath = savedPath;
     }
 
+    // ClosetDTO -> ClosetEntity
     public static ClosetEntity toClosetEntity(ClosetDTO closetDTO, UserEntity userEntity, ClosetInfoEntity closetInfoEntity) {
         ClosetEntity closetEntity = ClosetEntity.builder()
                 .id(closetDTO.getId())

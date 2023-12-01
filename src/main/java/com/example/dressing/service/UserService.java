@@ -1,7 +1,13 @@
 package com.example.dressing.service;
 
 import com.example.dressing.dto.UserDTO;
+import com.example.dressing.entity.ClosetEntity;
+import com.example.dressing.entity.CoordiEntity;
+import com.example.dressing.entity.SuggestEntity;
 import com.example.dressing.entity.UserEntity;
+import com.example.dressing.repository.ClosetRepository;
+import com.example.dressing.repository.CoordiRepository;
+import com.example.dressing.repository.SuggestRepository;
 import com.example.dressing.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -82,6 +88,11 @@ public class UserService {
 
     //성공: db에서 id를 이용해 찾은 유저의 DTO 리턴, 실패: null
     public UserDTO findByID(Long id) {
+        // userId가 null인 경우에 대한 처리 추가
+        if (userRepository == null) {
+            // 적절한 예외 처리 또는 기본값 반환
+            throw new IllegalArgumentException("User ID must not be null");
+        }
         Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
         if (optionalUserEntity.isPresent()) { //성공
             return UserDTO.toUserDTO(optionalUserEntity.get());
@@ -108,6 +119,7 @@ public class UserService {
 
     //db에 저장된 회원을 id를 이용해 없앤다
     public void deleteById(Long id) {
+        // 사용자 삭제
         userRepository.deleteById(id);
     }
 

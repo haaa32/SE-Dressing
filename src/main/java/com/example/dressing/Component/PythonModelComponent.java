@@ -6,8 +6,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// 파이썬 코드를 ProcessBuilder으로 실행 컴포넌트
 @Component
 public class PythonModelComponent {
+    // 이미지를 얻어서 옷 라벨을 반환하는 프로세스
     public String getLabel(String imagePath) throws IOException {
         // 파이썬 스크립트 경로
         String pythonScriptPath = "C:/SE_python/keras_classfy.py";

@@ -55,6 +55,7 @@ public class AdminController {
         return "redirect:/user/"; //ㅇㅎ 리다이렉트 -> html 파일 말고 getmapping 하는 거인듯?
     }
 
+    // 회원 삭제
     @GetMapping("/user/delete/{id}")
     public String deleteById(@PathVariable Long id) {
         userService.deleteById(id);

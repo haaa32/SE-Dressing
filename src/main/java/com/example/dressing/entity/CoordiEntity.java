@@ -15,26 +15,26 @@ import javax.persistence.*;
 public class CoordiEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // Cooldi id
 
     @ManyToOne
     @JoinColumn(name = "uid", referencedColumnName = "id") // fk
-    private UserEntity userEntity;
+    private UserEntity userEntity; //User id
 
     @Column
-    private Long outerId;
+    private Long outerId; // 아우터 id
 
     @Column
-    private Long topId;
+    private Long topId; //상의 id
 
     @Column
-    private Long bottomId;
+    private Long bottomId; // 하의 id
 
     @Column
-    private Long shoesId;
+    private Long shoesId; // 신발 id
 
     @Column
-    private Long bagId;
+    private Long bagId; // 가방 id
 
     @Column
     private int heart; //좋아요: 1, 싫어요: -1

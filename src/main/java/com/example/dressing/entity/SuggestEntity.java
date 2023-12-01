@@ -17,7 +17,7 @@ public class SuggestEntity {
 
     @ManyToOne
     @JoinColumn(name = "uid", referencedColumnName = "id") //실제 테이블에서 fk 이름 "uid", UserEntity에서 참조되는 속성 이름 "id"
-    private UserEntity userEntity; //FK, DB에는 UserEntity id 저장 --> 오 mysql에 key 타입 MUL로 뜸 외래키 된듯!
+    private UserEntity userEntity; //FK, DB에는 UserEntity id 저장
 
     @Column
     private String title; //건의 제목
@@ -25,6 +25,7 @@ public class SuggestEntity {
     @Column
     private String content; //건의 내용
 
+    // SuggestDTO -> SuggestEntity 변환
     public static SuggestEntity toSuggestEntity(SuggestDTO suggestDTO, UserEntity userEntity) {
         SuggestEntity suggestEntity = new SuggestEntity();
         suggestEntity.setId(suggestDTO.getId());
