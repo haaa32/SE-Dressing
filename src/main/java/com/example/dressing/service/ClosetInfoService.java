@@ -25,16 +25,16 @@ public class ClosetInfoService {
     public void insertClosetInfoData() {
         System.out.println("insertClosetInfoData 메소드 호출됨");
         List<ClosetInfoEntity> entities = Arrays.asList(
-                new ClosetInfoEntity("T-shirt", "Top", -5, 40),
-                new ClosetInfoEntity("Trouser", "Bottom",0, 40),
-                new ClosetInfoEntity("Pullover", "Top",-5, 22),
+                new ClosetInfoEntity("T-shirt", "Top", -10, 40),
+                new ClosetInfoEntity("Trouser", "Bottom",-10, 40),
+                new ClosetInfoEntity("Pullover", "Top",-10, 22),
                 new ClosetInfoEntity("Dress", "Top",12, 40),
-                new ClosetInfoEntity("Coat", "Outer",-5, 16),
+                new ClosetInfoEntity("Coat", "Outer",-10, 16),
                 new ClosetInfoEntity("Sandal", "Shoes",23, 40),
                 new ClosetInfoEntity("Shirt", "Top",17, 27),
-                new ClosetInfoEntity("Sneaker", "Shoes",0, 40),
-                new ClosetInfoEntity("Bag", "Bag",0, 40),
-                new ClosetInfoEntity("Ankle boot", "Shoes",-5, 11)
+                new ClosetInfoEntity("Sneaker", "Shoes",-5, 40),
+                new ClosetInfoEntity("Bag", "Bag",-10, 40),
+                new ClosetInfoEntity("Ankle boot", "Shoes",-10, 11)
         );
 
         // 저장소에 모든 항목들을 저장

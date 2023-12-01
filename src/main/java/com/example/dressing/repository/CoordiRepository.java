@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CoordiRepository extends JpaRepository<CoordiEntity, Long> {
-    // uid와 heart로 찾기
+    // Uesr의 id와 Cooldi의 heart로 찾기
     @Query("SELECT c FROM CoordiEntity c WHERE c.userEntity.id = :uid and c.heart = :heart")
     List<CoordiEntity> findUserCoordisByHeart(@Param("uid") Long uid, @Param("heart") int heart);
 }

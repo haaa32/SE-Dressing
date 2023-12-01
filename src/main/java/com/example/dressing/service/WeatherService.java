@@ -49,6 +49,7 @@ public class WeatherService {
         return future;
     }
 
+    // 온도만 추출해서 반환하는 메서드
     public double getDaeguTempCelsius(String daeguWeather) {
         String[] array = daeguWeather.split(" ");
         String temp = array[3]; // ex) 6.0^C, (뒤에 ^C, 3자 잘라야됨)

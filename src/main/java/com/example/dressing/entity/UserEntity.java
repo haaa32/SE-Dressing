@@ -20,7 +20,7 @@ import java.util.List;
 public class UserEntity extends TimeEntity { //엔티티 클래스 대로 실제로 DB에 테이블이 생성되게 된다
     @Id //pk 지정(primary key(주키))
     @GeneratedValue(strategy = GenerationType.IDENTITY) //mysql에서 auto_increment, 오라클의 sequence
-    private Long id;
+    private Long id; // User id
 
     @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClosetEntity> closets = new ArrayList<>();
@@ -32,26 +32,26 @@ public class UserEntity extends TimeEntity { //엔티티 클래스 대로 실제
     private List<SuggestEntity> suggests = new ArrayList<>();
 
     @Column //unique 디폴트 false (중복 허용)
-    private String userName;
+    private String userName; // User 이름
 
     @Column(unique = true) //unique 제약조건 추가
-    private String userId;
+    private String userId; // User 아이디
 
     @Column(length = 16) //열 길이도 지정 가능
-    private String userPassword;
+    private String userPassword; // User 비밀번호
 
     @Column(length = 13) //열 길이 13
-    private String phoneNumber;
+    private String phoneNumber; // User 전화번호
 
     @Column(length = 10)
     @ColumnDefault("'Bronze'") //default 값 설정
-    private String userRank;
+    private String userRank; // User rank
 
     //회원가입 날짜 엔터티는 TimeEntity 상속
 
     @Column
     @ColumnDefault("'Daegu'")
-    private String local; //대구 고정
+    private String local; // User 지역 (대구 고정)
 
     // 사용자가 추천받기 버튼을 몇 번 눌렀는지
     @Column

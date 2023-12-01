@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class TimeEntity {
-    @CreationTimestamp //만들어질 때 날짜
+    @CreationTimestamp //만들어질 때 날짜 자동 저장
     @Column(updatable = false) //업데이트 때는 날짜 변경 안됨
     private LocalDateTime createdDate;
 

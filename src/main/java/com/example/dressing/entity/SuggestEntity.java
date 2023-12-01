@@ -25,6 +25,7 @@ public class SuggestEntity {
     @Column
     private String content; //건의 내용
 
+    // SuggestDTO -> SuggestEntity 변환
     public static SuggestEntity toSuggestEntity(SuggestDTO suggestDTO, UserEntity userEntity) {
         SuggestEntity suggestEntity = new SuggestEntity();
         suggestEntity.setId(suggestDTO.getId());
