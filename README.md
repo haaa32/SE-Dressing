@@ -2,7 +2,7 @@
 
 ![Alt text](src/main/resources/static/images/logo.png)
 
-0. 링크(나중에 링크 적을 것) 로 접속
+0. 링크(나중에 링크 적을 것) 로 접속 <br>
 0.1. visit site 버튼 클릭
 
 <br>
