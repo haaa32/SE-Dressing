@@ -2,7 +2,7 @@
 
 ![Alt text](src/main/resources/static/images/logo.png)
 
-0. 링크(나중에 링크 적을 것) 로 접속 <br>
+0. 링크는 따로 연락주세요^^ <br>
 0.1. visit site 버튼 클릭
 
 <br>
@@ -58,4 +58,10 @@
 
 <br>
 
-#### 팀프로젝트 소감
+### 팀프로젝트 소감
+
+>조하은(Back-end) "" <br>
+>문성윤(AI) "" <br>
+>이효주(Front-end) "" <br>
+>박예원(Back-end) "" <br>
+>양유진(Back-end) "" <br>
