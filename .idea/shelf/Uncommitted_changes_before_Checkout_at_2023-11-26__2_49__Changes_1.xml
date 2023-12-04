@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Checkout_at_2023-11-26_오후_2_49_[Changes]1" date="1700977773580" recycled="true" deleted="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-26_오후_2_49_[Changes]1/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2023-11-26 오후 2:49 [Changes]" />
-  <binary>
-    <option name="BEFORE_PATH" value="out/production/classes/com/example/dressing/controller/UserController.class" />
-    <option name="AFTER_PATH" value="out/production/classes/com/example/dressing/controller/UserController.class" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-26_오후_2_49_[Changes]1/UserController.class" />
-  </binary>
-</changelist>
